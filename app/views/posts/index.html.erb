@@ -1,0 +1,12 @@
+<h1>posts</h1>
+
+<div id="posts">
+<% @posts.each do |post| %>
+  <h2>
+    <%= link_to post.title, post %>
+  </h2>
+  <div class="info">
+  </div>
+  <div class="content"><%= post.body %></div>
+<% end %>
+</div>

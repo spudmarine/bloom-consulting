@@ -1,4 +1,7 @@
-Bloomconsultinggroup::Application.routes.draw do
+BloomConsulting::Application.routes.draw do
+
+  root to: 'posts#index'
+  resources :posts
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
@@ -6,6 +9,10 @@ Bloomconsultinggroup::Application.routes.draw do
 
   resources :users
   resources :sessions
+
+  namespace :admin do
+    get '', to: 'dashboard#index', as: '/'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
