@@ -39,5 +39,7 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
+  config.include LoginMacros
+
   config.include Capybara::DSL
 end
