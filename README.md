@@ -3,7 +3,7 @@ bloom-comsulting
 
 Repository for the website and blog for Bloom Consulting Group based out of Redmond, WA.
 
-## Foundation 5
+### Foundation 5
 
 This app is using parts of Foundation 5. Those parts include:
 
