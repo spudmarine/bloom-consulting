@@ -12,6 +12,9 @@ gem 'sass-rails', '~> 4.0.0'
 # Create admin namespace scaffold
 gem 'rails-admin-scaffold'
 
+# CSS gems
+gem 'bourbon'
+
 group :development, :test do
 	gem 'rspec-rails', '~>3.0.0.beta'
   gem 'capybara'
