@@ -1,5 +1,13 @@
 BloomConsulting::Application.routes.draw do
 
+  get "static_pages/home"
+  get "static_pages/practice_areas"
+  get "static_pages/careers"
+  get "about", to: 'static_pages#about'
+  get "static_pages/team"
+  get "static_pages/insights"
+  get "static_pages/contact"
+
   root to: 'posts#index'
   resources :posts, only: [:index]
 

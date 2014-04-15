@@ -9,6 +9,9 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+# Create admin namespace scaffold
+gem 'rails-admin-scaffold'
+
 # CSS gems
 gem 'bourbon'
 
