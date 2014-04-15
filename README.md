@@ -1,4 +1,4 @@
-bloom-comsulting
+Bloom Consulting Group
 ================
 
 Repository for the website and blog for Bloom Consulting Group based out of Redmond, WA.
