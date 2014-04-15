@@ -9,6 +9,9 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+# Create admin namespace scaffold
+gem 'rails-admin-scaffold'
+
 group :development, :test do
 	gem 'rspec-rails', '~>3.0.0.beta'
   gem 'capybara'
