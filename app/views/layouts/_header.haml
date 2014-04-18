@@ -1,0 +1,16 @@
+.nav
+  .row.nav-inner
+    .small-4.columns
+      %img{src: "assets/logo/bloom-logo-small.svg"}
+    .small-8.columns
+      %ul{style: "float: right;"}
+        %li.nav-item
+          = link_to "Practice Areas", class: "nav-link"
+        %li.nav-item
+          = link_to "Careers", class: "nav-link"
+        %li.nav-item
+          = link_to "About", class: "nav-link"
+        %li.nav-item
+          = link_to "Manage Posts", admin_posts_path, class: "nav-link"
+        %li.nav-item
+          = link_to "Sign In", login_path, class: "nav-link"
