@@ -12,9 +12,9 @@ class Admin::MainsController < ApplicationController
   end
 
   # GET /mains/new
-  # def new
-  #   @main = Main.new
-  # end
+  def new
+    @main = Main.new
+  end
 
   # GET /mains/1/edit
   def edit
@@ -23,19 +23,19 @@ class Admin::MainsController < ApplicationController
 
   # POST /mains
   # POST /mains.json
-  # def create
-  #   @main = Main.new(main_params)
+  def create
+    @main = Main.new(main_params)
 
-  #   respond_to do |format|
-  #     if @main.save
-  #       format.html { redirect_to @main, notice: 'Main was successfully created.' }
-  #       format.json { render action: 'show', status: :created, location: @main }
-  #     else
-  #       format.html { render action: 'new' }
-  #       format.json { render json: @main.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+    respond_to do |format|
+      if @main.save
+        format.html { redirect_to @main, notice: 'Main was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @main }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @main.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # PATCH/PUT /mains/1
   # PATCH/PUT /mains/1.json
