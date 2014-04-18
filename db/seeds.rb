@@ -5,3 +5,24 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+admin = User.create([{:email => 'scott@bloomconsultinggroup.com', :password => 'password', :password_confirmation => 'password'}, {:email => 'jenmjayne@gmail.com', :password => 'password', :password_confirmation => 'password'}])
+
+# if admin.errors.blank?
+# 	puts "***User #{admin.email} created"
+# else
+# 	puts "admin failed to create because:"
+# 	admin.errors.each do |x, y|
+# 		puts "#{x} #{y}"
+# 	end
+# end
+
+main = Main.create(:hero_image => "hero image", :hero_title => "Grow cost effectively with Bloom", :stratum_1_image => "stratum image", :stratum_1_title => "Huskies: We're Coming to You", :stratum_1_copy => "Bloom Consulting Group will be visiting the UW campus in Seattle on April 15th to speak with MBA grads. Think you might be intereseted in working for a fast-paced, agile management firm with a focus on business intelligence? Come vist our booth!", :stratum_1_cta => "Learn more about Bloom", :stratum_1_link => "/about", :practice_area_1_image => "pracice area image", :practice_area_1_title => "Project Management", :practice_area_1_copy => "project planning and initiation, establishing a project framework, managing resources and scope, monitoring project quality, measuring performance, and managing risk", :practice_area_1_link => "/pa1", :practice_area_2_image => "practice area 2 image", :practice_area_2_title => "Management Consulting", :practice_area_2_copy => "project planning and initiation, establishing a project framework, managing resources and scope, monitoring project quality, measuring performance, and managing risk", :practice_area_2_link => "/pa2", :practice_area_3_image => "practice area 3 image", :practice_area_3_title => "Business Intelligence", :practice_area_3_copy => "a unique combination of team skills supplemented by diligent project managers who work closely with business", :practice_area_3_link => "/pa3 link", :stratum_2_image => "stratum 2 image", :stratum_2_title => "Interested in joining us?", :stratum_2_copy => "We're always on the lookout for amazing talent and we are currently hiring. If you think you might like to join the Bloom family, get in touch.", :stratum_2_cta => "Browse Open Positions", :stratum_2_link => "/careers")
+
+if main.errors.blank?
+	puts "Homepage created"
+else
+	puts "Homepage failed to create because:"
+	admin.errors.each do |x, y|
+		puts "#{x} #{y}"
+	end
+end
