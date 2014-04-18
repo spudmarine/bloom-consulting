@@ -6,7 +6,7 @@ BloomConsulting::Application.routes.draw do
     get page, controller: "static_pages", action: page
   end
 
-  root to: 'mains#show', :defaults => { id: "4" }
+  root to: 'mains#show', :defaults => { id: "1" }
 
   resources :posts, only: [:index]
 
