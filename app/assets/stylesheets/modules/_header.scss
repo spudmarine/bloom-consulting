@@ -1,0 +1,23 @@
+.nav {
+	background-color: $bloom-blue;
+}
+
+.nav-inner {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.nav-item {
+	display: inline-block;
+	margin: 0px 10px;
+	line-height: 47px;
+}
+
+.nav-link {
+	padding: 3px;
+	color: $white;
+	&:hover {
+		color: $white;
+		border-bottom: 2px solid $bloom-orange;
+	}
+}
