@@ -1,0 +1,69 @@
+<h1>Listing mains</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hero image</th>
+      <th>Hero title</th>
+      <th>Stratum 1 image</th>
+      <th>Stratum 1 title</th>
+      <th>Stratum 1 copy</th>
+      <th>Stratum 1 cta</th>
+      <th>Stratum 1 link</th>
+      <th>Practice area 1 image</th>
+      <th>Practice area 1 title</th>
+      <th>Practice area 1 copy</th>
+      <th>Practice area 1 link</th>
+      <th>Practice area 2 image</th>
+      <th>Practice area 2 title</th>
+      <th>Practice area 2 copy</th>
+      <th>Practice area 2 link</th>
+      <th>Practice area 3 image</th>
+      <th>Practice area 3 title</th>
+      <th>Practice area 3 copy</th>
+      <th>Practice area 3 link</th>
+      <th>Stratum 2 image</th>
+      <th>Stratum 2 title</th>
+      <th>Stratum 2 copy</th>
+      <th>Stratum 2 cta</th>
+      <th>Stratum 2 link</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mains.each do |main| %>
+      <tr>
+        <td><%= main.hero_image %></td>
+        <td><%= main.hero_title %></td>
+        <td><%= main.stratum_1_image %></td>
+        <td><%= main.stratum_1_title %></td>
+        <td><%= main.stratum_1_copy %></td>
+        <td><%= main.stratum_1_cta %></td>
+        <td><%= main.stratum_1_link %></td>
+        <td><%= main.practice_area_1_image %></td>
+        <td><%= main.practice_area_1_title %></td>
+        <td><%= main.practice_area_1_copy %></td>
+        <td><%= main.practice_area_1_link %></td>
+        <td><%= main.practice_area_2_image %></td>
+        <td><%= main.practice_area_2_title %></td>
+        <td><%= main.practice_area_2_copy %></td>
+        <td><%= main.practice_area_2_link %></td>
+        <td><%= main.practice_area_3_image %></td>
+        <td><%= main.practice_area_3_title %></td>
+        <td><%= main.practice_area_3_copy %></td>
+        <td><%= main.practice_area_3_link %></td>
+        <td><%= main.stratum_2_image %></td>
+        <td><%= main.stratum_2_title %></td>
+        <td><%= main.stratum_2_copy %></td>
+        <td><%= main.stratum_2_cta %></td>
+        <td><%= main.stratum_2_link %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
