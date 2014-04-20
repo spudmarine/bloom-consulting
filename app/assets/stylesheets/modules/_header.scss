@@ -1,5 +1,5 @@
 .nav {
-	background-color: $bloom-blue;
+	background-color: rgba(31, 73, 125, 0.85);
 }
 
 .nav-inner {
@@ -20,4 +20,8 @@
 		color: $white;
 		border-bottom: 2px solid $bloom-orange;
 	}
+}
+
+.large-hero {
+	background-size: cover;
 }
