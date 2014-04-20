@@ -12,7 +12,7 @@
 
 <p>
   <strong>Stratum 1 image:</strong>
-  <%= @main.stratum_1_image %>
+  <%= image_tag @main.stratum_1_image_url(:thumb).to_s %>
 </p>
 
 <p>
@@ -97,7 +97,7 @@
 
 <p>
   <strong>Stratum 2 image:</strong>
-  <%= @main.stratum_2_image %>
+  <%= image_tag @main.stratum_2_image_url(:thumb).to_s %>
 </p>
 
 <p>

@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class PracticeAreaImageUploader < CarrierWave::Uploader::Base
+class StratumImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   include CarrierWave::RMagick
@@ -32,9 +32,9 @@ class PracticeAreaImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-    version :thumb do
-      process :resize_to_limit => [370, 152]
-    end
+  version :thumb do
+    process :resize_to_limit => [140, 140]
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
