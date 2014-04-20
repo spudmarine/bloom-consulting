@@ -1,0 +1,53 @@
+<%= form_for(@practicearea) do |f| %>
+  <% if @practicearea.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@practicearea.errors.count, "error") %> prohibited this practicearea from being saved:</h2>
+
+      <ul>
+      <% @practicearea.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hero_image %><br>
+    <%= f.file_field :hero_image %>
+  </div>
+  <div class="field">
+    <%= f.label :hero_title %><br>
+    <%= f.text_field :hero_title %>
+  </div>
+  <div class="field">
+    <%= f.label :hero_copy %><br>
+    <%= f.text_area :hero_copy %>
+  </div>
+  <div class="field">
+    <%= f.label :pa1_title %><br>
+    <%= f.text_field :pa1_title %>
+  </div>
+  <div class="field">
+    <%= f.label :pa1_copy %><br>
+    <%= f.text_area :pa1_copy %>
+  </div>
+  <div class="field">
+    <%= f.label :pa2_title %><br>
+    <%= f.text_field :pa2_title %>
+  </div>
+  <div class="field">
+    <%= f.label :pa2_copy %><br>
+    <%= f.text_area :pa2_copy %>
+  </div>
+  <div class="field">
+    <%= f.label :pa3_title %><br>
+    <%= f.text_field :pa3_title %>
+  </div>
+  <div class="field">
+    <%= f.label :pa3_copy %><br>
+    <%= f.text_area :pa3_copy %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
