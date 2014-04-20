@@ -1,0 +1,11 @@
+= if @main.hero_image_url.present?
+  - image = @main.hero_image_url(:thumb)
+  .large-hero{style: "background-image: url(#{image});"}
+    = render 'layouts/header'
+    .hero
+      .row{style: "padding-top: 70px;"}
+        .small-8.small-offset-2.columns
+          %h1{style: "font-size: 48px; color: #fff; text-align: center;"}
+            = @main.hero_title
+          %h1{style: "text-align: center; padding-top: 40px;"}
+            %div{"data-icon" => "b"}
