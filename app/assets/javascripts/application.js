@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require fastclick
+//= require modernizr
+//= require placeholder
+//= require foundation.equalizer
 //= require_tree .
