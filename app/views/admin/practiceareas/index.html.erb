@@ -1,0 +1,42 @@
+<h1>Listing practiceareas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hero image</th>
+      <th>Hero title</th>
+      <th>Hero copy</th>
+      <th>Pa1 title</th>
+      <th>Pa1 copy</th>
+      <th>Pa2 title</th>
+      <th>Pa2 copy</th>
+      <th>Pa3 title</th>
+      <th>Pa3 copy</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @practiceareas.each do |practicearea| %>
+      <tr>
+        <td><%= practicearea.hero_image %></td>
+        <td><%= practicearea.hero_title %></td>
+        <td><%= practicearea.hero_copy %></td>
+        <td><%= practicearea.pa1_title %></td>
+        <td><%= practicearea.pa1_copy %></td>
+        <td><%= practicearea.pa2_title %></td>
+        <td><%= practicearea.pa2_copy %></td>
+        <td><%= practicearea.pa3_title %></td>
+        <td><%= practicearea.pa3_copy %></td>
+        <td><%= link_to 'Show', practicearea %></td>
+        <td><%= link_to 'Edit', edit_admin_practicearea_path(practicearea) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Practicearea', new_practicearea_path %>

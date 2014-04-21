@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "bloom-consulting-group";
-  src:url("icon_fonts/bloom-consulting-group.eot");
-  src:url("icon_fonts/bloom-consulting-group.eot?#iefix") format("embedded-opentype"),
-    url("icon_fonts/bloom-consulting-group.woff") format("woff"),
-    url("icon_fonts/bloom-consulting-group.ttf") format("truetype"),
-    url("icon_fonts/bloom-consulting-group.svg#bloom-consulting-group") format("svg");
+  src:url(font_path('bloom-consulting-group.eot'));
+  src:url(font_path('bloom-consulting-group.eot') + "?#iefix") format("embedded-opentype"),
+    url(font_path('bloom-consulting-group.woff')) format("woff"),
+    url(font_path('bloom-consulting-group.ttf')) format("truetype"),
+    url(font_path('bloom-consulting-group.svg') + "#bloom-consulting-group") format("svg");
   font-weight: normal;
   font-style: normal;
 

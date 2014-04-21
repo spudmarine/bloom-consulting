@@ -1,0 +1,2 @@
+module PracticeareasHelper
+end

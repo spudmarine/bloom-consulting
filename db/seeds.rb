@@ -26,3 +26,14 @@ else
 		puts "#{x} #{y}"
 	end
 end
+
+pa = Practicearea.create(:hero_image => "hero image", :hero_title => "Practice Areas", :hero_copy => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", :pa1_title => "Project Management", :pa1_copy => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis tellus imperdiet orci vehicula molestie. Etiam malesuada turpis eget odio elementum, sit amet hendrerit justo rutrum. Mauris egestas mi ac risus euismod imperdiet. Phasellus sed odio ligula. Morbi cursus imperdiet augue in adipiscing. Quisque in ipsum semper, semper velit at, consectetur mi. Nam aliquet risus at felis pulvinar, quis sodales mauris ultrices. Nullam varius dictum velit, sed porta elit interdum non. Ut massa leo, imperdiet sit amet luctus sed, volutpat eget est.", :pa2_title => "Management Consulting", :pa2_copy => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis tellus imperdiet orci vehicula molestie. Etiam malesuada turpis eget odio elementum, sit amet hendrerit justo rutrum. Mauris egestas mi ac risus euismod imperdiet. Phasellus sed odio ligula. Morbi cursus imperdiet augue in adipiscing. Quisque in ipsum semper, semper velit at, consectetur mi. Nam aliquet risus at felis pulvinar, quis sodales mauris ultrices. Nullam varius dictum velit, sed porta elit interdum non. Ut massa leo, imperdiet sit amet luctus sed, volutpat eget est.", :pa3_title => "Business Intelligence", :pa3_copy => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis tellus imperdiet orci vehicula molestie. Etiam malesuada turpis eget odio elementum, sit amet hendrerit justo rutrum. Mauris egestas mi ac risus euismod imperdiet. Phasellus sed odio ligula. Morbi cursus imperdiet augue in adipiscing. Quisque in ipsum semper, semper velit at, consectetur mi. Nam aliquet risus at felis pulvinar, quis sodales mauris ultrices. Nullam varius dictum velit, sed porta elit interdum non. Ut massa leo, imperdiet sit amet luctus sed, volutpat eget est.")
+
+if pa.errors.blank?
+	puts "Practice areas page created"
+else
+	puts "Practice areas failed to create because:"
+	admin.errors.each do |x, y|
+		puts "#{x} #{y}"
+	end
+end
