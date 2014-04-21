@@ -4,6 +4,7 @@ gem 'haml'
 
 gem 'carrierwave'
 gem 'rmagick', :require => 'RMagick'
+gem 'fog', '~> 1.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
