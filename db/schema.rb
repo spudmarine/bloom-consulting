@@ -11,7 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140418041852) do
+ActiveRecord::Schema.define(version: 20140420203647) do
+
+  create_table "admin_mains", force: true do |t|
+    t.string   "hero_image"
+    t.string   "hero_title"
+    t.string   "stratum_1_image"
+    t.string   "stratum_1_title"
+    t.text     "stratum_1_copy"
+    t.string   "stratum_1_cta"
+    t.string   "stratum_1_link"
+    t.string   "practice_area_1_image"
+    t.string   "practice_area_1_title"
+    t.text     "practice_area_1_copy"
+    t.string   "practice_area_1_link"
+    t.string   "practice_area_2_image"
+    t.string   "practice_area_2_title"
+    t.text     "practice_area_2_copy"
+    t.string   "practice_area_2_link"
+    t.string   "practice_area_3_image"
+    t.string   "practice_area_3_title"
+    t.text     "practice_area_3_copy"
+    t.string   "practice_area_3_link"
+    t.string   "stratum_2_image"
+    t.string   "stratum_2_title"
+    t.text     "stratum_2_copy"
+    t.string   "stratum_2_cta"
+    t.string   "stratum_2_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "admin_pages", force: true do |t|
     t.string   "name"
@@ -55,6 +84,20 @@ ActiveRecord::Schema.define(version: 20140418041852) do
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "practiceareas", force: true do |t|
+    t.string   "hero_image"
+    t.string   "hero_title"
+    t.text     "hero_copy"
+    t.string   "pa1_title"
+    t.text     "pa1_copy"
+    t.string   "pa2_title"
+    t.text     "pa2_copy"
+    t.string   "pa3_title"
+    t.text     "pa3_copy"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
