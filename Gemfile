@@ -8,8 +8,7 @@ gem 'rmagick', :require => 'RMagick'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -20,9 +19,16 @@ gem 'rails-admin-scaffold'
 # CSS gems
 gem 'bourbon'
 
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
 group :development, :test do
 	gem 'rspec-rails', '~>3.0.0.beta'
   gem 'capybara'
+  # Use sqlite3 as the database for Active Record
+	gem 'sqlite3'
 end
 
 # Use Uglifier as compressor for JavaScript assets
@@ -52,6 +58,8 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'protected_attributes'
+
+
 
 # Use unicorn as the app server
 # gem 'unicorn'
