@@ -1,21 +1,17 @@
 BloomConsulting::Application.routes.draw do
 
-  resources :mains
-
-  %w[practice_areas careers about team insights contact].each do |page|
-    get page, controller: "static_pages", action: page
-  end
-
   root to: 'mains#show', :defaults => { id: "1" }
-
-  resources :posts, only: [:index]
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
+  get 'practiceareas', to: 'practiceareas#show', :defaults => { id: "1"}
+
   resources :users
   resources :sessions
+  resources :mains
+  resources :posts, only: [:index]
 
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
@@ -23,6 +19,7 @@ BloomConsulting::Application.routes.draw do
     resources :users
     resources :mains
     resources :pages
+    resources :practiceareas
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
