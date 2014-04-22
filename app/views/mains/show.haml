@@ -1,53 +1,99 @@
-= if @main.hero_image_url.present?
-  - image = @main.hero_image_url
-  .large-hero{style: "background-image: url(#{image});"}
-    = render 'layouts/header'
-    .hero
-      .row{style: "padding-top: 70px;"}
-        .small-8.small-offset-2.columns
-          %h1{style: "font-size: 60px; color: #fff; text-align: center;"}
-            = @main.hero_title
-          %h2{style: "text-align: center; padding-top: 40px; color: #fff; padding-bottom: 40px;"}
-            %a.intro-arrow{"data-icon" => "b"}
-%div{style: "padding: 40px 0px;"}
+- image = @main.hero_image_url
+.large-hero{style: "background-image: url(#{image});"}
+  = render 'layouts/header'
+  .hero
+    .row{style: "padding-top: 70px;"}
+      .small-8.small-offset-2.columns
+        %h1{style: "font-size: 60px; color: #fff; text-align: center;"}
+          = @main.hero_title
+        %h2{style: "text-align: center; padding-top: 40px; color: #fff; padding-bottom: 40px;"}
+          %a.intro-arrow{"data-icon" => "b"}
+%div.bgc-lght-gray{style: "padding: 50px 0px;"}
+  .row
+    .small-12.medium-3.columns
+      %div{style: "text-align: center;"}
+        %img.circle-thumb.huskies{src: "assets/University_of_Washington-Seattle_Campus_394544.gif", style: "width: 100px; border-radius: 50%; border: 1px solid purple;"}
+    .small-12.medium-9.columns
+%div{style: "padding: 50px 0px;"}
   .row
     .small-12.columns
       %h2.c-blue{style: "text-align: center;"} Practice Areas
   .row{style: "margin-top: 20px;", "data-equalizer" => "true"}
-    .small-12.medium-4.columns{"data-equalizer-watch" => "true"}
-      %div{style: "border: 1px solid #eee;"}
-        = if @main.practice_area_1_image_url.present?
-          - image = @main.practice_area_1_image_url(:thumb)
-          .practice-area-one{style: "background-image: url(#{image});"}
-            .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
+    .small-12.medium-4.columns
+      %div{style: "border: 1px solid #eee;", "data-equalizer-watch" => "true"}
+        - image = @main.practice_area_1_image_url(:thumb)
+        .practice-area-one{style: "background-image: url(#{image});"}
+          .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
         %div{style: "padding: 20px; text-align: center;"}
           %h5.c-drk-gray= @main.practice_area_1_title
-          %p{style: "padding-top: 20px;"}= @main.practice_area_1_copy
-          %div{style: "padding-top: 10px;"}
-            = link_to @main.practice_area_1_link do
-              %h4{"data-icon" => "c"}
-    .small-12.medium-4.columns{"data-equalizer-watch" => "true"}
-      %div{style: "border: 1px solid #eee;"}
-        = if @main.practice_area_2_image_url.present?
-          - image = @main.practice_area_2_image_url(:thumb)
-          .practice-area-one{style: "background-image: url(#{image});"}
-            .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
+          %p{style: "padding: 15px 0px;"}= @main.practice_area_1_copy
+          %span.bottom-line
+            %h4
+              = link_to @main.practice_area_1_link do
+                %span{"data-icon" => "c"}
+    .small-12.medium-4.columns
+      %div{style: "border: 1px solid #eee;", "data-equalizer-watch" => "true"}
+        - image = @main.practice_area_2_image_url(:thumb)
+        .practice-area-one{style: "background-image: url(#{image});"}
+          .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
         %div{style: "padding: 20px; text-align: center;"}
           %h5.c-drk-gray= @main.practice_area_2_title
-          %p{style: "padding-top: 20px;"}= @main.practice_area_2_copy
-          %div{style: "padding-top: 10px;"}
-            = link_to @main.practice_area_2_link do
-              %h4{"data-icon" => "c"}
-    .small-12.medium-4.columns{"data-equalizer-watch" => "true"}
-      %div{style: "border: 1px solid #eee;"}
-        = if @main.practice_area_3_image_url.present?
-          - image = @main.practice_area_3_image_url(:thumb)
-          .practice-area-one{style: "background-image: url(#{image});"}
-            .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
+          %p{style: "padding: 15px 0px;"}= @main.practice_area_2_copy
+          %span.bottom-line
+            %h4
+              = link_to @main.practice_area_2_link do
+                %span{"data-icon" => "c"}
+    .small-12.medium-4.columns
+      %div{style: "border: 1px solid #eee;", "data-equalizer-watch" => "true"}
+        - image = @main.practice_area_3_image_url(:thumb)
+        .practice-area-one{style: "background-image: url(#{image});"}
+          .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
         %div{style: "padding: 20px; text-align: center;"}
           %h5.c-drk-gray= @main.practice_area_3_title
-          %p{style: "padding-top: 20px;"}= @main.practice_area_3_copy
-          %div{style: "padding-top: 10px;"}
-            = link_to @main.practice_area_3_link do
-              %h4{"data-icon" => "c"}
+          %p{style: "padding: 15px 0px;"}= @main.practice_area_3_copy
+          %span.bottom-line
+            %h4
+              = link_to @main.practice_area_3_link do
+                %span{"data-icon" => "c"}
+%div.bgc-lght-gray{style: "padding: 50px 0px;"}
+  .row
+    .small-12.columns
+      %h2.c-blue{style: "text-align: center;"} Meet the Team
+  .row{style: "margin-top: 20px;", "data-equalizer" => "true"}
+    .small-12.medium-4.columns
+      %div{style: "border: 1px solid #eee;", "data-equalizer-watch" => "true"}
+        - image = @main.practice_area_1_image_url(:thumb)
+        .practice-area-one{style: "background-image: url(#{image});"}
+          .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
+        %div{style: "padding: 20px; text-align: center;"}
+          %h5.c-drk-gray= @main.practice_area_1_title
+          %p{style: "padding: 15px 0px 40px;"}= @main.practice_area_1_copy
+          %span.bottom-line
+            %h4
+              = link_to @main.practice_area_1_link do
+                %span{"data-icon" => "c"}
+    .small-12.medium-4.columns
+      %div{style: "border: 1px solid #eee;", "data-equalizer-watch" => "true"}
+        - image = @main.practice_area_2_image_url(:thumb)
+        .practice-area-one{style: "background-image: url(#{image});"}
+          .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
+        %div{style: "padding: 20px; text-align: center;"}
+          %h5.c-drk-gray= @main.practice_area_2_title
+          %p{style: "padding: 15px 0px 40px;"}= @main.practice_area_2_copy
+          %span.bottom-line
+            %h4
+              = link_to @main.practice_area_2_link do
+                %span{"data-icon" => "c"}
+    .small-12.medium-4.columns
+      %div{style: "border: 1px solid #eee;", "data-equalizer-watch" => "true"}
+        - image = @main.practice_area_3_image_url(:thumb)
+        .practice-area-one{style: "background-image: url(#{image});"}
+          .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
+        %div{style: "padding: 20px; text-align: center;"}
+          %h5.c-drk-gray= @main.practice_area_3_title
+          %p{style: "padding: 15px 0px 40px;"}= @main.practice_area_3_copy
+          %span.bottom-line
+            %h4
+              = link_to @main.practice_area_3_link do
+                %span{"data-icon" => "c"}
 
