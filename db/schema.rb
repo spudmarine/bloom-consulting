@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140422023414) do
+ActiveRecord::Schema.define(version: 20140422142947) do
 
   create_table "admin_mains", force: true do |t|
     t.string   "hero_image"
@@ -122,6 +122,13 @@ ActiveRecord::Schema.define(version: 20140422023414) do
     t.text     "pa2_copy"
     t.string   "pa3_title"
     t.text     "pa3_copy"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teams", force: true do |t|
+    t.string   "intro_title"
+    t.text     "intro_copy"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
