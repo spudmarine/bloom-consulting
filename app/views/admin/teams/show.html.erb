@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Intro title:</strong>
+  <%= @team.intro_title %>
+</p>
+
+<p>
+  <strong>Intro copy:</strong>
+  <%= @team.intro_copy %>
+</p>
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>

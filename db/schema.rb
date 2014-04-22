@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140422023414) do
+ActiveRecord::Schema.define(version: 20140422152119) do
 
   create_table "admin_pages", force: true do |t|
     t.string   "name"
@@ -33,6 +33,18 @@ ActiveRecord::Schema.define(version: 20140422023414) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "intro_copy"
+  end
+
+  create_table "employees", force: true do |t|
+    t.string   "employee_image"
+    t.string   "name"
+    t.string   "title"
+    t.text     "bio"
+    t.string   "linkedin"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "jobs", force: true do |t|
@@ -93,6 +105,13 @@ ActiveRecord::Schema.define(version: 20140422023414) do
     t.text     "pa2_copy"
     t.string   "pa3_title"
     t.text     "pa3_copy"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teams", force: true do |t|
+    t.string   "intro_title"
+    t.text     "intro_copy"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
