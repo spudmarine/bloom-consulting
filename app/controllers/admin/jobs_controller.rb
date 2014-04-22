@@ -46,6 +46,6 @@ def new
 
   def destroy
     Job.find(params[:id]).destroy
-    redirect_to root_url
+    redirect_to admin_jobs_url
   end
 end
