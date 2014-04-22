@@ -7,7 +7,7 @@
         %h1.hero-font= @main.hero_title
         %h2.intro-arrow-box
           %a.intro-arrow.page-jump{"data-icon" => "b"}
-%div.strata.bgc-lght-gray.jump-anchor
+.strata.bgc-lght-gray.jump-anchor
   .row
     .small-12.medium-3.columns
       %div{style: "text-align: center;"}
@@ -18,7 +18,7 @@
       %h5
         = link_to @main.stratum_1_link do
           = @main.stratum_1_cta
-          %span{ "data-icon" => "c", style: "position: relative; top: 3px;" }
+          %span.h5-icon{ "data-icon" => "c"}
 %div{style: "padding: 50px 0px;"}
   .row
     .small-12.columns
@@ -65,40 +65,35 @@
     .small-12.columns
       %h2.c-blue{style: "text-align: center;"} Meet the Team
   .row{style: "margin-top: 20px;", "data-equalizer" => "true"}
-    .small-12.medium-4.columns
-      %div{style: "border: 1px solid #eee;", "data-equalizer-watch" => "true"}
-        - image = @main.practice_area_1_image_url(:thumb)
-        .practice-area-one{style: "background-image: url(#{image});"}
-          .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
-        %div{style: "padding: 20px; text-align: center;"}
-          %h5.c-drk-gray= @main.practice_area_1_title
-          %p{style: "padding: 15px 0px 40px;"}= @main.practice_area_1_copy
-          %span.bottom-line
-            %h4
-              = link_to @main.practice_area_1_link do
-                %span{"data-icon" => "c"}
-    .small-12.medium-4.columns
-      %div{style: "border: 1px solid #eee;", "data-equalizer-watch" => "true"}
-        - image = @main.practice_area_2_image_url(:thumb)
-        .practice-area-one{style: "background-image: url(#{image});"}
-          .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
-        %div{style: "padding: 20px; text-align: center;"}
-          %h5.c-drk-gray= @main.practice_area_2_title
-          %p{style: "padding: 15px 0px 40px;"}= @main.practice_area_2_copy
-          %span.bottom-line
-            %h4
-              = link_to @main.practice_area_2_link do
-                %span{"data-icon" => "c"}
-    .small-12.medium-4.columns
-      %div{style: "border: 1px solid #eee;", "data-equalizer-watch" => "true"}
-        - image = @main.practice_area_3_image_url(:thumb)
-        .practice-area-one{style: "background-image: url(#{image});"}
-          .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
-        %div{style: "padding: 20px; text-align: center;"}
-          %h5.c-drk-gray= @main.practice_area_3_title
-          %p{style: "padding: 15px 0px 40px;"}= @main.practice_area_3_copy
-          %span.bottom-line
-            %h4
-              = link_to @main.practice_area_3_link do
-                %span{"data-icon" => "c"}
+    .small-12.columns
+      %div.bgc-white.b-gray{style: "padding: 40px 80px;"}
+        %div.team-carousel.ta-center
+          %div
+            %img{src: "assets/team/heather-zindel.jpg", style: "margin: 0 auto;"}
+            %h6.c-orange{style: "padding-top: 8px;"} Heather Zindel
+            %p President
+          %div
+            %img{src: "assets/team/michael-barrett.jpg", style: "margin: 0 auto;"}
+            %h6.c-orange{style: "padding-top: 8px;"} Michael Barrett
+            %p Consultant
+          %div
+            %img{src: "assets/team/amber-cooley.jpg", style: "margin: 0 auto;"}
+            %h6.c-orange{style: "padding-top: 8px;"} Amber Cooley
+            %p Business Manager
+          %div
+            %img{src: "assets/team/braden-unger.jpg", style: "margin: 0 auto;"}
+            %h6.c-orange{style: "padding-top: 8px;"} Braden Unger
+            %p Project Manager
+          %div
+            %img{src: "assets/team/kyle-kumasaka.jpg", style: "margin: 0 auto;"}
+            %h6.c-orange{style: "padding-top: 8px;"} Kyle Kumasaka
+            %p Project Management Practice Director
+          %div
+            %img{src: "assets/team/john-jensen.jpg", style: "margin: 0 auto;"}
+            %h6.c-orange{style: "padding-top: 8px;"} John Jensen
+            %p Chief Financial Officer
+          %div
+            %img{src: "assets/team/joe-thomas.jpg", style: "margin: 0 auto;"}
+            %h6.c-orange{style: "padding-top: 8px;"} Joe Thomas
+            %p Business Intelligence Practice Director
 
