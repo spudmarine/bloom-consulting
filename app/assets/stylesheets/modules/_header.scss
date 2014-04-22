@@ -22,14 +22,6 @@
 	}
 }
 
-.large-hero {
-	background-size: cover;
-}
-
-.intro-arrow {
-	color: $white;
-}
-
 @keyframes bounce {
   0%   {top:0px;}
 	50%  {top:8px;}
@@ -52,13 +44,4 @@
   0%   {top:0px;}
 	50%  {top:8px;}
 	100% {top:0px;}
-}
-
-.intro-arrow:hover {
-	position: relative;
-	color: $bloom-orange;
-	animation: bounce 0.8s infinite;
-  -webkit-animation: bounce 0.8s infinite;
-  -moz-animation: bounce 0.8s infinite;
-  -o-animation: bounce 0.8s infinite;
 }

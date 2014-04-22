@@ -1,3 +1,28 @@
+.large-hero {
+	background-size: cover;
+}
+
 .hero {
 	background-color: rgba(31, 73, 125, 0.85);
+	padding-top: 70px;
+	text-align: center;
+}
+
+.hero-font {
+	font-size: 3.75em;
+	color: $white;
+}
+
+.intro-arrow-box {
+	padding: 40px 0px;
+}
+
+.intro-arrow {
+	color: $white;
+}
+
+.intro-arrow:hover {
+	position: relative;
+	color: $bloom-orange;
+	@include animation(bounce .8s infinite);
 }

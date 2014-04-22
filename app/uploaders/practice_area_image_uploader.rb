@@ -33,7 +33,7 @@ class PracticeAreaImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
     version :thumb do
-      process :resize_to_limit => [370, 152]
+      process :resize_to_fill => [370, 152]
     end
 
   # Add a white list of extensions which are allowed to be uploaded.

@@ -1,3 +1,17 @@
+// Typography
+///////////////////////////////////////////////////////////////////////////////
+$sans-serif: Arial;
+$serif: $georgia;
+
+$base-font-family: 'MuseoSans-500', Arial, $sans-serif;
+$header-font-family: $base-font-family;
+
+// Main Heading Fonts
+$museo-sans:        'MuseoSans-500', Arial, sans-serif;
+$museo-sans-italic: 'MuseoSans-500Italic', Arial, sans-serif;
+
+
+
 // COLORS
 //////////////////////////////////////////////////////////////////////
 
@@ -8,17 +22,54 @@ $bloom-gray:     #7f7f7f;
 $bloom-green:    #276327;
 $bloom-drk-blue: #002060;
 
+$bloom-colors: (
+	('bloom-blue',     $bloom-blue),
+	('bloom-orange',   $bloom-orange),
+	('bloom-gray',     $bloom-gray),
+	('bloom-green',    $bloom-green),
+	('bloom-drk-blue', $bloom-drk-blue)
+);
+
 // Web Colors
-$white:      #fff;
-$light-gray: #f6f6f6;
-$gray:       #9b9b9b;
-$drk-gray:   #4a4a4a;
+$white:          #fff;
+$light-gray:     #f6f6f6;
+$gray:           #9b9b9b;
+$dark-gray:      #4a4a4a;
+
+$web-colors: (
+	('white',      $white),
+	('light-gray', $light-gray),
+	('gray',       $gray),
+	('dark-gray',  $dark-gray)
+);
+
+// Special Colors
+$huskies:        #372557;
+
+// Body Color
+$base-body-color: white;
+
+//  Font Colors
+$base-font-color: $gray;
+$base-accent-color: $bloom-orange;
+
+//  Text Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-link-color, 5);
+
+// Border color
+$base-border-color: $light-gray;
+
+// Flash Colors
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;
 
 
 
-// FONTS
-//////////////////////////////////////////////////////////////////////
+// Sizes
+///////////////////////////////////////////////////////////////////////////////
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$base-border-radius: em(3);
 
-// Main Heading Fonts
-$museo-sans:        'MuseoSans-500', Arial, sans-serif;
-$museo-sans-italic: 'MuseoSans-500Italic', Arial, sans-serif;

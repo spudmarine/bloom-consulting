@@ -1,0 +1,24 @@
+.container {
+	min-height: 100%;
+	position: relative;
+}
+
+.footer {
+	padding: 40px 0px 60px;
+	position: relative;
+	bottom: 0px;
+	height: 40px;
+}
+
+.footer-item {
+	display: inline-block;
+	margin: 0px 10px;
+	line-height: 24px;
+}
+
+.footer-link {
+	color: $gray;
+	&:hover {
+		color: $bloom-orange;
+	}
+}

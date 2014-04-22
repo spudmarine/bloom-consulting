@@ -1,7 +1,6 @@
 // Application CSS Manifest File
 ////////////////////////////////////////////////////////////////////////////////
 
-
 // Resets
 @import 'bloom-reset';
 
@@ -9,4 +8,6 @@
 @import 'webfonts/webfonts';
 @import 'iconfonts/iconfonts';
 @import 'variables';
+@import 'mixins';
+@import 'animations';
 @import 'typography';

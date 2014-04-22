@@ -7,7 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= yield %>
+<div class="container"><%= yield %></div>
 <%= render 'layouts/footer' %>
+<script>
+  $(document).foundation();
+</script>
 </body>
 </html>
