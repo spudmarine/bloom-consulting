@@ -1,6 +1,7 @@
 class Admin::CareersController < ApplicationController
   before_action :set_career, only: [:show, :edit, :update, :destroy]
-
+  before_action :authorize
+  
   # GET /careers
   # GET /careers.json
   def index
@@ -42,7 +43,7 @@ class Admin::CareersController < ApplicationController
   def update
     respond_to do |format|
       if @career.update(career_params)
-        format.html { redirect_to @career, notice: 'Career was successfully updated.' }
+        format.html { redirect_to admin_careers_path, notice: 'Career was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

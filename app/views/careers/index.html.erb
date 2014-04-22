@@ -19,7 +19,7 @@
   <tbody>
     <% @careers.each do |career| %>
       <tr>
-        <td><%= career.hero_image %></td>
+        <td><%= image_tag career.hero_image.to_s %></td>
         <td><%= career.hero_title %></td>
         <td><%= career.hero_copy %></td>
         <td><%= career.intro_title %></td>
