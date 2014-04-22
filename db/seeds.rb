@@ -37,3 +37,14 @@ else
 		puts "#{x} #{y}"
 	end
 end
+
+career = Career.create(:hero_image => "hero image", :hero_title => "Careers", :hero_copy => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", :intro_title => "Open Positions", :intro_copy => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis tellus imperdiet orci vehicula molestie.", :cta_title => "Don't see an open position for you?", :cta_copy => "We're always looking for amazing talent. Get in touch and we'll see what we have!")
+
+if career.errors.blank?
+	puts "Careers page created"
+else
+	puts "Careers failed to create because:"
+	admin.errors.each do |x, y|
+		puts "#{x} #{y}"
+	end
+end
