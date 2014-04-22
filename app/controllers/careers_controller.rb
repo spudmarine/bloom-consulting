@@ -5,6 +5,7 @@ class CareersController < ApplicationController
   # GET /careers.json
   def index
     @careers = Career.all
+    @jobs = Job.all
   end
 
   # GET /careers/1
