@@ -36,12 +36,8 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Purpose</th>
-      <th>Responsibilities</th>
-      <th>Scope</th>
-      <th>Environmental Requirements</th>
-      <th>Education</th>
-      <th>Qualifications</th>
+      <th>Location</th>
+      <th>Description</th>
       <th></th>
       <th></th>
       <th></th>
@@ -52,13 +48,9 @@
     <% @jobs.each do |job| %>
       <tr>
         <td><%= job.title %></td>
-        <td><%= job.purpose %></td>
-        <td><%= job.responsibilities %></td>
-        <td><%= job.scope %></td>
-        <td><%= job.environmental %></td>
-        <td><%= job.education %></td>
-        <td><%= job.qualifications %></td>
-      </tr>
+        <td><%= job.location %></td>
+        <td><%= raw job.responsibilities %></td>
+        </tr>
     <% end %>
   </tbody>
 </table>
