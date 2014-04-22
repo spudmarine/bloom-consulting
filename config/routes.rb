@@ -1,5 +1,6 @@
 BloomConsulting::Application.routes.draw do
 
+
   root to: 'mains#show', :defaults => { id: "1" }
 
   get 'signup', to: 'users#new', as: 'signup'
@@ -12,6 +13,8 @@ BloomConsulting::Application.routes.draw do
   resources :sessions
   resources :mains
   resources :posts, only: [:index]
+  resources :careers
+  resources :jobs
 
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
@@ -20,6 +23,9 @@ BloomConsulting::Application.routes.draw do
     resources :mains
     resources :pages
     resources :practiceareas
+    resources :careers
+    resources :jobs
+
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

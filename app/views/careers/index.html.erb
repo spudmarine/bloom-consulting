@@ -1,0 +1,66 @@
+<h1>Listing careers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hero image</th>
+      <th>Hero title</th>
+      <th>Hero copy</th>
+      <th>Intro title</th>
+      <th>Intro title</th>
+      <th>Cta title</th>
+      <th>Cta copy</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @careers.each do |career| %>
+      <tr>
+        <td><%= career.hero_image %></td>
+        <td><%= career.hero_title %></td>
+        <td><%= career.hero_copy %></td>
+        <td><%= career.intro_title %></td>
+        <td><%= career.intro_title %></td>
+        <td><%= career.cta_title %></td>
+        <td><%= career.cta_copy %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Purpose</th>
+      <th>Responsibilities</th>
+      <th>Scope</th>
+      <th>Environmental Requirements</th>
+      <th>Education</th>
+      <th>Qualifications</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.title %></td>
+        <td><%= job.purpose %></td>
+        <td><%= job.responsibilities %></td>
+        <td><%= job.scope %></td>
+        <td><%= job.environmental %></td>
+        <td><%= job.education %></td>
+        <td><%= job.qualifications %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

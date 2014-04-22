@@ -1,0 +1,45 @@
+<%= form_for[:admin, @career], :html => {:multipart => true} do |f| %>
+  <% if @career.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@career.errors.count, "error") %> prohibited this career from being saved:</h2>
+
+      <ul>
+      <% @career.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hero_image %><br>
+    <%= f.file_field :hero_image %>
+  </div>
+  <div class="field">
+    <%= f.label :hero_title %><br>
+    <%= f.text_field :hero_title %>
+  </div>
+  <div class="field">
+    <%= f.label :hero_copy %><br>
+    <%= f.text_area :hero_copy %>
+  </div>
+  <div class="field">
+    <%= f.label :intro_title %><br>
+    <%= f.text_field :intro_title %>
+  </div>
+  <div class="field">
+    <%= f.label :intro_title %><br>
+    <%= f.text_area :intro_title %>
+  </div>
+  <div class="field">
+    <%= f.label :cta_title %><br>
+    <%= f.text_field :cta_title %>
+  </div>
+  <div class="field">
+    <%= f.label :cta_copy %><br>
+    <%= f.text_area :cta_copy %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
