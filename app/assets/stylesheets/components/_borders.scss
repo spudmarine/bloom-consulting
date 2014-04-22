@@ -1,0 +1,23 @@
+@each $side in left, right, top, bottom {
+  @each $color in $bloom-colors {
+    .b-#{$side}-#{nth($color, 1)} {
+      border-#{$side}: 1px solid nth($color, 2);
+    }
+    .b-#{nth($color, 1)} {
+      border: 1px solid nth($color, 2);
+    }
+  }
+}
+
+@each $side in left, right, top, bottom {
+  @each $color in $web-colors {
+    .b-#{$side}-#{nth($color, 1)} {
+      border-#{$side}: 1px solid nth($color, 2);
+    }
+    .b-#{nth($color, 1)} {
+      border: 1px solid nth($color, 2);
+    }
+  }
+}
+
+.b-huskies { border: 1px solid $huskies; }

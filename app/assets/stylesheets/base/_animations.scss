@@ -1,0 +1,6 @@
+// Bounce effect
+@include keyframes(bounce) {
+  0%   {top:0px;}
+	50%  {top:8px;}
+	100% {top:0px;}
+}

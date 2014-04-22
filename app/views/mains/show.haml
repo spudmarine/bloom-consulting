@@ -2,18 +2,23 @@
 .large-hero{style: "background-image: url(#{image});"}
   = render 'layouts/header'
   .hero
-    .row{style: "padding-top: 70px;"}
+    .row
       .small-8.small-offset-2.columns
-        %h1{style: "font-size: 60px; color: #fff; text-align: center;"}
-          = @main.hero_title
-        %h2{style: "text-align: center; padding-top: 40px; color: #fff; padding-bottom: 40px;"}
-          %a.intro-arrow{"data-icon" => "b"}
-%div.bgc-lght-gray{style: "padding: 50px 0px;"}
+        %h1.hero-font= @main.hero_title
+        %h2.intro-arrow-box
+          %a.intro-arrow.page-jump{"data-icon" => "b"}
+%div.strata.bgc-lght-gray.jump-anchor
   .row
     .small-12.medium-3.columns
       %div{style: "text-align: center;"}
-        %img.circle-thumb.huskies{src: "assets/University_of_Washington-Seattle_Campus_394544.gif", style: "width: 100px; border-radius: 50%; border: 1px solid purple;"}
+        = image_tag @main.stratum_1_image_url(:thumb).to_s, class: "circle-thumb b-huskies"
     .small-12.medium-9.columns
+      %h4{style: "color: #372557;"}= @main.stratum_1_title
+      %p{style: "color: #372557; padding-top: 10px;"}= @main.stratum_1_copy
+      %h5
+        = link_to @main.stratum_1_link do
+          = @main.stratum_1_cta
+          %span{ "data-icon" => "c", style: "position: relative; top: 3px;" }
 %div{style: "padding: 50px 0px;"}
   .row
     .small-12.columns

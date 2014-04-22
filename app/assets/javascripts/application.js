@@ -20,4 +20,5 @@
 //= require jquery.cookie
 //= require placeholder
 //= require height-equalizer
+//= require page_scroll
 //= require_tree .
