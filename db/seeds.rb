@@ -48,3 +48,14 @@ else
 		puts "#{x} #{y}"
 	end
 end
+
+team = Team.create(:intro_title => "Meet the Team", :intro_copy => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet consectetur mi at mattis. Cum sociis penatibus et magnis dis parturient montes.")
+
+if team.errors.blank?
+	puts "Team page created"
+else
+	puts "Team failed to create because:"
+	admin.errors.each do |x, y|
+		puts "#{x} #{y}"
+	end
+end

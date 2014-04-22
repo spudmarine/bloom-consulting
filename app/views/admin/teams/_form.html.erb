@@ -1,0 +1,25 @@
+<%= form_for [:admin, @team], :html => {:multipart => true} do |f| %>
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @team.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :intro_title %><br>
+    <%= f.text_field :intro_title %>
+  </div>
+  <div class="field">
+    <%= f.label :intro_copy %><br>
+    <%= f.text_area :intro_copy %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
