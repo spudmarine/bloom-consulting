@@ -1,6 +1,7 @@
 class Admin::PracticeareasController < ApplicationController
   before_action :set_practicearea, only: [:show, :edit, :update, :destroy]
-
+  before_action :authorize
+  
   # GET /practiceareas
   # GET /practiceareas.json
   def index
