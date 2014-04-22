@@ -21,4 +21,5 @@
 //= require placeholder
 //= require height-equalizer
 //= require page_scroll
+//= require tinymce-jquery
 //= require_tree .

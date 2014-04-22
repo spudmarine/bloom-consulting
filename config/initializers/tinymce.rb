@@ -1,0 +1,1 @@
+TinyMCE::Rails::Engine.config.tinymce.base = "/assets/tinymce"
