@@ -11,11 +11,12 @@
  *= require_self
  */
 
- @import 'normalize';
- @import 'bourbon';
- @import 'foundation.min';
- @import 'bitters/bitters';
+@import 'normalize';
+@import 'bourbon';
+@import 'foundation.min';
+@import 'bitters/bitters';
 
- @import 'base/base';
- @import 'components/components';
- @import 'modules/modules';
+@import 'base/base';
+@import 'slick';
+@import 'components/components';
+@import 'modules/modules';

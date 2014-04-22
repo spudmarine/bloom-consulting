@@ -20,5 +20,7 @@
 //= require jquery.cookie
 //= require placeholder
 //= require height-equalizer
+//= require slick.min
 //= require page_scroll
+//= require slick
 //= require_tree .
