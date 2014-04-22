@@ -1,0 +1,35 @@
+<h1>Listing careers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hero image</th>
+      <th>Hero title</th>
+      <th>Hero copy</th>
+      <th>Intro title</th>
+      <th>Intro title</th>
+      <th>Cta title</th>
+      <th>Cta copy</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @careers.each do |career| %>
+      <tr>
+        <td><%= career.hero_image %></td>
+        <td><%= career.hero_title %></td>
+        <td><%= career.hero_copy %></td>
+        <td><%= career.intro_title %></td>
+        <td><%= career.intro_title %></td>
+        <td><%= career.cta_title %></td>
+        <td><%= career.cta_copy %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
