@@ -32,4 +32,35 @@
   </tbody>
 </table>
 
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Purpose</th>
+      <th>Responsibilities</th>
+      <th>Scope</th>
+      <th>Environmental Requirements</th>
+      <th>Education</th>
+      <th>Qualifications</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.title %></td>
+        <td><%= job.purpose %></td>
+        <td><%= job.responsibilities %></td>
+        <td><%= job.scope %></td>
+        <td><%= job.environmental %></td>
+        <td><%= job.education %></td>
+        <td><%= job.qualifications %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <br>
