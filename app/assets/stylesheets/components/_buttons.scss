@@ -1,0 +1,23 @@
+.btn-filled {
+	padding: 15px 15px;
+	border-radius: 3px;
+	color: $white;
+	background-color: $bloom-orange;
+	text-transform: uppercase;
+	display: block;
+	width: 100%;
+	vertical-align: middle;
+	&:hover {
+		background-color: darken($bloom-orange, 5);
+		color: $white;
+	}
+	@include transition (all 0.2s ease-in-out);
+	span[data-icon] {
+		position: relative;
+		top: 2px;
+	}
+}
+
+.btn-c-318 {
+	width: 318px;
+}
