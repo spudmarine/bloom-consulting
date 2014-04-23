@@ -16,6 +16,7 @@
 		position: relative;
 		top: 2px;
 	}
+	@include ie7-inline-block();
 }
 
 .btn-c-318 {
