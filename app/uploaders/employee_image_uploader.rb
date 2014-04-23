@@ -33,7 +33,13 @@ class EmployeeImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_to_limit => [50, 50]
+    process :resize_to_limit => [125, 125]
+    process :quality => 70
+  end
+
+  version :profile do
+    process :resize_to_limit => [168, 168]
+    process :quality => 70
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
