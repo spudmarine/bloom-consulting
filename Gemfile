@@ -7,6 +7,7 @@ gem 'rmagick', :require => 'RMagick'
 gem 'fog'
 gem 'carrierwave_direct'
 gem 'sidekiq'
+gem 'tinymce-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'

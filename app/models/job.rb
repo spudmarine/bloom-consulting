@@ -1,4 +1,3 @@
 class Job < ActiveRecord::Base
-	attr_accessible :employee_image, :name, :title, :bio, :linkedin, :twitter, :facebook
-	mount_uploader :employee_image, EmployeeImageUploader
+	attr_accessible :title, :location, :responsibilities
 end

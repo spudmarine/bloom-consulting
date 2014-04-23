@@ -1,0 +1,11 @@
+selector: '.tinymce'
+menubar: "tools table format view insert edit"
+plugins: [
+  "advlist autolink lists link charmap preview anchor image",
+        "searchreplace visualblocks fullscreen",
+        "insertdatetime table contextmenu paste wordcount media code"
+]
+toolbar1: "undo redo | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | link image media | code"
+browser_spellcheck : true 
+relative_url: true 
+convert_urls: false

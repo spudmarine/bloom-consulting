@@ -23,5 +23,6 @@
 //= require height-equalizer
 //= require slick.min
 //= require page_scroll
+//= require tinymce-jquery
 //= require slick
 //= require_tree .
