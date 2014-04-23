@@ -1,5 +1,4 @@
 .btn-filled {
-	padding: 15px 15px;
 	border-radius: 3px;
 	color: $white;
 	background-color: $bloom-orange;
@@ -12,13 +11,43 @@
 		color: $white;
 	}
 	@include transition (all 0.2s ease-in-out);
-	span[data-icon] {
-		position: relative;
-		top: 2px;
-	}
 	@include ie7-inline-block();
 }
 
 .btn-c-318 {
 	width: 318px;
+}
+
+.btn-empty {
+	border-radius: 3px;
+	color: $bloom-orange;
+	border: 1px solid $bloom-orange;
+	background-color: transparent;
+	text-transform: uppercase;
+	display: block;
+	width: 100%;
+	vertical-align: middle;
+	&:hover {
+		background-color: $bloom-orange;
+		color: $white
+	}
+	@include transition (all 0.2s ease-in-out);
+	@include ie7-inline-block();
+}
+
+.btn-m {
+	padding: 10px;
+}
+
+.btn-l {
+	padding: 15px;
+	span[data-icon] {
+		position: relative;
+		top: 2px;
+	}
+}
+
+.btn-text {
+	position: relative;
+	top: 2px;
 }
