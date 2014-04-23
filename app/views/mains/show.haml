@@ -70,7 +70,7 @@
         %div.team-carousel.ta-center
           - @employees.each do |employee|
             %div
-              %img{src: employee.employee_image(:thumb), style: "margin: 0 auto;"}
+              %img{src: employee.employee_image.thumb, style: "margin: 0 auto;"}
               %p.c-orange{style: "padding-top: 12px; margin-bottom: -3px;"}= employee.name
               %p
                 %small= employee.title
