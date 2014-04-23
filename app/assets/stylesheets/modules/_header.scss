@@ -22,6 +22,10 @@
 	}
 }
 
+.current {
+	border-bottom: 2px solid $bloom-orange;
+}
+
 @keyframes bounce {
   0%   {top:0px;}
 	50%  {top:8px;}
