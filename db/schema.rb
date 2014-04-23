@@ -13,35 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140422224446) do
 
-  create_table "admin_mains", force: true do |t|
-    t.string   "hero_image"
-    t.string   "hero_title"
-    t.string   "stratum_1_image"
-    t.string   "stratum_1_title"
-    t.text     "stratum_1_copy"
-    t.string   "stratum_1_cta"
-    t.string   "stratum_1_link"
-    t.string   "practice_area_1_image"
-    t.string   "practice_area_1_title"
-    t.text     "practice_area_1_copy"
-    t.string   "practice_area_1_link"
-    t.string   "practice_area_2_image"
-    t.string   "practice_area_2_title"
-    t.text     "practice_area_2_copy"
-    t.string   "practice_area_2_link"
-    t.string   "practice_area_3_image"
-    t.string   "practice_area_3_title"
-    t.text     "practice_area_3_copy"
-    t.string   "practice_area_3_link"
-    t.string   "stratum_2_image"
-    t.string   "stratum_2_title"
-    t.text     "stratum_2_copy"
-    t.string   "stratum_2_cta"
-    t.string   "stratum_2_link"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "admin_pages", force: true do |t|
     t.string   "name"
     t.string   "permalink"
