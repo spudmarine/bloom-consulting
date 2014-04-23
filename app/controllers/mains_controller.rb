@@ -6,6 +6,7 @@ class MainsController < ApplicationController
   end
 
   def show
+    @employees = Employee.all
   end
 
   private
