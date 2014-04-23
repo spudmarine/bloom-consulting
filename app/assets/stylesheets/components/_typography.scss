@@ -2,5 +2,12 @@
 
 .h5-icon { 
 	position: relative;
-	top: 3px;
+	top: 4px;
+}
+
+.link-white {
+	color: $white;
+	&:hover {
+		color: $white;
+	}
 }

@@ -19,7 +19,7 @@
         = link_to @main.stratum_1_link do
           = @main.stratum_1_cta
           %span.h5-icon{ "data-icon" => "c"}
-%div{style: "padding: 50px 0px;"}
+.strata
   .row
     .small-12.columns
       %h2.c-blue{style: "text-align: center;"} Practice Areas
@@ -60,7 +60,7 @@
             %h4
               = link_to @main.practice_area_3_link do
                 %span{"data-icon" => "c"}
-%div.bgc-lght-gray{style: "padding: 50px 0px;"}
+.strata.bgc-lght-gray
   .row
     .small-12.columns
       %h2.c-blue.ta-center Meet the Team
@@ -78,4 +78,16 @@
           = link_to teams_path, :class => "btn-filled" do
             Meet Us All
             %span{style: "float: right;", "data-icon" => "c"}
+.strata.bgc-orange
+  .row
+    .small-12.medium-3.columns
+      %div{style: "text-align: center;"}
+        = image_tag @main.stratum_2_image_url(:thumb).to_s, class: "b-bloom-gray"
+    .small-12.medium-9.columns
+      %h4.c-white= @main.stratum_2_title
+      %p.c-white{style: "padding-top: 10px;"}= @main.stratum_2_copy
+      %h5
+        = link_to @main.stratum_1_link, :class => "link-white" do
+          = @main.stratum_2_cta
+          %span.h5-icon{ "data-icon" => "c"}
 
