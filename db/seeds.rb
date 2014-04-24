@@ -22,7 +22,7 @@ if main.errors.blank?
 	puts "Homepage created"
 else
 	puts "Homepage failed to create because:"
-	admin.errors.each do |x, y|
+	main.errors.each do |x, y|
 		puts "#{x} #{y}"
 	end
 end
@@ -33,7 +33,7 @@ if pa.errors.blank?
 	puts "Practice areas page created"
 else
 	puts "Practice areas failed to create because:"
-	admin.errors.each do |x, y|
+	pa.errors.each do |x, y|
 		puts "#{x} #{y}"
 	end
 end
@@ -44,7 +44,7 @@ if career.errors.blank?
 	puts "Careers page created"
 else
 	puts "Careers failed to create because:"
-	admin.errors.each do |x, y|
+	career.errors.each do |x, y|
 		puts "#{x} #{y}"
 	end
 end
@@ -55,7 +55,7 @@ if team.errors.blank?
 	puts "Team page created"
 else
 	puts "Team failed to create because:"
-	admin.errors.each do |x, y|
+	team.errors.each do |x, y|
 		puts "#{x} #{y}"
 	end
 end
@@ -66,7 +66,18 @@ if about.errors.blank?
 	puts "About page created"
 else
 	puts "About page failed to create because:"
-	admin.errors.each do |x, y|
+	about.errors.each do |x, y|
+		puts "#{x} #{y}"
+	end
+end
+
+contact = Contact.create(:address => "7730 Leary Way Redmond, WA 98052", :phone => "206-200-2231", :email => "info@bloomconsultinggroup.com")
+
+if contact.errors.blank?
+	puts "Contact page created"
+else
+	puts "Contact page failed to create because:"
+	contact.errors.each do |x, y|
 		puts "#{x} #{y}"
 	end
 end
