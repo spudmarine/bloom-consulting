@@ -1,0 +1,30 @@
+- image = @about.hero_image_url(:thumb)
+.large-hero{style: "background-image: url(#{image});"}
+  = render 'layouts/header'
+  .hero
+    .row
+      .small-12.medium-10.medium-offset-1.columns
+        %h1{style: "font-size: 48px; color: #fff; text-align: center;"}
+          = @about.hero_title
+        %p{style: "text-align: center; padding-top: 15px; color: #fff; padding-bottom: 80px;"}
+          = @about.hero_copy
+.strata
+  .row
+    .small-12.medium-5.columns
+      %h3.c-drk-gray= @about.area1_title
+    .small-12.medium-7.columns
+      %p= @about.area1_copy
+%hr
+.strata
+  .row
+    .small-12.medium-5.columns
+      %h3.c-drk-gray= @about.area2_title
+    .small-12.medium-7.columns
+      %p= @about.area2_copy
+%hr
+.strata
+  .row
+    .small-12.medium-5.columns
+      %h3.c-drk-gray= @about.area3_title
+    .small-12.medium-7.columns
+      %p= @about.area3_copy
