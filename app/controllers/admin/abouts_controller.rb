@@ -12,6 +12,27 @@ class Admin::AboutsController < ApplicationController
   # GET /abouts/1.json
   def show
   end
+  def new
+    @about = About.new
+  end
+  
+  def create
+    @about = About.new(params[:about])
+
+    respond_to do |format|
+      if @about.save
+        format.html { redirect_to admin_abouts_url,
+          notice: 'About successfully created' }
+        format.json { render json: @about,
+          status: :created,
+          location: [:admin,@about] }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @about.errors,
+          status: :unprocessable_entity }
+      end
+    end
+  end
 
   # GET /abouts/1/edit
   def edit
