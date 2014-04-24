@@ -1,7 +1,5 @@
 BloomConsulting::Application.routes.draw do
 
-
-
   root to: 'mains#show', :defaults => { id: "1" }
 
   get 'signup', to: 'users#new', as: 'signup'
@@ -9,7 +7,7 @@ BloomConsulting::Application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   get 'practiceareas', to: 'practiceareas#show', :defaults => { id: "1"}
-  get 'about', to: 'abouts#index'
+  get 'about', to: 'abouts#show', :defaults => { id: "1"}
   get 'team', to: 'teams#index'
   get 'contact', to: 'contacts#index'
 
