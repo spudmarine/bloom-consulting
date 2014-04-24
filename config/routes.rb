@@ -1,7 +1,6 @@
 BloomConsulting::Application.routes.draw do
 
 
-  resources :contacts
 
   root to: 'mains#show', :defaults => { id: "1" }
 
@@ -12,6 +11,7 @@ BloomConsulting::Application.routes.draw do
   get 'practiceareas', to: 'practiceareas#show', :defaults => { id: "1"}
   get 'about', to: 'abouts#index'
   get 'team', to: 'teams#index'
+  get 'contact', to: 'contacts#index'
 
   resources :users
   resources :sessions
@@ -21,6 +21,8 @@ BloomConsulting::Application.routes.draw do
   resources :jobs
   resources :teams
   resources :employees
+  resources :contacts
+
 
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
@@ -34,6 +36,8 @@ BloomConsulting::Application.routes.draw do
     resources :teams
     resources :employees
     resources :abouts
+    resources :contacts
+
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
