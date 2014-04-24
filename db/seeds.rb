@@ -59,3 +59,14 @@ else
 		puts "#{x} #{y}"
 	end
 end
+
+about = About.create(:hero_image => "hero image", :hero_title => "About", :hero_copy => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", :area1_title => "Company Overview", :area1_copy => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis tellus imperdiet orci vehicula molestie.", :area2_title => "Culture", :area2_copy => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis tellus imperdiet orci vehicula molestie.", :area3_title => "N/A", :area3_copy => "N/A")
+
+if about.errors.blank?
+	puts "About page created"
+else
+	puts "About page failed to create because:"
+	admin.errors.each do |x, y|
+		puts "#{x} #{y}"
+	end
+end

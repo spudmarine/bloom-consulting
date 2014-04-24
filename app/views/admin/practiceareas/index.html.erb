@@ -21,7 +21,7 @@
   <tbody>
     <% @practiceareas.each do |practicearea| %>
       <tr>
-        <td><%= practicearea.hero_image %></td>
+        <td><%= image_tag practicearea.hero_image.to_s %></td>
         <td><%= practicearea.hero_title %></td>
         <td><%= practicearea.hero_copy %></td>
         <td><%= practicearea.pa1_title %></td>

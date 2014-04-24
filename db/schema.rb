@@ -11,7 +11,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140422224446) do
+ActiveRecord::Schema.define(version: 20140424174514) do
+
+  create_table "abouts", force: true do |t|
+    t.string   "hero_image"
+    t.string   "hero_title"
+    t.string   "hero_copy"
+    t.string   "area1_title"
+    t.text     "area1_copy"
+    t.string   "area2_title"
+    t.text     "area2_copy"
+    t.string   "area3_title"
+    t.text     "area3_copy"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_mains", force: true do |t|
+    t.string   "hero_image"
+    t.string   "hero_title"
+    t.string   "stratum_1_image"
+    t.string   "stratum_1_title"
+    t.text     "stratum_1_copy"
+    t.string   "stratum_1_cta"
+    t.string   "stratum_1_link"
+    t.string   "practice_area_1_image"
+    t.string   "practice_area_1_title"
+    t.text     "practice_area_1_copy"
+    t.string   "practice_area_1_link"
+    t.string   "practice_area_2_image"
+    t.string   "practice_area_2_title"
+    t.text     "practice_area_2_copy"
+    t.string   "practice_area_2_link"
+    t.string   "practice_area_3_image"
+    t.string   "practice_area_3_title"
+    t.text     "practice_area_3_copy"
+    t.string   "practice_area_3_link"
+    t.string   "stratum_2_image"
+    t.string   "stratum_2_title"
+    t.text     "stratum_2_copy"
+    t.string   "stratum_2_cta"
+    t.string   "stratum_2_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "admin_pages", force: true do |t|
     t.string   "name"
@@ -33,6 +76,14 @@ ActiveRecord::Schema.define(version: 20140422224446) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "intro_copy"
+  end
+
+  create_table "contacts", force: true do |t|
+    t.text     "address"
+    t.string   "phone"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "employees", force: true do |t|

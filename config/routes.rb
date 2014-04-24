@@ -1,5 +1,8 @@
 BloomConsulting::Application.routes.draw do
 
+
+  resources :contacts
+
   root to: 'mains#show', :defaults => { id: "1" }
 
   get 'signup', to: 'users#new', as: 'signup'
@@ -7,6 +10,8 @@ BloomConsulting::Application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   get 'practiceareas', to: 'practiceareas#show', :defaults => { id: "1"}
+  get 'about', to: 'abouts#index'
+  get 'team', to: 'teams#index'
 
   resources :users
   resources :sessions
@@ -28,7 +33,7 @@ BloomConsulting::Application.routes.draw do
     resources :jobs
     resources :teams
     resources :employees
-
+    resources :abouts
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
