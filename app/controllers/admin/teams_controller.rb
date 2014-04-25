@@ -12,6 +12,24 @@ class Admin::TeamsController < ApplicationController
   # GET /teams/1.json
   def show
   end
+  
+  def new
+    @team = Team.new
+  end
+
+  def create
+    @team = Team.new(team_params)
+
+    respond_to do |format|
+      if @team.save
+        format.html { redirect_to admin_teams_url, notice: 'Team was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @team }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @team.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # GET /teams/1/edit
   def edit
