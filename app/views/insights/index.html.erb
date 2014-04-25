@@ -1,0 +1,28 @@
+<h1>Listing insights</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Blurb</th>
+      <th>Article</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @insights.each do |insight| %>
+      <tr>
+        <td><%= insight.title %></td>
+        <td><%= insight.author %></td>
+        <td><%= insight.blurb %></td>
+        <td><%= insight.article %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

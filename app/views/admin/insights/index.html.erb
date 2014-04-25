@@ -1,0 +1,32 @@
+<h1>Listing insights</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Blurb</th>
+      <th>Article</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @insights.each do |insight| %>
+      <tr>
+        <td><%= insight.title %></td>
+        <td><%= insight.author %></td>
+        <td><%= insight.blurb %></td>
+        <td><%= insight.article %></td>
+        <td><%= link_to 'Edit', edit_admin_insight_path(insight) %></td>
+        <td><%= link_to 'Destroy', admin_insight_path(insight), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Insight', new_admin_insight_path %>
