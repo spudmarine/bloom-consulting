@@ -13,29 +13,8 @@ class Admin::ContactsController < ApplicationController
   def show
   end
 
-  # GET /contacts/new
-  def new
-    @contact = Contact.new
-  end
-
   # GET /contacts/1/edit
   def edit
-  end
-
-  # POST /contacts
-  # POST /contacts.json
-  def create
-    @contact = Contact.new(contact_params)
-
-    respond_to do |format|
-      if @contact.save
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @contact }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /contacts/1
@@ -49,16 +28,6 @@ class Admin::ContactsController < ApplicationController
         format.html { render action: 'edit' }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # DELETE /contacts/1
-  # DELETE /contacts/1.json
-  def destroy
-    @contact.destroy
-    respond_to do |format|
-      format.html { redirect_to contacts_url }
-      format.json { head :no_content }
     end
   end
 
