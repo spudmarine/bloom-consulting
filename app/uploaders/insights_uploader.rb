@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 class InsightsUploader < CarrierWave::Uploader::Base
+  @fog_public = true
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
