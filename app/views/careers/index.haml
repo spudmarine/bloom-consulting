@@ -1,0 +1,10 @@
+- image = @careers.hero_image
+.large-hero{style: "background-image: url(#{image});"}
+  = render 'layouts/header'
+  .hero
+    .row
+      .small-12.medium-10.medium-offset-1.columns
+        %h1{style: "font-size: 48px; color: #fff; text-align: center;"}
+          = @careers.hero_title
+        %p{style: "text-align: center; padding-top: 15px; color: #fff; padding-bottom: 80px;"}
+          = @careers.hero_copy
