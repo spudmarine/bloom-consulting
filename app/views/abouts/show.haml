@@ -11,20 +11,21 @@
 .strata
   .row
     .small-12.medium-5.columns
-      %h3.c-drk-gray= @about.area1_title
+      %h3.c-blue= @about.area1_title
     .small-12.medium-7.columns
       %p= @about.area1_copy
 %hr
 .strata
   .row
     .small-12.medium-5.columns
-      %h3.c-drk-gray= @about.area2_title
+      %h3.c-blue= @about.area2_title
     .small-12.medium-7.columns
       %p= @about.area2_copy
-%hr
-.strata
-  .row
-    .small-12.medium-5.columns
-      %h3.c-drk-gray= @about.area3_title
-    .small-12.medium-7.columns
-      %p= @about.area3_copy
+- if @about.area3_title.present?
+  %hr
+  .strata
+    .row
+      .small-12.medium-5.columns
+        %h3.c-blue= @about.area3_title
+      .small-12.medium-7.columns
+        %p= @about.area3_copy
