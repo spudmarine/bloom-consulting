@@ -1,0 +1,27 @@
+.tbl-striped {
+  tr:nth-child(odd) > td {
+    background-color: $light-gray;
+  }
+  tr:nth-child(even) > td,
+  tr:nth-child(even) > tr {
+    background-color: transparent;
+  }
+  border: 1px solid #ddd;
+  td {
+  	vertical-align: top;
+  	padding: 20px 15px;
+  }
+}
+
+.job-title {
+	color: $dark-gray;
+	font-weight: bold;
+}
+
+.job-detail {
+	font-family: 'MuseoSans-500Italic', Arial, sans-serif;
+}
+
+.job-link {
+	text-align: right;
+}

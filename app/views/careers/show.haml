@@ -1,0 +1,39 @@
+- image = @career.hero_image
+.large-hero{style: "background-image: url(#{image});"}
+  = render 'layouts/header'
+  .hero
+    .row
+      .small-12.medium-10.medium-offset-1.columns
+        %h1{style: "font-size: 48px; color: #fff; text-align: center;"}
+          = @career.hero_title
+        %p{style: "text-align: center; padding-top: 15px; color: #fff; padding-bottom: 80px;"}
+          = @career.hero_copy
+.strata
+  .row
+    .small-12.columns
+      %h3.c-drk-gray= @career.intro_title
+      %p{style: "padding-top: 10px;"}
+        = @career.intro_copy
+  .row
+    - jobs = Job.all
+    .small-12.columns
+      %table.tbl-striped
+        - jobs.each do |job|
+          %tr
+            %td.job-title= job.title
+            %td.job-detail= job.location
+            %td.job-detail= raw job.responsibilities
+            %td.job-link
+              %a 
+                Position Details
+                %span
+                  %small{style: "padding-left: 5px;", "data-icon" => "k"}
+.strata.bgc-lght-gray
+  .row
+    .small-12.medium-9.columns
+      %h6.c-drk-gray= @career.cta_title
+      %p{style: "padding-top: 5px;"}= @career.cta_copy
+    .small-12.medium-3.columns
+      = link_to contact_path, :class => "btn-empty btn-m" do
+        %span.btn-text Contact Us
+        %span.btn-text{ style: "float: right;", "data-icon" => "c"}
