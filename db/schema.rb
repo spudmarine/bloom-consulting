@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140427021334) do
+ActiveRecord::Schema.define(version: 20140427034419) do
 
   create_table "abouts", force: true do |t|
     t.string   "hero_image"
@@ -93,9 +93,9 @@ ActiveRecord::Schema.define(version: 20140427021334) do
     t.text     "bio"
     t.string   "linkedin"
     t.string   "twitter"
-    t.string   "facebook"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "bio_intro"
   end
 
   create_table "insights", force: true do |t|
