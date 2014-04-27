@@ -25,3 +25,7 @@
 .job-link {
 	text-align: right;
 }
+
+.strata-striped:nth-child(odd) {
+  background-color: $light-gray;
+}
