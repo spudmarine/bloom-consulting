@@ -1,5 +1,5 @@
 selector: '.tinymce'
-menubar: "tools table format view insert edit"
+menubar: "format view edit"
 plugins: [
   "advlist autolink lists link charmap preview anchor image",
         "searchreplace visualblocks fullscreen",
