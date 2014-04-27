@@ -14,11 +14,17 @@
 	display: inline-block;
 	margin: 0px 10px;
 	line-height: 24px;
+	color: $gray;
 }
 
 .footer-link {
 	color: $gray;
+}
+
+.main-footer {
+	padding: 3px;
 	&:hover {
-		color: $bloom-orange;
+		color: $gray;
+		border-bottom: 2px solid $bloom-orange;
 	}
 }
