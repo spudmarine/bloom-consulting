@@ -12,9 +12,22 @@
 
 .footer-item {
 	display: inline-block;
-	margin: 0px 10px;
 	line-height: 24px;
 	color: $gray;
+}
+
+.footer-item:first-of-type {
+	margin: 0px 10px 0px 0px;
+}
+
+.footer-item:not(:first-of-type) {
+	margin: 0px 10px;
+}
+
+ul.f-right {
+	.footer-item:last-of-type {
+		margin: 0px 0px 0px 10px;
+	}
 }
 
 .footer-link {

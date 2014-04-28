@@ -1,0 +1,23 @@
+= render 'layouts/header'
+
+.strata-small
+  .row{style: "padding-top: 30px;"}
+    .small-12.columns
+      %h1.c-drk-gray Insights
+- insights = Insight.all
+- insights.each do |insight|
+  .strata.strata-striped
+    .row
+      .small-12.medium-4.columns
+        %h5.c-drk-gray= insight.title
+        %p
+          %small
+            by
+            = insight.author
+      .small-12.medium-8.columns
+        %p= insight.blurb
+        - if insight.article.url.present?
+          %div{style: "padding-top: 20px;"}
+            = link_to insight.article.url, class: "btn-empty btn-m ta-centered", :target => "_Blank" do
+              %span.btn-text{ style: "padding-right: 5px;", "data-icon" => "a"}
+              %span.btn-text Download Article
