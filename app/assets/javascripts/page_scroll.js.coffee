@@ -19,3 +19,10 @@ $(window).bind 'page:change', ->
     target = "#" + $(this).attr("data-target")
 
     pageScrollNav(link, target)
+
+  $('.anchor-link').each ->
+    link = $(this)
+    target = $(this).attr("href")
+
+    pageScrollNav(link, target)
+
