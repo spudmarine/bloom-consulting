@@ -1,6 +1,10 @@
-pageScroll = (link, target) ->
+pageScrollNav = (link, target) ->
   $(link).click ->
     $('html, body').animate({scrollTop: $(target).offset().top - 60 }, 1000)
+
+pageScroll = (link, target) ->
+  $(link).click ->
+    $('html, body').animate({scrollTop: $(target).offset().top}, 1000)
 
 
 $(window).bind 'page:change', ->
@@ -14,4 +18,4 @@ $(window).bind 'page:change', ->
     link = $(this)
     target = "#" + $(this).attr("data-target")
 
-    pageScroll(link, target)
+    pageScrollNav(link, target)
