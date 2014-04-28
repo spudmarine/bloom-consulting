@@ -75,7 +75,7 @@
               %p
                 %small= employee.title
         %div.btn-c-318{style: "margin: 0 auto;"}
-          = link_to teams_path, :class => "btn-filled btn-l" do
+          = link_to team_path, :class => "btn-filled btn-l btn-block" do
             %span.btn-text Meet Us All
             %span.btn-text{style: "float: right;", "data-icon" => "c"}
 .strata.bgc-orange
@@ -87,7 +87,7 @@
       %h4.c-white= @main.stratum_2_title
       %p.c-white{style: "padding-top: 10px;"}= @main.stratum_2_copy
       %h5
-        = link_to @main.stratum_1_link, :class => "link-white" do
+        = link_to @main.stratum_2_link, :class => "link-white" do
           = @main.stratum_2_cta
           %span.h5-icon{ "data-icon" => "c"}
 
