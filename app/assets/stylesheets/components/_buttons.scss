@@ -53,8 +53,12 @@
 	}
 }
 
-.btn-text {
+.btn-text, .btn-icon {
 	position: relative;
 	top: 2px;
+	span[data-icon] {
+		position: relative;
+		top: 3px;
+	}
 }
 

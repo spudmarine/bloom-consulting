@@ -4,6 +4,8 @@
   .row{style: "padding-top: 30px;"}
     .small-12.columns
       %h3.c-drk-gray= @team.intro_title
+  .row
+    .small-12.large-9.columns
       %p{style: "padding-top: 5px;"}= @team.intro_copy
 - employees = Employee.all
 - employees.each do |employee|
@@ -27,9 +29,12 @@
         .row
           .small-12.columns
             %p{style: "padding-top: 10px;"}= employee.bio_intro
-            %a
-              Read More
-              %span
-                %small{"data-icon" => "b"}
+            %div.bio-hide
+              %p.full-bio{style: "margin: 0px;"}= raw employee.bio
+            - if employee.bio.present?
+              %a.bio-toggle
+                %span.btn-text
+                %span{style: "padding-left: 5px;"}
+                  %small.btn-icon{"data-icon" => ""}
 
 
