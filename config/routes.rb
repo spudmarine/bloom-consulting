@@ -10,7 +10,7 @@ BloomConsulting::Application.routes.draw do
   get 'careers', to: 'careers#show', :defaults => { id: "1"}
   get 'about', to: 'abouts#show', :defaults => { id: "1"}
   get 'team', to: 'teams#show', :defaults => { id: "1"}
-  get 'contact', to: 'contacts#index'
+  get 'contact', to: 'contacts#show', :defaults => { id: "1"}
 
   resources :users
   resources :sessions
