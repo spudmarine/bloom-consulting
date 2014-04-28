@@ -20,4 +20,7 @@
           %div{style: "padding-top: 20px;"}
             = link_to insight.article.url, class: "btn-empty btn-m ta-centered", :target => "_Blank" do
               %span.btn-text{ style: "padding-right: 5px;", "data-icon" => "a"}
-              %span.btn-text Download Article
+              - if insight.article.url.end_with?(".ppt", ".pptx")
+                %span.btn-text Download Presentation
+              - else
+                %span.btn-text Download Article
