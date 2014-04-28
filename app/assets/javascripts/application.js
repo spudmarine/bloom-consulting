@@ -18,6 +18,7 @@
 //= require fastclick
 //= require foundation.min
 //= require foundation.equalizer
+//= require foundation.magellan
 //= require jquery.cookie
 //= require placeholder
 //= require height-equalizer

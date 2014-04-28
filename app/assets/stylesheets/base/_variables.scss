@@ -32,15 +32,17 @@ $bloom-colors: (
 
 // Web Colors
 $white:          #fff;
-$light-gray:     #f6f6f6;
+$lighter-gray:   #f6f6f6;
+$light-gray:     #ddd;
 $gray:           #9b9b9b;
 $dark-gray:      #4a4a4a;
 
 $web-colors: (
-	('white',      $white),
-	('light-gray', $light-gray),
-	('gray',       $gray),
-	('dark-gray',  $dark-gray)
+	('white',        $white),
+	('lighter-gray', $lighter-gray),
+  ('light-gray',   $light-gray),
+	('gray',         $gray),
+	('dark-gray',    $dark-gray)
 );
 
 // Special Colors
@@ -58,7 +60,7 @@ $base-link-color: $base-accent-color;
 $hover-link-color: darken($base-link-color, 5);
 
 // Border color
-$base-border-color: $light-gray;
+$base-border-color: #ddd;
 
 // Flash Colors
 $error-color: $light-red;

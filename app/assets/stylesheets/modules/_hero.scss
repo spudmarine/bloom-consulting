@@ -2,6 +2,11 @@
 	background-size: cover;
 }
 
+.fixed-image {
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
 .hero {
 	background-color: rgba(31, 73, 125, 0.85);
 	padding-top: 70px;
