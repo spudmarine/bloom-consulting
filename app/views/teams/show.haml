@@ -22,10 +22,10 @@
           .small-4.columns
             - if employee.linkedin.present?
               %h5
-                %a{href: "http://" + employee.linkedin, style: "float: right; margin-left: 10px;", "data-icon" => "i"}
+                %a{href: "http://" + employee.linkedin, target: "_blank", style: "float: right; margin-left: 10px;", "data-icon" => "i"}
             - if employee.twitter.present?
               %h5
-                %a{href: "http://" + employee.linkedin, style: "float: right;", "data-icon" => "h"}
+                %a{href: "http://" + employee.twitter, target: "_blank", style: "float: right;", "data-icon" => "h"}
         .row
           .small-12.columns
             %p{style: "padding-top: 10px;"}= employee.bio_intro
