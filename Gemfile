@@ -9,6 +9,7 @@ gem 'carrierwave_direct'
 gem 'sidekiq'
 gem 'tinymce-rails'
 gem 'active_link_to'
+gem 'newrelic_rpm'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
