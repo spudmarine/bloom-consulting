@@ -26,4 +26,5 @@
 //= require page_scroll
 //= require tinymce-jquery
 //= require slick
+//= require toggle_show
 //= require_tree .
