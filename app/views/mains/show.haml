@@ -1,5 +1,5 @@
 - image = @main.hero_image_url
-.large-hero{style: "background-image: url(#{image});"}
+.large-hero.fixed-image{style: "background-image: url(#{image});"}
   = render 'layouts/header'
   .hero
     .row
@@ -7,7 +7,7 @@
         %h1.hero-font= @main.hero_title
         %h2.intro-arrow-box
           %a.intro-arrow.page-jump{"data-icon" => "b"}
-.strata.bgc-lght-gray.jump-anchor
+.strata.bgc-lghter-gray.jump-anchor
   .row
     .small-12.medium-3.columns
       %div{style: "text-align: center;"}
@@ -22,10 +22,10 @@
 .strata
   .row
     .small-12.columns
-      %h2.c-blue{style: "text-align: center;"} Practice Areas
+      %h2.c-drk-gray{style: "text-align: center;"} Practice Areas
   .row{style: "margin-top: 20px;", "data-equalizer" => "true"}
     .small-12.medium-4.columns
-      %div{style: "border: 1px solid #979797;", "data-equalizer-watch" => "true"}
+      %div.b-light-gray{"data-equalizer-watch" => "true"}
         - image = @main.practice_area_1_image_url(:thumb)
         .practice-area-one{style: "background-image: url(#{image});"}
           .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
@@ -37,7 +37,7 @@
               = link_to @main.practice_area_1_link do
                 %span{"data-icon" => "c"}
     .small-12.medium-4.columns
-      %div{style: "border: 1px solid #979797;", "data-equalizer-watch" => "true"}
+      %div.b-light-gray{"data-equalizer-watch" => "true"}
         - image = @main.practice_area_2_image_url(:thumb)
         .practice-area-one{style: "background-image: url(#{image});"}
           .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
@@ -49,7 +49,7 @@
               = link_to @main.practice_area_2_link do
                 %span{"data-icon" => "c"}
     .small-12.medium-4.columns
-      %div{style: "border: 1px solid #979797;", "data-equalizer-watch" => "true"}
+      %div.b-light-gray{"data-equalizer-watch" => "true"}
         - image = @main.practice_area_3_image_url(:thumb)
         .practice-area-one{style: "background-image: url(#{image});"}
           .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
@@ -60,13 +60,13 @@
             %h4
               = link_to @main.practice_area_3_link do
                 %span{"data-icon" => "c"}
-.strata.bgc-lght-gray
+.strata.bgc-lghter-gray
   .row
     .small-12.columns
-      %h2.c-blue.ta-center Meet the Team
+      %h2.c-drk-gray.ta-center Meet the Team
   .row{style: "margin-top: 20px;"}
     .small-12.columns
-      %div.bgc-white.b-gray{style: "padding: 40px 80px;"}
+      %div.bgc-white.b-light-gray{style: "padding: 40px 80px;"}
         %div.team-carousel.ta-center
           - @employees.each do |employee|
             %div

@@ -1,6 +1,6 @@
 .tbl-striped {
   tr:nth-child(odd) > td {
-    background-color: $light-gray;
+    background-color: $lighter-gray;
   }
   tr:nth-child(even) > td,
   tr:nth-child(even) > tr {
@@ -27,5 +27,5 @@
 }
 
 .strata-striped:nth-child(odd) {
-  background-color: $light-gray;
+  background-color: $lighter-gray;
 }
