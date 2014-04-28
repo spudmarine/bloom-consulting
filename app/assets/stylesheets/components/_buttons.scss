@@ -3,7 +3,6 @@
 	color: $white;
 	background-color: $bloom-orange;
 	text-transform: uppercase;
-	display: block;
 	width: 100%;
 	vertical-align: middle;
 	&:hover {
@@ -12,6 +11,10 @@
 	}
 	@include transition (all 0.2s ease-in-out);
 	@include ie7-inline-block();
+}
+
+.btn-block {
+	display: block;
 }
 
 .btn-c-318 {
@@ -24,7 +27,6 @@
 	border: 1px solid $bloom-orange;
 	background-color: transparent;
 	text-transform: uppercase;
-	display: block;
 	width: 100%;
 	vertical-align: middle;
 	&:hover {
@@ -36,7 +38,11 @@
 }
 
 .btn-m {
-	padding: 10px;
+	padding: 10px 20px;
+	span[data-icon] {
+		position: relative;
+		top: 3px;
+	}
 }
 
 .btn-l {
@@ -51,3 +57,4 @@
 	position: relative;
 	top: 2px;
 }
+
