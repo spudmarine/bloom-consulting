@@ -34,7 +34,7 @@
           %p{style: "padding: 15px 0px;"}= @main.practice_area_1_copy
           %span.bottom-line
             %h4
-              = link_to practiceareas_path, :anchor => "pm" do
+              = link_to practiceareas_path(anchor: "pm"), class: "anchor-link" do
                 %span{"data-icon" => "c"}
     .small-12.medium-4.columns
       %div.b-light-gray{"data-equalizer-watch" => "true"}
@@ -46,7 +46,7 @@
           %p{style: "padding: 15px 0px;"}= @main.practice_area_2_copy
           %span.bottom-line
             %h4
-              = link_to practiceareas_path, :anchor => "mc" do
+              = link_to practiceareas_path(anchor: "mc"), class: "anchor-link" do
                 %span{"data-icon" => "c"}
     .small-12.medium-4.columns
       %div.b-light-gray{"data-equalizer-watch" => "true"}
@@ -58,7 +58,7 @@
           %p{style: "padding: 15px 0px;"}= @main.practice_area_3_copy
           %span.bottom-line
             %h4
-              = link_to practiceareas_path, :anchor => "bi" do
+              = link_to practiceareas_path(anchor: "bi"), class: "anchor-link" do
                 %span{"data-icon" => "c"}
 .strata.bgc-lghter-gray
   .row
