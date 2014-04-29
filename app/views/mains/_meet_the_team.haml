@@ -1,0 +1,18 @@
+.strata.bgc-lghter-gray
+  .row
+    .small-12.columns
+      %h2.c-drk-gray.ta-center Meet the Team
+  .row.m-top-20
+    .small-12.columns
+      %div.bgc-white.b-light-gray.p-x-40.p-y-80
+        %div.team-carousel.ta-center
+          - @employees.each do |employee|
+            %div
+              %img.b-light-gray{src: employee.employee_image.thumb, style: "margin: 0 auto;"}
+              %p.c-orange{style: "padding-top: 12px; margin-bottom: -3px;"}= employee.name
+              %p
+                %small= employee.title
+        %div.btn-c-318.center
+          = link_to team_path, :class => "btn btn-filled btn-l btn-block" do
+            %span.btn-text Meet Us All
+            %span.btn-text.f-right{"data-icon" => "c"}

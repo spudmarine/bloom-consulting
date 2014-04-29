@@ -3,26 +3,26 @@
   = render 'layouts/header'
   .hero
     .row
-      .small-12.medium-10.medium-offset-1.columns
-        %h1{style: "font-size: 48px; color: #fff; text-align: center;"}
+      .small-12.medium-10.medium-offset-1.columns.ta-center
+        %h1.c-white.hero-font
           = @practicearea.hero_title
-        %p{style: "text-align: center; padding-top: 15px; color: #fff; padding-bottom: 80px;"}
+        %p.p-top-15.c-white.p-bottom-80
           = @practicearea.hero_copy
 .strata-small.bgc-lghter-gray.b-bottom-light-gray.w-100.z-999{"data-magellan-expedition" => "fixed"}
   .row
     .small-12.medium-9.columns
-      %h6.target-jump{style: "display: inline-block; padding-left: 5px; line-height: 42px; margin-bottom: 0px;", "data-target" => "pm"}
+      %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "pm"}
         %a Project Management
-      %h6{style: "display: inline-block; padding-left: 5px; color: #ddd; line-height: 42px; margin-bottom: 0px;"} &#124;
-      %h6.target-jump{style: "display: inline-block; padding-left: 5px; line-height: 42px; margin-bottom: 0px;", "data-target" => "mc"}
+      %h6.d-inline-block.p-left-5.c-lght-gray.lh-btn-m.m-bottom-0 &#124;
+      %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "mc"}
         %a Management Consulting
-      %h6{style: "display: inline-block; padding-left: 5px; color: #ddd; line-height: 42px; margin-bottom: 0px;"} &#124;
-      %h6.target-jump{style: "display: inline-block; line-height: 42px; margin-bottom: 0px;", "data-target" => "bi"}
+      %h6.d-inline-block.p-left-5.c-lght-gray.lh-btn-m.m-bottom-0 &#124;
+      %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "bi"}
         %a Business Intelligence
     .small-12.medium-3.columns
-      =link_to contact_path, class: "btn-empty btn-m btn-block" do
+      = link_to contact_path, class: "btn btn-empty btn-m btn-block" do
         %span.btn-text Contact Us
-        %span.btn-text{ style: "float: right;", "data-icon" => "c"}
+        %span.btn-text.f-right{"data-icon" => "c"}
 .strata#pm
   .row
     .small-12.medium-5.columns

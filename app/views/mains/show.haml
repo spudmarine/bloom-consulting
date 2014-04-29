@@ -7,87 +7,9 @@
         %h1.hero-font= @main.hero_title
         %h2.intro-arrow-box
           %a.intro-arrow.page-jump{"data-icon" => "b"}
-.strata.bgc-lghter-gray.jump-anchor
-  .row
-    .small-12.medium-3.columns
-      %div{style: "text-align: center;"}
-        = image_tag @main.stratum_1_image_url(:thumb).to_s, class: "circle-thumb b-huskies"
-    .small-12.medium-9.columns
-      %h4{style: "color: #372557;"}= @main.stratum_1_title
-      %p{style: "color: #372557; padding-top: 10px;"}= @main.stratum_1_copy
-      %h5
-        = link_to @main.stratum_1_link do
-          = @main.stratum_1_cta
-          %span.h5-icon{ "data-icon" => "c"}
-.strata
-  .row
-    .small-12.columns
-      %h2.c-drk-gray{style: "text-align: center;"} Practice Areas
-  .row{style: "margin-top: 20px;", "data-equalizer" => "true"}
-    .small-12.medium-4.columns
-      %div.b-light-gray{"data-equalizer-watch" => "true"}
-        - image = @main.practice_area_1_image_url(:thumb)
-        .practice-area-one{style: "background-image: url(#{image});"}
-          .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
-        %div{style: "padding: 20px; text-align: center;"}
-          %h5.c-drk-gray= @main.practice_area_1_title
-          %p{style: "padding: 15px 0px;"}= @main.practice_area_1_copy
-          %span.bottom-line
-            %h4
-              = link_to practiceareas_path(anchor: "pm"), class: "anchor-link" do
-                %span{"data-icon" => "c"}
-    .small-12.medium-4.columns
-      %div.b-light-gray{"data-equalizer-watch" => "true"}
-        - image = @main.practice_area_2_image_url(:thumb)
-        .practice-area-one{style: "background-image: url(#{image});"}
-          .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
-        %div{style: "padding: 20px; text-align: center;"}
-          %h5.c-drk-gray= @main.practice_area_2_title
-          %p{style: "padding: 15px 0px;"}= @main.practice_area_2_copy
-          %span.bottom-line
-            %h4
-              = link_to practiceareas_path(anchor: "mc"), class: "anchor-link" do
-                %span{"data-icon" => "c"}
-    .small-12.medium-4.columns
-      %div.b-light-gray{"data-equalizer-watch" => "true"}
-        - image = @main.practice_area_3_image_url(:thumb)
-        .practice-area-one{style: "background-image: url(#{image});"}
-          .blue-overlay{style: "width: 100%; height: 100%; background-color: rgba(31,73,125,0.4);"}
-        %div{style: "padding: 20px; text-align: center;"}
-          %h5.c-drk-gray= @main.practice_area_3_title
-          %p{style: "padding: 15px 0px;"}= @main.practice_area_3_copy
-          %span.bottom-line
-            %h4
-              = link_to practiceareas_path(anchor: "bi"), class: "anchor-link" do
-                %span{"data-icon" => "c"}
-.strata.bgc-lghter-gray
-  .row
-    .small-12.columns
-      %h2.c-drk-gray.ta-center Meet the Team
-  .row{style: "margin-top: 20px;"}
-    .small-12.columns
-      %div.bgc-white.b-light-gray{style: "padding: 40px 80px;"}
-        %div.team-carousel.ta-center
-          - @employees.each do |employee|
-            %div
-              %img{src: employee.employee_image.thumb, style: "margin: 0 auto;"}
-              %p.c-orange{style: "padding-top: 12px; margin-bottom: -3px;"}= employee.name
-              %p
-                %small= employee.title
-        %div.btn-c-318{style: "margin: 0 auto;"}
-          = link_to team_path, :class => "btn-filled btn-l btn-block" do
-            %span.btn-text Meet Us All
-            %span.btn-text{style: "float: right;", "data-icon" => "c"}
-.strata.bgc-orange
-  .row
-    .small-12.medium-3.columns
-      %div{style: "text-align: center;"}
-        = image_tag @main.stratum_2_image_url(:thumb).to_s, class: "b-bloom-gray"
-    .small-12.medium-9.columns
-      %h4.c-white= @main.stratum_2_title
-      %p.c-white{style: "padding-top: 10px;"}= @main.stratum_2_copy
-      %h5
-        = link_to @main.stratum_2_link, :class => "link-white" do
-          = @main.stratum_2_cta
-          %span.h5-icon{ "data-icon" => "c"}
+
+= render 'top_announcement'
+= render 'practice_areas'
+= render 'meet_the_team'
+= render 'hiring_announcement'
 

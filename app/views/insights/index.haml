@@ -1,7 +1,7 @@
 = render 'layouts/header'
 
 .strata-small
-  .row{style: "padding-top: 30px;"}
+  .row.p-top-30
     .small-12.columns
       %h1.c-drk-gray Insights
 - insights = Insight.all
@@ -17,9 +17,9 @@
       .small-12.medium-8.columns
         %p= insight.blurb
         - if insight.article.url.present?
-          %div{style: "padding-top: 20px;"}
-            = link_to insight.article.url, class: "btn-empty btn-m ta-centered", :target => "_Blank" do
-              %span.btn-text{ style: "padding-right: 5px;", "data-icon" => "a"}
+          %div.p-top-20
+            = link_to insight.article.url, class: "btn btn-empty btn-m ta-center", :target => "_Blank" do
+              %span.btn-text.p-right-5{"data-icon" => "a"}
               - if insight.article.url.end_with?(".ppt", ".pptx")
                 %span.btn-text Download Presentation
               - else
