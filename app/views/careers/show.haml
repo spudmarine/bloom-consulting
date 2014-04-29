@@ -24,8 +24,8 @@
             %td.job-detail= job.location
             %td.job-detail= raw job.description
             %td.job-link
-              %a 
-                = link_to "Position Details", job_path
+              = link_to job_path(job) do
+                Position Details
                 %span
                   %small.p-left-5{"data-icon" => "k"}
 .strata.bgc-lghter-gray

@@ -1,0 +1,33 @@
+= render 'layouts/header'
+
+.strata
+  .row.p-x-20
+    .small-12.medium-3.columns
+      = link_to careers_path, class: "lh-h1" do 
+        %span.m-right-5{"data-icon" => "d"}
+        Return to Open Positions
+    .small-12.medium-9.columns
+      %h1.c-drk-gray= @job.title
+  .row.p-x-10
+    .small-12.medium-3.columns
+      %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"} location:
+    .small-12.medium-9.columns
+      %p= @job.location
+  .row.p-x-10
+    .small-12.medium-3.columns
+      %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"} description:
+    .small-12.medium-9.columns
+      %p= raw @job.description
+  .row.p-x-10
+    .small-12.medium-3.columns
+      %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"} responsibilities:
+    .small-12.medium-9.columns
+      %p= raw @job.responsibilities
+.strata.bgc-lghter-gray
+  .row
+    .small-12.medium-3.columns
+      %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"} apply now:
+    .small-12.medium-9.columns
+      %p If you think this position sounds right for you, send us a copy of your résumé and a cover letter to the following email address:
+      .m-top-10
+        = link_to "recruiting@bloomconsultinggroup.com", "mailto:recruiting@bloomconsultinggroup.com?subject=RE: #{@job.title} Position"
