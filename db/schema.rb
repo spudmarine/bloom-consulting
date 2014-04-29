@@ -112,11 +112,24 @@ ActiveRecord::Schema.define(version: 20140429170638) do
 
   create_table "jobs", force: true do |t|
     t.string   "title"
-    t.text     "responsibilities"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "location"
     t.text     "description"
+    t.string   "area1_title"
+    t.text     "area1_copy"
+    t.string   "area2_title"
+    t.text     "area2_copy"
+    t.string   "area3_title"
+    t.text     "area3_copy"
+    t.string   "area4_title"
+    t.text     "area4_copy"
+    t.string   "area5_title"
+    t.text     "area5_copy"
+    t.string   "area6_title"
+    t.text     "area6_copy"
+    t.string   "area7_title"
+    t.text     "area7_copy"
   end
 
   create_table "mains", force: true do |t|
