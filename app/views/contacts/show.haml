@@ -1,27 +1,27 @@
 = render 'layouts/header'
 
 .strata-small
-  .row{style: "padding-top: 30px;"}
+  .row.p-top-30
     .small-12.columns
       %h1.c-drk-gray Contact Us
-  .row{style: "padding-top: 20px;"}
+  .row.p-top-20
     .small-12.medium-6.columns
       %iframe.b-gray{src: "http://www.bing.com/maps/embed/viewer.aspx?v=3&cp=47.672935~-122.123372&lvl=16&w=500&h=400&sty=r&typ=d&pp=~~47.672285~-122.123587&ps=&dir=0&mkt=en-us&src=SHELL&form=BMEMJS", width: "100%", height: "300", frameborder: "0"}
     .small-12.medium-6.columns
-      .row.bgc-lghter-gray{style: "padding: 20px;"}
+      .row.bgc-lghter-gray.p-20
         .small-1.columns
-          %p.c-drk-gray.ta-centered{"data-icon" => "e"}
+          %p.c-drk-gray.ta-center{"data-icon" => "e"}
         .small-11.columns
           %p= @contact.address
           %a{style: "margin-top: 10px;", href: "http://www.bing.com/maps/?cp=47.672935~-122.123372&sty=r&lvl=16&rtp=~pos.47.672935_-122.123372____&mm_embed=dir", target: "_blank"} Get Directions
-      .row{style: "padding: 20px;"}
+      .row.p-20
         .small-1.columns
-          %p.c-drk-gray.ta-centered{"data-icon" => "g"}
+          %p.c-drk-gray.ta-center{"data-icon" => "g"}
         .small-11.columns
           %p= @contact.phone
-      .row.bgc-lghter-gray{style: "padding: 20px;"}
+      .row.bgc-lghter-gray.p-20
         .small-1.columns
-          %p.c-drk-gray.ta-centered{"data-icon" => "f"}
+          %p.c-drk-gray.ta-center{"data-icon" => "f"}
         .small-11.columns
           %a{href: "mailto:" + @contact.email}= @contact.email
 

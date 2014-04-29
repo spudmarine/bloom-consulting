@@ -4,15 +4,15 @@
   .hero
     .row
       .small-12.medium-10.medium-offset-1.columns
-        %h1{style: "font-size: 48px; color: #fff; text-align: center;"}
+        %h1.ta-center.c-white.hero-font
           = @career.hero_title
-        %p{style: "text-align: center; padding-top: 15px; color: #fff; padding-bottom: 80px;"}
+        %p.ta-center.p-top-15.c-white.p-bottom-80
           = @career.hero_copy
 .strata
   .row
     .small-12.columns
       %h3.c-drk-gray= @career.intro_title
-      %p{style: "padding-top: 10px;"}
+      %p.p-top-10
         = @career.intro_copy
   .row
     - jobs = Job.all
@@ -27,13 +27,13 @@
               %a 
                 = link_to "Position Details", job_path
                 %span
-                  %small{style: "padding-left: 5px;", "data-icon" => "k"}
+                  %small.p-left-5{"data-icon" => "k"}
 .strata.bgc-lghter-gray
   .row
     .small-12.medium-9.columns
       %h6.c-drk-gray= @career.cta_title
-      %p{style: "padding-top: 5px;"}= @career.cta_copy
+      %p.p-top-5= @career.cta_copy
     .small-12.medium-3.columns
-      = link_to contact_path, :class => "btn-empty btn-m btn-block" do
+      = link_to contact_path, :class => "btn btn-empty btn-m btn-block" do
         %span.btn-text Contact Us
-        %span.btn-text{ style: "float: right;", "data-icon" => "c"}
+        %span.btn-text.f-right{"data-icon" => "c"}

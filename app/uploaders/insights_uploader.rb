@@ -27,6 +27,7 @@ class InsightsUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]
+  process :quality => [70]
   #
   # def scale(width, height)
   #   # do something

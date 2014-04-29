@@ -1,4 +1,4 @@
-@each $val in  5, 10, 15, 20, 25, 30, 40, 50, 60 {
+@each $val in  0, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80 {
 
 	// Padding
 	.p-#{$val}, %p-#{$val} {
@@ -18,6 +18,16 @@
 	}
 
 	.p-left-#{$val}, %p-left-#{$val} {
+		padding-left: #{$val}px;
+	}
+
+	.p-x-#{$val}, %p-x-#{$val} {
+		padding-top: #{$val}px;
+		padding-bottom: #{$val}px;
+	}
+
+	.p-y-#{$val}, %p-y-#{$val} {
+		padding-right: #{$val}px;
 		padding-left: #{$val}px;
 	}
 
@@ -42,4 +52,18 @@
 		margin-left: #{$val}px;
 	}
 
+	.m-x-#{$val}, %m-x-#{$val} {
+		margin-top: #{$val}px;
+		margin-bottom: #{$val}px;
+	}
+
+	.m-y-#{$val}, %m-y-#{$val} {
+		margin-right: #{$val}px;
+		margin-left: #{$val}px;
+	}
+
+}
+
+.center {
+	margin: 0 auto;
 }
