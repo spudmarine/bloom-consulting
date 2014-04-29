@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :area1_copy %><br>
-    <%= f.text_area :area1_copy %>
+    <%= f.text_area :area1_copy, :class => "tinymce", :id => "editor", :rows => 30, :cols => 80 %>
   </div>
   <div class="field">
     <%= f.label :area2_title %><br>
@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :area2_copy %><br>
-    <%= f.text_area :area2_copy %>
+    <%= f.text_area :area2_copy, :class => "tinymce", :id => "editor", :rows => 30, :cols => 80 %>
   </div>
   <div class="field">
     <%= f.label :area3_title %><br>
@@ -45,9 +45,12 @@
   </div>
   <div class="field">
     <%= f.label :area3_copy %><br>
-    <%= f.text_area :area3_copy %>
+    <%= f.text_area :area3_copy, :class => "tinymce", :id => "editor", :rows => 30, :cols => 80 %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<%= tinymce %>
+
