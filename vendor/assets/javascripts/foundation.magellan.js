@@ -95,10 +95,12 @@
             placeholder.attr(self.add_namespace('data-magellan-expedition-clone'),'');
             expedition.before(placeholder);
           }
-          expedition.css({position:'fixed', top: 0, width: "100%"});
+          expedition.removeClass("p-relative");
+          expedition.addClass("w-100 z-999 p-fixed t-0");
         } else {
           expedition.prev('[' + self.add_namespace('data-magellan-expedition-clone') + ']').remove();
-          expedition.attr('style','');
+          expedition.removeClass("w-100 z-999 p-fixed t-0");
+          expedition.addClass("p-relative");
         }
       });
     },
