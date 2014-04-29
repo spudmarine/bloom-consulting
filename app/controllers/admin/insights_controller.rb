@@ -69,6 +69,6 @@ class Admin::InsightsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def insight_params
-      params.require(:insight).permit(:title, :author, :blurb, :article)
+      params.require(:insight).permit(:title, :author, :blurb, :article, :projectmanagement, :businessconsulting, :businessintelligence)
     end
 end
