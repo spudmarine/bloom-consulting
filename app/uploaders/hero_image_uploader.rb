@@ -4,7 +4,7 @@ class HeroImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::Processing::RMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :fog
@@ -26,16 +26,17 @@ class HeroImageUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]
-  process :quality => [70]
+  process quality: 50
   #
   # def scale(width, height)
   #   # do something
   # end
 
   # Create different versions of your uploaded files:
-    version :thumb do
-      process :resize_to_limit => [800, 800]
-    end
+  version :thumb do
+    process :resize_to_fill => [800, 800]
+    process quality: 50
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
