@@ -18,11 +18,48 @@
       %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"} description:
     .small-12.medium-9.columns
       %p= raw @job.description
-  .row.p-x-10
-    .small-12.medium-3.columns
-      %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"} responsibilities:
-    .small-12.medium-9.columns
-      %p= raw @job.responsibilities
+  - if @job.area1_title.present?
+    .row.p-x-10
+      .small-12.medium-3.columns
+        %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"}= @job.area1_title + ":"
+      .small-12.medium-9.columns
+        = raw @job.area1_copy
+  - if @job.area2_title.present?
+    .row.p-x-10
+      .small-12.medium-3.columns
+        %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"}= @job.area2_title + ":"
+      .small-12.medium-9.columns
+        = raw @job.area2_copy
+  - if @job.area3_title.present?
+    .row.p-x-10
+      .small-12.medium-3.columns
+        %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"}= @job.area3_title + ":"
+      .small-12.medium-9.columns
+        = raw @job.area3_copy
+  - if @job.area4_title.present?
+    .row.p-x-10
+      .small-12.medium-3.columns
+        %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"}= @job.area4_title + ":"
+      .small-12.medium-9.columns
+        = raw @job.area4_copy
+  - if @job.area5_title.present?
+    .row.p-x-10
+      .small-12.medium-3.columns
+        %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"}= @job.area5_title + ":"
+      .small-12.medium-9.columns
+        = raw @job.area5_copy
+  - if @job.area6_title.present?
+    .row.p-x-10
+      .small-12.medium-3.columns
+        %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"}= @job.area6_title + ":"
+      .small-12.medium-9.columns
+        = raw @job.area6_copy
+  - if @job.area7_title.present?
+    .row.p-x-10
+      .small-12.medium-3.columns
+        %h6.c-drk-gray{style: "text-transform: uppercase; text-align: right;"}= @job.area7_title + ":"
+      .small-12.medium-9.columns
+        = raw @job.area7_copy
 .strata.bgc-lghter-gray
   .row
     .small-12.medium-3.columns
