@@ -28,20 +28,7 @@
                 Position Details
                 %span
                   %small.p-left-5{"data-icon" => "k"}
-- mains = Main.all
-.strata.bgc-lghter-gray.jump-anchor
-  - mains.each do |main|
-    .row
-      .small-12.medium-3.columns
-        %div.ta-center
-          = image_tag main.stratum_1_image_url(:thumb).to_s, class: "circle-thumb b-huskies"
-      .small-12.medium-9.columns
-        %h4.c-huskies= main.stratum_1_title
-        %p.c-huskies.p-top-10= main.stratum_1_copy
-        %h5
-          = link_to main.stratum_1_link do
-            = main.stratum_1_cta
-            %span.h5-icon{ "data-icon" => "c"}
+= render 'mains/top_announcement'
 .strata
   .row
     .small-12.medium-9.columns
