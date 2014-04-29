@@ -19,7 +19,6 @@
         <td><%= job.title %></td>
         <td><%= job.location %></td>
         <td><%= job.description %></td>
-        <td><%= raw job.responsibilities %></td>
         <td><%= link_to 'Edit', edit_admin_job_path(job) %></td>
         <td><%= link_to 'Delete', admin_job_path(job), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
