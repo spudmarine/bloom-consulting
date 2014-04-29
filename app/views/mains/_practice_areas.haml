@@ -4,38 +4,38 @@
       %h2.c-drk-gray.ta-center Practice Areas
   .row.m-top-20{"data-equalizer" => "true"}
     .small-12.medium-4.columns
-      %div.b-light-gray{"data-equalizer-watch" => "true"}
-        - image = @main.practice_area_1_image_url(:thumb)
-        .practice-area-one{style: "background-image: url(#{image});"}
-          .blue-overlay
-        %div.p-20.ta-center
-          %h5.c-drk-gray= @main.practice_area_1_title
-          %p.p-x-15= @main.practice_area_1_copy
-          %span.bottom-line
-            %h4
-              = link_to practiceareas_path(anchor: "pm"), class: "anchor-link" do
-                %span{"data-icon" => "c"}
+      = link_to practiceareas_path(anchor: "pm"), class: "anchor-link" do
+        %div.b-light-gray{"data-equalizer-watch" => "true"}
+          - image = @main.practice_area_1_image_url(:thumb)
+          .practice-area-one{style: "background-image: url(#{image});"}
+            .blue-overlay
+          %div.p-20.ta-center
+            %h5.c-drk-gray= @main.practice_area_1_title
+            %p.p-x-15= @main.practice_area_1_copy
+            %span.bottom-line
+              %h4
+                %span.c-orange{"data-icon" => "c"}
     .small-12.medium-4.columns
-      %div.b-light-gray{"data-equalizer-watch" => "true"}
-        - image = @main.practice_area_2_image_url(:thumb)
-        .practice-area-one{style: "background-image: url(#{image});"}
-          .blue-overlay
-        %div.p-20.ta-center
-          %h5.c-drk-gray= @main.practice_area_2_title
-          %p.p-x-15= @main.practice_area_2_copy
-          %span.bottom-line
-            %h4
-              = link_to practiceareas_path(anchor: "mc"), class: "anchor-link" do
-                %span{"data-icon" => "c"}
+      = link_to practiceareas_path(anchor: "mc"), class: "anchor-link" do
+        %div.b-light-gray{"data-equalizer-watch" => "true"}
+          - image = @main.practice_area_2_image_url(:thumb)
+          .practice-area-one{style: "background-image: url(#{image});"}
+            .blue-overlay
+          %div.p-20.ta-center
+            %h5.c-drk-gray= @main.practice_area_2_title
+            %p.p-x-15= @main.practice_area_2_copy
+            %span.bottom-line
+              %h4
+                %span.c-orange{"data-icon" => "c"}
     .small-12.medium-4.columns
-      %div.b-light-gray{"data-equalizer-watch" => "true"}
-        - image = @main.practice_area_3_image_url(:thumb)
-        .practice-area-one{style: "background-image: url(#{image});"}
-          .blue-overlay
-        %div.p-20.ta-center
-          %h5.c-drk-gray= @main.practice_area_3_title
-          %p.p-x-15= @main.practice_area_3_copy
-          %span.bottom-line
-            %h4
-              = link_to practiceareas_path(anchor: "bi"), class: "anchor-link" do
-                %span{"data-icon" => "c"}
+      = link_to practiceareas_path(anchor: "bi"), class: "anchor-link" do
+        %div.b-light-gray{"data-equalizer-watch" => "true"}
+          - image = @main.practice_area_3_image_url(:thumb)
+          .practice-area-one{style: "background-image: url(#{image});"}
+            .blue-overlay
+          %div.p-20.ta-center
+            %h5.c-drk-gray= @main.practice_area_3_title
+            %p.p-x-15= @main.practice_area_3_copy
+            %span.bottom-line
+              %h4
+                %span.c-orange{"data-icon" => "c"}

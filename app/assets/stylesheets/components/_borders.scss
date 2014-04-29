@@ -1,3 +1,7 @@
+[class*='b-'] {
+  @include transition(all 0.1s linear);
+}
+
 @each $side in left, right, top, bottom {
   @each $color in $bloom-colors {
     .b-#{$side}-#{nth($color, 1)} {
@@ -21,3 +25,9 @@
 }
 
 .b-huskies { border: 1px solid $huskies; }
+
+a:hover {
+  [class*='b-'] {
+    border-color: $base-link-color;
+  }
+}
