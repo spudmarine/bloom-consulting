@@ -4,3 +4,16 @@
 	50%  {top:8px;}
 	100% {top:0px;}
 }
+
+@include keyframes(shake) {
+  0%   {transform: rotate(0);}
+  25%  {transform: rotate(10deg);}
+  50%  {transform: rotate(0);}
+  75%  {transform: rotate(-10deg);}
+  100% {transform: rotate(0);}
+  0%   {-webkit-transform: rotate(0);}
+  25%  {-webkit-transform: rotate(10deg);}
+  50%  {-webkit-transform: rotate(0);}
+  75%  {-webkit-transform: rotate(-10deg);}
+  100% {-webkit-transform: rotate(0);}
+}
