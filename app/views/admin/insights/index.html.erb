@@ -6,7 +6,6 @@
       <th>Title</th>
       <th>Author</th>
       <th>Blurb</th>
-      <th>Article</th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,7 +18,6 @@
         <td><%= insight.title %></td>
         <td><%= insight.author %></td>
         <td><%= insight.blurb %></td>
-        <td><%= insight.article %></td>
         <td><%= link_to 'Edit', edit_admin_insight_path(insight) %></td>
         <td><%= link_to 'Delete', admin_insight_path(insight), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
