@@ -6,6 +6,7 @@ class CareersController < ApplicationController
   def index
     @careers = Career.all
     @jobs = Job.all
+    @mains = Main.all
   end
 
   # GET /careers/1

@@ -28,7 +28,21 @@
                 Position Details
                 %span
                   %small.p-left-5{"data-icon" => "k"}
-.strata.bgc-lghter-gray
+- mains = Main.all
+  .strata.bgc-lghter-gray.jump-anchor
+    .row
+      .small-12.medium-3.columns
+        -mains.each do |main|
+        %div.ta-center
+          = image_tag main.stratum_1_image_url(:thumb).to_s, class: "circle-thumb b-huskies"
+      .small-12.medium-9.columns
+        %h4.c-huskies= main.stratum_1_title
+        %p.c-huskies.p-top-10= main.stratum_1_copy
+        %h5
+          = link_to main.stratum_1_link do
+            = main.stratum_1_cta
+            %span.h5-icon{ "data-icon" => "c"}
+.strata
   .row
     .small-12.medium-9.columns
       %h6.c-drk-gray= @career.cta_title
