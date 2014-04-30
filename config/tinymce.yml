@@ -5,6 +5,22 @@ plugins: [
         "searchreplace visualblocks fullscreen",
         "insertdatetime table contextmenu paste wordcount media code"
 ]
+style_formats:
+  - title: 'Bloom Blue Text'
+    inline : 'span'
+    classes : 'c-blue'
+  - title: 'Bloom Orange Text'
+    inline : 'span'
+    classes : 'c-orange'
+  - title: 'Bloom Dark Blue Text'
+    inline : 'span'
+    classes : 'c-drk-blue'
+  - title: 'Bloom Green Text'
+    inline : 'span'
+    classes : 'c-green'
+  - title: 'Huskies Purple Text'
+    inline : 'span'
+    classes: 'c-huskies'
 toolbar1: "undo redo | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | link image media | code"
 browser_spellcheck : true 
 relative_url: true 
