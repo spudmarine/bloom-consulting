@@ -7,6 +7,7 @@ class MainsController < ApplicationController
 
   def show
     @employees = Employee.all
+    @quotes = Quote.all
   end
 
   private
