@@ -8,37 +8,36 @@
           = @practicearea.hero_title
         %p.p-top-15.c-white.p-bottom-80
           = @practicearea.hero_copy
-%div{style: "z-index: 1000;"}
-  .strata-small.bgc-lghter-gray.b-bottom-light-gray.w-100.p-relative{"data-magellan-expedition" => "fixed"}
-    .row
-      .small-12.medium-9.columns
-        %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "pm"}
-          %a= @practicearea.pa1_title
-        %h6.d-inline-block.p-left-5.c-lght-gray.lh-btn-m.m-bottom-0 &#124;
-        %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "mc"}
-          %a= @practicearea.pa2_title
-        %h6.d-inline-block.p-left-5.c-lght-gray.lh-btn-m.m-bottom-0 &#124;
-        %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "bi"}
-          %a= @practicearea.pa3_title
-      .small-12.medium-3.columns
-        = link_to contact_path, class: "btn btn-empty btn-m btn-block" do
-          %span.btn-text Contact Us
-          %span.btn-text.f-right{"data-icon" => "c"}
-.strata#pm
+.strata-small.bgc-lghter-gray.b-bottom-light-gray.w-100.p-relative{"data-magellan-expedition" => "fixed"}
+  .row
+    .small-12.medium-9.columns
+      %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "pm"}
+        %a= @practicearea.pa1_title
+      %h6.d-inline-block.p-left-5.c-lght-gray.lh-btn-m.m-bottom-0 &#124;
+      %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "mc"}
+        %a= @practicearea.pa2_title
+      %h6.d-inline-block.p-left-5.c-lght-gray.lh-btn-m.m-bottom-0 &#124;
+      %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "bi"}
+        %a= @practicearea.pa3_title
+    .small-12.medium-3.columns
+      = link_to contact_path, class: "btn btn-empty btn-m btn-block" do
+        %span.btn-text Contact Us
+        %span.btn-text.f-right{"data-icon" => "c"}
+.strata#pm{style: "z-index: 800;"}
   .row
     .small-12.medium-5.columns
       %h3.c-drk-gray= @practicearea.pa1_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa1_copy
-%hr
-.strata#mc
+%hr{style: "z-index: 800;"}
+.strata#mc{style: "z-index: 800;"}
   .row
     .small-12.medium-5.columns
       %h3.c-drk-gray= @practicearea.pa2_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa2_copy
-%hr
-.strata#bi
+%hr{style: "z-index: 800;"}
+.strata#bi{style: "z-index: 800;"}
   .row
     .small-12.medium-5.columns
       %h3.c-drk-gray= @practicearea.pa3_title
