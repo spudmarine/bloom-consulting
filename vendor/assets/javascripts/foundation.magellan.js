@@ -86,7 +86,7 @@
             top_offset = expedition.data('magellan-top-offset');
         var isIE = /*@cc_on!@*/false || !!document.documentMode; // At least IE6
 
-        if (isIE === false) {
+        if (!document.all) {
           if (window_top_offset >= top_offset) {
             // Placeholder allows height calculations to be consistent even when
             // appearing to switch between fixed/non-fixed placement
