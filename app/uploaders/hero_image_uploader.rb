@@ -34,7 +34,7 @@ class HeroImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_to_fill => [2800, 700]
+    process :resize_to_fill => [2800, 1000]
     process quality: 70
   end
 
