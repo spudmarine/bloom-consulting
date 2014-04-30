@@ -28,4 +28,8 @@
       .small-12.medium-5.columns
         %h3.c-blue= @about.area3_title
       .small-12.medium-7.columns
-        %p= raw @about.area3_copy
+        - quotes = Quote.all
+          - quotes.each do |quote|
+          %p= quote.title
+          %p= raw quote.quote
+          %p= quote.credit
