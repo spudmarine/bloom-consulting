@@ -1,0 +1,18 @@
+.strata.bgc-lghter-gray
+  .row
+    .small-12.columns
+      %h2.c-drk-gray.ta-center What Business Leaders are Saying
+  .row.m-top-20
+    .small-12.columns
+      - @quotes.each do |quote|
+        %div
+          %p.c-orange{style: "padding-top: 12px; margin-bottom: -3px;"}= quote.title
+          %p
+            %small= raw quote.quote
+          %p
+            %em
+              %small= quote.credit
+      %div.btn-c-318.center
+        = link_to about_path, :class => "btn btn-filled btn-l btn-block" do
+          %span.btn-text Read more
+          %span.btn-text.f-right{"data-icon" => "c"}
