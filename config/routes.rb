@@ -22,6 +22,7 @@ BloomConsulting::Application.routes.draw do
   resources :employees
   resources :contacts
   resources :insights
+  resources :quotes
 
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
@@ -37,6 +38,7 @@ BloomConsulting::Application.routes.draw do
     resources :abouts
     resources :contacts
     resources :insights
+    resources :quotes
 
   end
 
