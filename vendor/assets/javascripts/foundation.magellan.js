@@ -84,23 +84,26 @@
       $('[' + this.attr_name() + '=fixed]', self.scope).each(function() {
         var expedition = $(this),
             top_offset = expedition.data('magellan-top-offset');
+        var isIE = /*@cc_on!@*/false || !!document.documentMode; // At least IE6
 
-        if (window_top_offset >= top_offset) {
-          // Placeholder allows height calculations to be consistent even when
-          // appearing to switch between fixed/non-fixed placement
-          var placeholder = expedition.prev('[' + self.add_namespace('data-magellan-expedition-clone') + ']');
-          if (placeholder.length === 0) {
-            placeholder = expedition.clone();
-            placeholder.removeAttr(self.attr_name());
-            placeholder.attr(self.add_namespace('data-magellan-expedition-clone'),'');
-            expedition.before(placeholder);
+        if (isIE === false) {
+          if (window_top_offset >= top_offset) {
+            // Placeholder allows height calculations to be consistent even when
+            // appearing to switch between fixed/non-fixed placement
+            var placeholder = expedition.prev('[' + self.add_namespace('data-magellan-expedition-clone') + ']');
+            if (placeholder.length === 0) {
+              placeholder = expedition.clone();
+              placeholder.removeAttr(self.attr_name());
+              placeholder.attr(self.add_namespace('data-magellan-expedition-clone'),'');
+              expedition.before(placeholder);
+            }
+            expedition.removeClass("p-relative");
+            expedition.addClass("w-100 z-999 p-fixed t-0");
+          } else {
+            expedition.prev('[' + self.add_namespace('data-magellan-expedition-clone') + ']').remove();
+            expedition.removeClass("w-100 z-999 p-fixed t-0");
+            expedition.addClass("p-relative");
           }
-          expedition.removeClass("p-relative");
-          expedition.addClass("w-100 z-999 p-fixed t-0");
-        } else {
-          expedition.prev('[' + self.add_namespace('data-magellan-expedition-clone') + ']').remove();
-          expedition.removeClass("w-100 z-999 p-fixed t-0");
-          expedition.addClass("p-relative");
         }
       });
     },
