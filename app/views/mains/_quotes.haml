@@ -4,15 +4,15 @@
       %h2.c-drk-gray.ta-center What Business Leaders are Saying
   .row.m-top-20
     .small-12.columns
-      %div.quote-carousel.ta-center.m-x-30.m-y-60
+      %div.quote-carousel.ta-center.m-top-30.m-bottom-0.m-y-60
         - @quotes.each do |quote|
           %div
             %h6.c-orange= quote.title
-            .f-italics.p-y-50.m-top-20= raw quote.quote
-            %p.m-top-10
+            .p-y-50.m-top-20= raw quote.quote
+            %p.m-top-10.f-italics
               %span -
               = quote.credit
       %div.btn-c-318.center
-        = link_to about_path, :class => "btn btn-filled btn-l btn-block" do
+        = link_to about_path(anchor: "quotes"), :class => "btn btn-filled btn-l btn-block" do
           %span.btn-text Read more
           %span.btn-text.f-right{"data-icon" => "c"}

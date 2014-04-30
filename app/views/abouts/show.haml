@@ -23,6 +23,7 @@
       %p= raw @about.area2_copy
 - if @about.area3_title.present?
   %hr
+  #quotes
   .strata
     .row
       .small-12.medium-5.columns
@@ -30,6 +31,8 @@
       .small-12.medium-7.columns
         - quotes = Quote.all
           - quotes.each do |quote|
-          %p= quote.title
-          %p= raw quote.quote
-          %p= quote.credit
+          %h6= quote.title
+          .m-top-10= raw quote.quote
+          %p.p-bottom-25.p-top-10.f-italics
+            %span -
+            = quote.credit
