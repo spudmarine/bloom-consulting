@@ -1,4 +1,4 @@
-;(function ($, window, document, undefined) {
+;(function ($, window, body, document, undefined) {
   'use strict';
 
   Foundation.libs['magellan-expedition'] = {
@@ -79,7 +79,7 @@
 
     update_expedition_positions : function() {
       var self = this,
-          window_top_offset = $(window).scrollTop();
+          window_top_offset = $(body).scrollTop();
 
       $('[' + this.attr_name() + '=fixed]', self.scope).each(function() {
         var expedition = $(this),
@@ -107,7 +107,7 @@
 
     update_arrivals : function() {
       var self = this,
-          window_top_offset = $(window).scrollTop();
+          window_top_offset = $(body).scrollTop();
 
       $('[' + this.attr_name() + ']', self.scope).each(function() {
         var expedition = $(this),
