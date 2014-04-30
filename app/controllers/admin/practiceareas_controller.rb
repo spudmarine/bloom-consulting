@@ -11,6 +11,7 @@ class Admin::PracticeareasController < ApplicationController
   # GET /practiceareas/1
   # GET /practiceareas/1.json
   def show
+    @insights = Insights.all
   end
 
   # GET /practiceareas/1/edit
