@@ -1,17 +1,17 @@
-.strata.bgc-lghter-gray
+.strata
   .row
     .small-12.columns
       %h2.c-drk-gray.ta-center What Business Leaders are Saying
   .row.m-top-20
     .small-12.columns
-      - @quotes.each do |quote|
-        %div
-          %p.c-orange{style: "padding-top: 12px; margin-bottom: -3px;"}= quote.title
-          %p
-            %small= raw quote.quote
-          %p
-            %em
-              %small= quote.credit
+      %div.quote-carousel.ta-center.m-x-30.m-y-60
+        - @quotes.each do |quote|
+          %div
+            %h6.c-orange= quote.title
+            .f-italics.p-y-50.m-top-20= raw quote.quote
+            %p.m-top-10
+              %span -
+              = quote.credit
       %div.btn-c-318.center
         = link_to about_path, :class => "btn btn-filled btn-l btn-block" do
           %span.btn-text Read more
