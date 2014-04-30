@@ -39,7 +39,7 @@ class EmployeeImageUploader < CarrierWave::Uploader::Base
   end
 
   version :profile do
-    process :resize_to_fill => [168, 168]
+    process :resize_to_fill => [210, 210]
     process quality: 70
   end
 
