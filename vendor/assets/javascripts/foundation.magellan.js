@@ -1,4 +1,4 @@
-;(function ($, window, body, document, undefined) {
+;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs['magellan-expedition'] = {
@@ -53,7 +53,7 @@
             });
         })
         .on('scroll.fndtn.magellan', self.throttle(this.check_for_arrivals.bind(this), settings.throttle_delay))
-        $(window).on('resize.fndtn.magellan', self.throttle(this.set_expedition_position.bind(this), settings.throttle_delay));
+        $(document).on('resize.fndtn.magellan', self.throttle(this.set_expedition_position.bind(this), settings.throttle_delay));
     },
 
     check_for_arrivals : function() {
@@ -79,7 +79,7 @@
 
     update_expedition_positions : function() {
       var self = this,
-          window_top_offset = $(body).scrollTop();
+          window_top_offset = $(document).scrollTop();
 
       $('[' + this.attr_name() + '=fixed]', self.scope).each(function() {
         var expedition = $(this),
@@ -107,7 +107,7 @@
 
     update_arrivals : function() {
       var self = this,
-          window_top_offset = $(body).scrollTop();
+          window_top_offset = $(document).scrollTop();
 
       $('[' + this.attr_name() + ']', self.scope).each(function() {
         var expedition = $(this),
