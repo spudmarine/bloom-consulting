@@ -30,7 +30,7 @@
     .small-12.medium-7.columns
       %p= raw @practicearea.pa1_copy
       - insights = Insight.where(:businessconsulting => true)
-        - if insights.length
+        - if insights.present?
           %p.c-drk-gray.m-top-30
             %em
               = @practicearea.pa1_title
@@ -47,16 +47,17 @@
       %h3.c-drk-gray= @practicearea.pa2_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa2_copy
-      - insights = Insight.all
-        %p.c-drk-gray.m-top-30
-          %em
-            = @practicearea.pa2_title
-            Media:  
-        - insights.each do |insight|
-          - if insight.projectmanagement?
-          = link_to insight.article.url do 
-            %span.m-right-5.p-icon{"data-icon" => "a"}
-            = insight.title
+      - insights = Insight.where(:projectmanagement => true)
+        - if insights.present?
+          %p.c-drk-gray.m-top-30
+            %em
+              = @practicearea.pa2_title
+              Media:
+          - insights.each do |insight|
+            - if insight.projectmanagement?
+            = link_to insight.article.url do 
+              %span.m-right-5.p-icon{"data-icon" => "a"}
+              = insight.title
 %hr{style: "z-index: 800;"}
 .strata#bi{style: "z-index: 800;"}
   .row
@@ -64,13 +65,14 @@
       %h3.c-drk-gray= @practicearea.pa3_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa3_copy
-      - insights = Insight.all
-        %p.c-drk-gray.m-top-30
-          %em
-            = @practicearea.pa3_title
-            Media:
-        - insights.each do |insight|
-          - if insight.businessintelligence?
-          = link_to insight.article.url do 
-            %span.m-right-5.p-icon{"data-icon" => "a"}
-            = insight.title
+      - insights = Insight.where(:businessintelligence => true)
+        - if insights.present?
+          %p.c-drk-gray.m-top-30
+            %em
+              = @practicearea.pa3_title
+              Media:
+          - insights.each do |insight|
+            - if insight.businessintelligence?
+            = link_to insight.article.url do 
+              %span.m-right-5.p-icon{"data-icon" => "a"}
+              = insight.title
