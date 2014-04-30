@@ -29,11 +29,15 @@
       %h3.c-drk-gray= @practicearea.pa1_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa1_copy
-      %p= @practicearea.pa1_title
-      - insights = Insight.all
-        - insights.each do |insight|
-          - if insight.businessconsulting?
-          %p= link_to insight.title, insight.article.url
+      - insights = Insight.where(:businessconsulting => true)
+        - if insights.length
+          %p
+            %em
+              = @practicearea.pa1_title
+              Media:
+            - insights.each do |insight|
+              - if insight.businessconsulting?
+              %p= link_to insight.title, insight.article.url
 %hr{style: "z-index: 800;"}
 .strata#mc{style: "z-index: 800;"}
   .row
@@ -41,20 +45,26 @@
       %h3.c-drk-gray= @practicearea.pa2_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa2_copy
-      %p= @practicearea.pa2_title
       - insights = Insight.all
-        - insights.each do |insight|
-          - if insight.projectmanagement?
-          %p= link_to insight.title, insight.article.url
+        %p
+          %em
+            = @practicearea.pa2_title
+            Media:  
+          - insights.each do |insight|
+            - if insight.projectmanagement?
+            %p= link_to insight.title, insight.article.url
 %hr{style: "z-index: 800;"}
 .strata#bi{style: "z-index: 800;"}
   .row
     .small-12.medium-5.columns
       %h3.c-drk-gray= @practicearea.pa3_title
     .small-12.medium-7.columns
-      = raw @practicearea.pa3_copy
-      %p= @practicearea.pa3_title
+      %p= raw @practicearea.pa3_copy
       - insights = Insight.all
-        - insights.each do |insight|
-          - if insight.businessintelligence?
-          %p= link_to insight.title, insight.article.url
+        %p
+          %em
+            = @practicearea.pa3_title
+            Media:
+          - insights.each do |insight|
+            - if insight.businessintelligence?
+            %p= link_to insight.title, insight.article.url
