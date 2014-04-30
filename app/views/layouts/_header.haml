@@ -4,7 +4,7 @@
       = link_to root_path do
         %img{src: "https://s3-us-west-2.amazonaws.com/bloom-site-images/bloom-logo-small.svg", style: "max-height: 40px;"}
     .small-8.columns
-      %ul{style: "float: right;"}
+      %ul.l-no-style.f-right
         %li.nav-item
           = active_link_to "Practice Areas", practiceareas_path, class: "nav-link", :class_active => 'current'
         %li.nav-item

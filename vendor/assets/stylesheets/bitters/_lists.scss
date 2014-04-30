@@ -16,6 +16,10 @@ ol {
   padding-left: $base-line-height;
 }
 
+.l-no-style {
+  list-style-type: none;
+}
+
 dl {
   line-height: $base-line-height;
   margin-bottom: $base-line-height / 2;
