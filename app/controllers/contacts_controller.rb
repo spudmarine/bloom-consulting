@@ -11,6 +11,7 @@ class ContactsController < ApplicationController
   # GET /contacts/1.json
   def show
     @contact = Contact.find(params[:id])
+    @main = Main.find(params[:id])
   end
 
   private

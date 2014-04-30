@@ -1,5 +1,7 @@
-= render "layouts/header"
-
+- image = @main.hero_image_url
+.strata-mini.fixed-image{style: "background-image: url(#{image});"}
+  = render 'layouts/header'
+  
 .strata-small
   .row.p-top-30
     .small-12.columns
