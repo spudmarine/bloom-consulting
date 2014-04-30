@@ -5,6 +5,7 @@ class InsightsController < ApplicationController
   # GET /insights.json
   def index
     @insights = Insight.all
+    @mains = Main.all
   end
 
   # GET /insights/1
