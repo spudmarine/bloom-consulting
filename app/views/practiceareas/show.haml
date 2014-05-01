@@ -4,7 +4,7 @@
   .hero
     .row
       .small-12.medium-10.medium-offset-1.columns.ta-center
-        %h1.c-white.hero-font
+        %h1.hero-font
           = @practicearea.hero_title
         %p.p-top-15.c-white.p-bottom-80
           = @practicearea.hero_copy
@@ -27,7 +27,7 @@
 .strata{style: "z-index: 800;"}
   .row
     .small-12.medium-5.columns
-      %h3.c-drk-gray= @practicearea.pa1_title
+      %h3.c-blue= @practicearea.pa1_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa1_copy
       - insights = Insight.where(:businessconsulting => true)
@@ -46,7 +46,7 @@
 .strata{style: "z-index: 800;"}
   .row
     .small-12.medium-5.columns
-      %h3.c-drk-gray= @practicearea.pa2_title
+      %h3.c-blue= @practicearea.pa2_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa2_copy
       - insights = Insight.where(:projectmanagement => true)
@@ -65,7 +65,7 @@
 .strata{style: "z-index: 800;"}
   .row
     .small-12.medium-5.columns
-      %h3.c-drk-gray= @practicearea.pa3_title
+      %h3.c-blue= @practicearea.pa3_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa3_copy
       - insights = Insight.where(:businessintelligence => true)
