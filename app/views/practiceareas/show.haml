@@ -30,17 +30,17 @@
       %h3.c-blue= @practicearea.pa1_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa1_copy
-      - insights = Insight.where(:businessconsulting => true)
-        - if insights.present?
+      - success = Success.where(:businessconsulting => true)
+        - if success.present?
           %p.c-drk-gray.m-top-30
             %em
               = @practicearea.pa1_title
               Media:
-          - insights.each do |insight|
-            - if insight.businessconsulting?
-            = link_to insight.article.url do 
+          - success.each do |success|
+            - if success.businessconsulting?
+            = link_to success.article.url do 
               %span.m-right-5.p-icon{"data-icon" => "a"}
-              = insight.title
+              = success.title
 %hr{style: "z-index: 800;"}
 #mc.clear-nav-anchor
 .strata{style: "z-index: 800;"}
@@ -49,17 +49,17 @@
       %h3.c-blue= @practicearea.pa2_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa2_copy
-      - insights = Insight.where(:projectmanagement => true)
-        - if insights.present?
+      - success = Success.where(:projectmanagement => true)
+        - if success.present?
           %p.c-drk-gray.m-top-30
             %em
               = @practicearea.pa2_title
               Media:
-          - insights.each do |insight|
-            - if insight.projectmanagement?
-            = link_to insight.article.url do 
+          - success.each do |success|
+            - if success.projectmanagement?
+            = link_to success.article.url do 
               %span.m-right-5.p-icon{"data-icon" => "a"}
-              = insight.title
+              = success.title
 %hr{style: "z-index: 800;"}
 #bi.clear-nav-anchor
 .strata{style: "z-index: 800;"}
@@ -68,14 +68,14 @@
       %h3.c-blue= @practicearea.pa3_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa3_copy
-      - insights = Insight.where(:businessintelligence => true)
-        - if insights.present?
+      - success = Success.where(:businessintelligence => true)
+        - if success.present?
           %p.c-drk-gray.m-top-30
             %em
               = @practicearea.pa3_title
               Media:
-          - insights.each do |insight|
-            - if insight.businessintelligence?
-            = link_to insight.article.url do 
+          - success.each do |success|
+            - if success.businessintelligence?
+            = link_to success.article.url do 
               %span.m-right-5.p-icon{"data-icon" => "a"}
-              = insight.title
+              = success.title

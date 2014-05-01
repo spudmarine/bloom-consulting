@@ -8,6 +8,18 @@
           = @about.hero_title
         %p.ta-center.p-top-15.c-white.p-bottom-80
           = @about.hero_copy
+.strata-small.bgc-lghter-gray.b-bottom-light-gray.w-100.p-relative{"data-magellan-expedition" => "fixed"}
+  .row
+    .small-12.medium-9.columns
+      %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "co"}
+        %a= @about.area1_title
+      %h6.d-inline-block.p-left-5.c-lght-gray.lh-btn-m.m-bottom-0 &#124;
+      %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "cc"}
+        %a= @about.area2_title
+      %h6.d-inline-block.p-left-5.c-lght-gray.lh-btn-m.m-bottom-0 &#124;
+      %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "quotes"}
+        %a= @about.area3_title
+#co.clear-nav-anchor    
 .strata
   .row
     .small-12.medium-5.columns
@@ -15,6 +27,7 @@
     .small-12.medium-7.columns
       %p= raw @about.area1_copy
 %hr
+#cc.clear-nav-anchor    
 .strata
   .row
     .small-12.medium-5.columns
