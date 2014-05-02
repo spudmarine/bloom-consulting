@@ -24,10 +24,10 @@
           .small-4.columns
             - if employee.linkedin.present?
               %h5
-                %a.f-right.m-left-10{href: "http://" + employee.linkedin, target: "_blank", "data-icon" => "i"}
+                %a.f-right.m-left-10{href: "http://" + employee.linkedin, target: "_blank", "data-icon" => "k"}
             - if employee.twitter.present?
               %h5
-                %a.f-right{href: "http://" + employee.twitter, target: "_blank", "data-icon" => "h"}
+                %a.f-right{href: "http://" + employee.twitter, target: "_blank", "data-icon" => "l"}
         .row
           .small-12.columns
             %p.p-top-10= employee.bio_intro
@@ -35,8 +35,8 @@
               %p.full-bio.m-0= raw employee.bio
             - if employee.bio.present?
               %a.bio-toggle
-                %span.btn-text
+                %span.js-link-text
                 %span.p-left-5
-                  %small.btn-icon{"data-icon" => ""}
+                  %small.p-icon.js-link-icon{"data-icon" => ""}
 
 

@@ -22,7 +22,7 @@
     .small-12.medium-3.columns
       = link_to contact_path, class: "btn btn-empty btn-m btn-block" do
         %span.btn-text Contact Us
-        %span.btn-text.f-right{"data-icon" => "c"}
+        %span.btn-text.f-right{"data-icon" => "p"}
 #pm.clear-nav-anchor    
 .strata{style: "z-index: 800;"}
   .row
@@ -31,16 +31,17 @@
     .small-12.medium-7.columns
       %p= raw @practicearea.pa1_copy
       - success = Success.where(:businessconsulting => true)
-        - if success.present?
-          %p.c-drk-gray.m-top-30
-            %em
-              = @practicearea.pa1_title
-              Media:
+      - if success.present?
+        %h6.c-white.m-top-30.bgc-blue.p-15
+          %span.m-right-10.h5-icon{"data-icon" => "n"}
+          = @practicearea.pa1_title
+          Media
+        %ul.p-top-10
           - success.each do |success|
-            - if success.businessconsulting?
-            = link_to success.article.url do 
-              %span.m-right-5.p-icon{"data-icon" => "a"}
-              = success.title
+            %li.l-no-style.p-x-10
+              = link_to success.article.url do 
+                %span.m-right-5.p-icon{"data-icon" => "c"}
+                = success.title
 %hr{style: "z-index: 800;"}
 #mc.clear-nav-anchor
 .strata{style: "z-index: 800;"}
@@ -50,16 +51,17 @@
     .small-12.medium-7.columns
       %p= raw @practicearea.pa2_copy
       - success = Success.where(:projectmanagement => true)
-        - if success.present?
-          %p.c-drk-gray.m-top-30
-            %em
-              = @practicearea.pa2_title
-              Media:
+      - if success.present?
+        %h6.c-white.m-top-30.bgc-blue.p-15
+          %span.m-right-10.h5-icon{"data-icon" => "n"}
+          = @practicearea.pa2_title
+          Media
+        %ul.p-top-10
           - success.each do |success|
-            - if success.projectmanagement?
-            = link_to success.article.url do 
-              %span.m-right-5.p-icon{"data-icon" => "a"}
-              = success.title
+            %li.l-no-style.p-x-10
+              = link_to success.article.url do 
+                %span.m-right-5.p-icon{"data-icon" => "c"}
+                = success.title
 %hr{style: "z-index: 800;"}
 #bi.clear-nav-anchor
 .strata{style: "z-index: 800;"}
@@ -69,13 +71,14 @@
     .small-12.medium-7.columns
       %p= raw @practicearea.pa3_copy
       - success = Success.where(:businessintelligence => true)
-        - if success.present?
-          %p.c-drk-gray.m-top-30
-            %em
-              = @practicearea.pa3_title
-              Media:
+      - if success.present?
+        %h6.c-white.m-top-30.bgc-blue.p-15
+          %span.m-right-10.h5-icon{"data-icon" => "n"}
+          = @practicearea.pa3_title
+          Media
+        %ul.p-top-10
           - success.each do |success|
-            - if success.businessintelligence?
-            = link_to success.article.url do 
-              %span.m-right-5.p-icon{"data-icon" => "a"}
-              = success.title
+            %li.l-no-style.p-x-10
+              = link_to success.article.url do 
+                %span.m-right-5.p-icon{"data-icon" => "c"}
+                = success.title

@@ -38,13 +38,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.bloom-cloud-download:before {
+.bloom-call-3:before {
   content: "a";
 }
-.bloom-arrow-67:before {
+.bloom-mail-2:before {
   content: "b";
 }
-.bloom-arrow-circle-28:before {
+.bloom-cloud-download:before {
   content: "c";
 }
 .bloom-arrow-2:before {
@@ -53,27 +53,39 @@
 .bloom-marker-1:before {
   content: "e";
 }
-.bloom-mail-2:before {
+.bloom-arrow-39:before {
   content: "f";
 }
-.bloom-call-3:before {
+.bloom-arrow-38:before {
   content: "g";
 }
-.bloom-fontawesome-webfont:before {
+.bloom-arrow-37:before {
   content: "h";
 }
-.bloom-fontawesome-webfont-1:before {
+.bloom-arrow-40:before {
   content: "i";
 }
-.bloom-fontawesome-webfont-2:before {
+.bloom-facebook-circled:before {
   content: "j";
 }
-.bloom-arrow-66:before {
+.bloom-linkedin-circled:before {
   content: "k";
 }
-.bloom-arrow-65:before {
+.bloom-twitter-circled:before {
   content: "l";
 }
-.bloom-arrow-68:before {
+.bloom-arrow-rectangle-18:before {
   content: "m";
+}
+.bloom-files-4:before {
+  content: "n";
+}
+.bloom-arrow-rectangle-14:before {
+  content: "o";
+}
+.bloom-arrow-50:before {
+  content: "p";
+}
+.bloom-arrow-54:before {
+  content: "q";
 }

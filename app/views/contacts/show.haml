@@ -12,23 +12,23 @@
     .small-12.medium-6.columns
       .row.bgc-lghter-gray.p-20
         .small-1.columns
-          %p.c-drk-gray.ta-center{"data-icon" => "e"}
+          %p.ta-center{"data-icon" => "e"}
         .small-11.columns
           %p= @contact.address
           %a{style: "margin-top: 10px;", href: "http://www.bing.com/maps/?cp=47.672935~-122.123372&sty=r&lvl=16&rtp=~pos.47.672935_-122.123372____&mm_embed=dir", target: "_blank"} Get Directions
       .row.p-20
         .small-1.columns
-          %p.c-drk-gray.ta-center{"data-icon" => "g"}
+          %p.ta-center{"data-icon" => "a"}
         .small-11.columns
           %p= @contact.phone
       .row.bgc-lghter-gray.p-20
         .small-1.columns
-          %p.c-drk-gray.ta-center{"data-icon" => "f"}
+          %p.ta-center{"data-icon" => "b"}
         .small-11.columns
           %a{href: "mailto:" + @contact.email}= @contact.email
       .row.p-20
         .small-1.columns
-          %p.c-drk-gray.ta-center{"data-icon" => "a"}
+          %p.ta-center{"data-icon" => "c"}
         .small-11.columns
           %a{ :href => "https://s3-us-west-2.amazonaws.com/bloom-site-images/Bloom_E_Brochure.pdf", :target => "_blank" }
             Download a Bloom Consulting Group Brochure
