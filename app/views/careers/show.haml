@@ -28,20 +28,27 @@
                 Position Details
                 %span
                   %small.p-left-5{"data-icon" => "p"}
-- mains = Main.all
-  .strata.bgc-lghter-gray.jump-anchor
-    .row
-      .small-12.medium-3.columns
-        -mains.each do |main|
-        %div.ta-center
-          = image_tag main.stratum_1_image_url(:thumb).to_s, class: "circle-thumb"
-      .small-12.medium-9.columns
-        %h4.c-drk-gray= main.stratum_1_title
-        %p.c-drk-gray.p-top-10= main.stratum_1_copy
-        %h5
-          = link_to main.stratum_1_link do
-            = main.stratum_1_cta
-            %span.h5-icon{ "data-icon" => "p"}
+.strata
+  .row
+    .small-12.columns
+      %h3.c-blue Upcoming Recruiting Events
+      %p.p-top-10
+        We're going to universities in the area to talk to recent and soon-to-be graduates like you.
+  .row
+    .small-12.columns
+      %table.tbl-striped
+        %tr
+          %td.job-title{style: "width: 35%;"} University of Washington
+          %td{style: "width: 35%;"} Business School Job Fair
+          %td May 8th, 2014
+          %td{style: "text-align: right;"}
+            %a 
+              Event Details
+        %tr
+          %td.job-title Seattle Univsersity
+          %td Business School Job Fair
+          %td May 14th, 2014
+          %td{style: "text-align: right;"}
 .strata
   .row
     .small-12.medium-9.columns

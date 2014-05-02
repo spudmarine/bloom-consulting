@@ -14,6 +14,48 @@
 .bgc-huskies        { background-color: $huskies; }
 
 
+// Patterns
+
+.bg-shattered {
+  background-image: url('shattered-orange.png');
+  background-repeat: repeat;
+}
+
+.bg-gplay {
+  background-image: url('gplaypattern.png');
+  background-repeat: repeat;
+}
+
+.bg-zebra {
+  background-image: url('subtle_zebra_3d.png');
+  background-repeat: repeat;
+}
+
+.bg-lined-paper {
+  background-image: url('lined_paper.png');
+  background-repeat: repeat;
+}
+
+.bg-diag-noise {
+  background-image: url('diagonal-noise.png');
+  background-repeat: repeat;
+}
+
+.bg-bright-squares {
+  background-image: url('bright_squares.png');
+  background-repeat: repeat;
+}
+
+.bg-bloom-lines {
+  background-image: url('bloom-lines.png');
+  background-repeat: repeat;
+}
+
+.bg-crossword {
+  background-image: url('crossword.png');
+  background-repeat: repeat;
+}
+
 // Font Colors
 .c-blue           { color: $bloom-blue; }
 .c-orange         { color: $bloom-orange; }
