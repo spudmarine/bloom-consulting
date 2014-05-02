@@ -2,12 +2,11 @@
   .row
     .small-12.columns
       %h2.c-blue.ta-center What Business Leaders are Saying
-  .row.m-top-20
+  .row
     .small-12.columns
       %div.quote-carousel.ta-center.m-top-30.m-bottom-0.m-y-60
         - @quotes.each do |quote|
           %div
-            %h6.c-drk-gray= quote.title
             .p-y-50.m-top-20= raw quote.quote
             %p.m-top-10.f-italics
               %span -
