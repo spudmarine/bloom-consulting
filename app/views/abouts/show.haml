@@ -53,7 +53,7 @@
       .small-12.medium-7.columns
         - quotes = Quote.all
           - quotes.each do |quote|
-          %h6= quote.title
+          %h6.c-drk-gray= quote.title
           .m-top-10= raw quote.quote
           %p.p-bottom-25.p-top-10.f-italics
             %span -
