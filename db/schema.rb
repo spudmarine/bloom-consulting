@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140501185506) do
+ActiveRecord::Schema.define(version: 20140502025157) do
 
   create_table "abouts", force: true do |t|
     t.string   "hero_image"
@@ -155,6 +155,20 @@ ActiveRecord::Schema.define(version: 20140501185506) do
     t.text     "pa3_copy"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "marketing_services_title"
+    t.text     "marketing_services_copy"
+    t.string   "sales_services_title"
+    t.text     "sales_services_copy"
+    t.string   "channel_services_title"
+    t.text     "channel_services_copy"
+    t.string   "bi_services_title"
+    t.text     "bi_services_copy"
+    t.string   "pm_process_groups_title"
+    t.text     "pm_process_groups_copy"
+    t.string   "pm_knowledge_title"
+    t.text     "pm_knowledge_copy"
+    t.string   "pm_deliverables_title"
+    t.text     "pm_deliverables_copy"
   end
 
   create_table "quotes", force: true do |t|

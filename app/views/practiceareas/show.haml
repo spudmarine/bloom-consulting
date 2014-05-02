@@ -30,6 +30,18 @@
       %h3.c-blue= @practicearea.pa1_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa1_copy
+      - if @practicearea.marketing_services_title.present?
+        %h6.c-white.m-top-30.bgc-blue.p-15= @practicearea.marketing_services_title
+        .p-top-10= raw @practicearea.marketing_services_copy
+      - if @practicearea.sales_services_title.present?
+        %h6.c-white.m-top-30.bgc-blue.p-15= @practicearea.sales_services_title
+        .p-top-10= raw @practicearea.sales_services_copy
+      - if @practicearea.channel_services_title.present?
+        %h6.c-white.m-top-30.bgc-blue.p-15= @practicearea.channel_services_title
+        .p-top-10= raw @practicearea.channel_services_copy
+      - if @practicearea.bi_services_title.present?
+        %h6.c-white.m-top-30.bgc-blue.p-15= @practicearea.bi_services_title
+        .p-top-10= raw @practicearea.bi_services_copy
       - success = Success.where(:businessconsulting => true)
       - if success.present?
         %h6.c-white.m-top-30.bgc-blue.p-15
@@ -50,6 +62,15 @@
       %h3.c-blue= @practicearea.pa2_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa2_copy
+      - if @practicearea.pm_process_groups_title.present?
+        %h6.c-white.m-top-30.bgc-blue.p-15= @practicearea.pm_process_groups_title
+        .p-top-10= raw @practicearea.pm_process_groups_copy
+      - if @practicearea.pm_knowledge_title.present?
+        %h6.c-white.m-top-30.bgc-blue.p-15= @practicearea.pm_knowledge_title
+        .p-top-10= raw @practicearea.pm_knowledge_copy
+      - if @practicearea.pm_deliverables_title.present?
+        %h6.c-white.m-top-30.bgc-blue.p-15= @practicearea.pm_deliverables_title
+        .p-top-10= raw @practicearea.pm_deliverables_copy
       - success = Success.where(:projectmanagement => true)
       - if success.present?
         %h6.c-white.m-top-30.bgc-blue.p-15
