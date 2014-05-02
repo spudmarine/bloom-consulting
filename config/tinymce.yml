@@ -6,6 +6,9 @@ plugins: [
         "insertdatetime table contextmenu paste wordcount media code"
 ]
 style_formats:
+  - title: 'Bloom Dark Gray Text'
+    inline : 'span'
+    classes : 'c-drk-gray'
   - title: 'Bloom Blue Text'
     inline : 'span'
     classes : 'c-blue'
