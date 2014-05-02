@@ -1,7 +1,11 @@
 - image = @main.hero_image_url
-.strata-mini.large-hero.fixed-image{style: "background-image: url(#{image});"}
+.strata-mini.large-hero.fixed-image#top{style: "background-image: url(#{image});"}
   = render 'layouts/header'
-  
+= link_to "#top" do
+  .back-to-top
+    %h6.c-white.m-right-20 
+      %span.m-right-5.h5-icon{"data-icon" => "i"}
+      Back To Top
 .strata-small
   .row.p-top-30
     .small-12.columns

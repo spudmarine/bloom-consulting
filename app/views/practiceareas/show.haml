@@ -1,4 +1,5 @@
 - image = @practicearea.hero_image_url(:thumb)
+#top
 .large-hero.fixed-image{style: "background-image: url(#{image});"}
   = render 'layouts/header'
   .hero
@@ -8,6 +9,11 @@
           = @practicearea.hero_title
         %p.p-top-15.c-white.p-bottom-80
           = @practicearea.hero_copy
+= link_to "#top" do
+  .back-to-top
+    %h6.c-white.m-right-20 
+      %span.m-right-5.h5-icon{"data-icon" => "i"}
+      Back To Top
 .strata-small.bgc-lghter-gray.b-bottom-light-gray.w-100.p-relative{"data-magellan-expedition" => "fixed"}
   .row
     .small-12.medium-9.columns

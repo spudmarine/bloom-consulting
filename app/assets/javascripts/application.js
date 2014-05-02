@@ -27,4 +27,6 @@
 //= require tinymce-jquery
 //= require slick
 //= require toggle_show
+//= require jquery.scrollTo.min
+//= require back_to_top
 //= require_tree .
