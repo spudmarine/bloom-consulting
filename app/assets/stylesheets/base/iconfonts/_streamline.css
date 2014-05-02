@@ -2,13 +2,14 @@
 
 @font-face {
   font-family: "bloom-consulting-group";
-  src:url("icon_fonts/bloom-consulting-group.eot");
-  src:url("icon_fonts/bloom-consulting-group.eot?#iefix") format("embedded-opentype"),
-    url("icon_fonts/bloom-consulting-group.ttf") format("truetype"),
-    url("icon_fonts/bloom-consulting-group.svg#bloom-consulting-group") format("svg"),
-    url("icon_fonts/bloom-consulting-group.woff") format("woff");
+  src: font-url('icon_fonts/bloom-consulting-group.eot');
+  src: font-url('icon_fonts/bloom-consulting-group.eot' + '?#iefix') format("embedded-opentype"),
+    font-url('icon_fonts/bloom-consulting-group.woff') format("woff"),
+    font-url('icon_fonts/bloom-consulting-group.ttf') format("truetype"),
+    font-url('icon_fonts/bloom-consulting-group.svg' + '#bloom-consulting-group') format("svg");
   font-weight: normal;
   font-style: normal;
+
 }
 
 [data-icon]:before {
