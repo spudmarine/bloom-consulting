@@ -30,10 +30,10 @@
 .slick-prev:before, .slick-next:before { font-family: "bloom-consulting-group"; font-size: 20px; line-height: 1; color: $bloom-orange; opacity: 0.85; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .slick-prev { left: -25px; }
-.slick-prev:before { content: "l"; }
+.slick-prev:before { content: "h"; }
 
 .slick-next { right: -25px; }
-.slick-next:before { content: "k"; }
+.slick-next:before { content: "g"; }
 
 /* Dots */
 .slick-slider { margin-bottom: 30px; }

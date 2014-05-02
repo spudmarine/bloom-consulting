@@ -1,12 +1,12 @@
 toggleShow = (link) ->
 
   wrapper = $(link).prev()
-  linkText = $(link).find(".btn-text")
-  linkIcon = $(link).find(".btn-icon")
+  linkText = $(link).find(".js-link-text")
+  linkIcon = $(link).find(".js-link-icon")
   closedText = "Read More"
-  closedIcon = "b"
+  closedIcon = "f"
   openText = "Hide Details"
-  openIcon = "m"
+  openIcon = "i"
 
   if $(wrapper).hasClass("bio-hide")
     $(linkText).text(closedText)
