@@ -111,6 +111,11 @@
       %h3.c-blue= @practicearea.pa3_title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa3_copy
+      - if @practicearea.bifocus_title.present?
+        %h6.c-white.m-top-30.bgc-blue.p-15
+          %span.m-right-10.h5-icon{"data-icon" => "u"}
+          = @practicearea.bifocus_title
+        .p-top-20.p-left-10= raw @practicearea.bifocus_copy
       - success = Success.where(:businessintelligence => true)
       - if success.present?
         %h6.c-white.m-top-30.bgc-blue.p-15

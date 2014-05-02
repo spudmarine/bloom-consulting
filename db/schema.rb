@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140502025157) do
+ActiveRecord::Schema.define(version: 20140502213634) do
 
   create_table "abouts", force: true do |t|
     t.string   "hero_image"
@@ -198,6 +198,8 @@ ActiveRecord::Schema.define(version: 20140502025157) do
     t.text     "pm_knowledge_copy"
     t.string   "pm_deliverables_title"
     t.text     "pm_deliverables_copy"
+    t.string   "bifocus_title"
+    t.text     "bifocus_copy"
   end
 
   create_table "quotes", force: true do |t|
