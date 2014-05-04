@@ -60,6 +60,6 @@ class Admin::CareersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def career_params
-      params.require(:career).permit(:hero_image, :hero_title, :hero_copy, :intro_title, :intro_copy, :cta_title, :cta_copy)
+      params.require(:career).permit(:hero_image, :hero_title, :hero_copy, :intro_title, :intro_copy, :cta_title, :cta_copy, :event_header, :event_intro)
     end
 end

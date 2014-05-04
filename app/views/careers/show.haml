@@ -31,24 +31,24 @@
 .strata.p-top-0#events
   .row
     .small-12.columns
-      %h3.c-blue Upcoming Recruiting Events
+      %h3.c-blue= @career.event_header
       %p.p-top-10
-        We're going to universities in the area to talk to recent and soon-to-be graduates like you.
+        = @career.event_intro
   .row
+    - events = Event.all
     .small-12.columns
       %table.tbl-striped
-        %tr
-          %td.job-title{style: "width: 35%;"} University of Washington
-          %td{style: "width: 35%;"} Business School Job Fair
-          %td May 8th, 2014
-          %td{style: "text-align: right;"}
-            %a 
-              Event Details
-        %tr
-          %td.job-title Seattle Univsersity
-          %td Business School Job Fair
-          %td May 14th, 2014
-          %td{style: "text-align: right;"}
+        -events.each do |event|
+          %tr
+            %td.job-title{style: "width: 35%;"}= event.location
+            %td{style: "width: 35%;"}= event.description
+            %td= event.date.strftime('%b, %d, %Y')
+            %td{style: "text-align: right;"}
+              = link_to "http://#{event.link}" do
+                Event Info
+                %span
+                  %small.p-left-5{"data-icon" => "p"}
+
 .strata.bgc-lghter-gray
   .row
     .small-12.medium-9.columns

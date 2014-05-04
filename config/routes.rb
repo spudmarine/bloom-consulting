@@ -1,6 +1,5 @@
 BloomConsulting::Application.routes.draw do
 
-
   root to: 'mains#show', :defaults => { id: "1" }
 
   get 'signup', to: 'users#new', as: 'signup'
@@ -25,6 +24,7 @@ BloomConsulting::Application.routes.draw do
   resources :insights
   resources :quotes
   resources :successes
+  resources :events
 
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
@@ -42,6 +42,7 @@ BloomConsulting::Application.routes.draw do
     resources :insights
     resources :quotes
     resources :successes
+    resources :events
 
   end
 
