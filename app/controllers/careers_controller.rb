@@ -7,6 +7,7 @@ class CareersController < ApplicationController
     @careers = Career.all
     @jobs = Job.all
     @mains = Main.all
+    @events = Event.all
   end
 
   # GET /careers/1
@@ -22,6 +23,6 @@ class CareersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def career_params
-      params.require(:career).permit(:hero_image, :hero_title, :hero_copy, :intro_title, :intro_title, :cta_title, :cta_copy)
+      params.require(:career).permit(:hero_image, :hero_title, :hero_copy, :intro_title, :intro_title, :cta_title, :cta_copy, :event_header, :event_info)
     end
 end
