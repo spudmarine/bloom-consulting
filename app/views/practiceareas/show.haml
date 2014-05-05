@@ -34,7 +34,7 @@
   .row
     .small-12.medium-5.columns
       %h3.c-blue= @practicearea.pa1_title
-      %ul.clearing-thumbs.small-block-grid-3{"data-clearing" => "true"}
+      %ul.clearing-thumbs.medium-block-grid-3{"data-clearing" => "true"}
         - carousel = Carousel.where(:consulting => true)
         - if carousel.present?
           - carousel.each do |carousel|
@@ -81,7 +81,7 @@
   .row
     .small-12.medium-5.columns
       %h3.c-blue= @practicearea.pa2_title
-      %ul.clearing-thumbs.small-block-grid-3{"data-clearing" => "true"}
+      %ul.clearing-thumbs.medium-block-grid-3{"data-clearing" => "true"}
         - carousel = Carousel.where(:pm => true)
         - if carousel.present?
           - carousel.each do |carousel|
@@ -123,7 +123,7 @@
   .row
     .small-12.medium-5.columns
       %h3.c-blue= @practicearea.pa3_title
-      %ul.clearing-thumbs.small-block-grid-3{"data-clearing" => "true"}
+      %ul.clearing-thumbs.medium-block-grid-3{"data-clearing" => "true"}
         - carousel = Carousel.where(:bi => true)
         - if carousel.present?
           - carousel.each do |carousel|

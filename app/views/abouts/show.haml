@@ -34,7 +34,7 @@
   .row
     .small-12.medium-5.columns
       %h3.c-blue.m-bottom-10= @about.area1_title
-      %ul.clearing-thumbs.small-block-grid-3{"data-clearing" => "true"}
+      %ul.clearing-thumbs.medium-block-grid-3{"data-clearing" => "true"}
         - carousel = Carousel.where(:overview => true)
         - if carousel.present?
           - carousel.each do |carousel|
@@ -49,7 +49,7 @@
   .row
     .small-12.medium-5.columns
       %h3.c-blue= @about.area2_title
-      %ul.clearing-thumbs.small-block-grid-3{"data-clearing" => "true"}
+      %ul.clearing-thumbs.medium-block-grid-3{"data-clearing" => "true"}
         - carousel = Carousel.where(:culture => true)
         - if carousel.present?
           - carousel.each do |carousel|
