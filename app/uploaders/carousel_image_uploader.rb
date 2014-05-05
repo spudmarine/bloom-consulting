@@ -40,7 +40,7 @@ class CarouselImageUploader < CarrierWave::Uploader::Base
   #   process :resize_to_fit => [50, 50]
   # end
   version :thumb do
-    process :resize_to_fill => [80, 80]
+    process :resize_to_fill => [120, 120]
     process quality: 70
   end
 
