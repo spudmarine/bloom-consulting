@@ -26,6 +26,6 @@
 	text-align: right;
 }
 
-.strata-striped:nth-child(odd) {
+.strata-striped:nth-child(even) {
   background-color: $lighter-gray;
 }
