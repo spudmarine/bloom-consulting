@@ -19,6 +19,7 @@
 //= require foundation.min
 //= require foundation.equalizer
 //= require foundation.magellan
+//= require foundation.clearing
 //= require jquery.cookie
 //= require placeholder
 //= require height-equalizer
