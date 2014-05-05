@@ -1,3 +1,4 @@
+- employees = Employee.all
 - image = @about.hero_image_url(:thumb)
 .large-hero.fixed-image#top{style: "background-image: url(#{image});"}
   = render 'layouts/header'
@@ -34,12 +35,10 @@
     .small-12.medium-5.columns
       %h3.c-blue.m-bottom-10= @about.area1_title
       %ul.clearing-thumbs.small-block-grid-4{"data-clearing" => "true"}
-        %li
-          %a.th{href: "/assets/team/braden-unger.jpg"}
-            %img{src: "/assets/team/braden-unger.jpg"}
-        %li
-          %a.th{href: "/assets/team/amber-cooley.jpg"}
-            %img{src: "/assets/team/amber-cooley.jpg"}
+        - employees.each do |employee|
+          %li
+            %a.th{href: employee.employee_image.profile}
+              = image_tag employee.employee_image.thumb
     .small-12.medium-7.columns
       %p= raw @about.area1_copy
 %hr
