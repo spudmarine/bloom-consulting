@@ -6,6 +6,8 @@
 
     version: '5.2.2',
 
+    // CUSTOMIZED: Edited the settings to add in icons for next, prev and close buttons
+
     settings : {
       templates : {
         viewing : '<a href="#" class="clearing-close"><span data-icon="y"></span></a>' +
@@ -16,6 +18,7 @@
 
       // comma delimited list of selectors that, on click, will close clearing,
       // add 'div.clearing-blackout, div.visible-img' to close on background click
+      // CUSTOMIZED: Adjusted the close selector, adding "span" to make it work with the custom icon
       close_selectors : '.clearing-close span',
 
       touch_label : '',
