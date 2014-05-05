@@ -40,7 +40,7 @@
           - carousel.each do |carousel|
             %li
               %a.th{href: carousel.carousel_image}
-                = image_tag carousel.carousel_image.thumb
+                = image_tag carousel.carousel_image.thumb, "data-caption" => carousel.title
     .small-12.medium-7.columns
       %p= raw @about.area1_copy
 %hr
@@ -55,7 +55,7 @@
           - carousel.each do |carousel|
             %li
               %a.th{href: carousel.carousel_image}
-                = image_tag carousel.carousel_image.thumb
+                = image_tag carousel.carousel_image.thumb, "data-caption" => carousel.title
     .small-12.medium-7.columns
       %p= raw @about.area2_copy
 - if @about.area3_title.present?
