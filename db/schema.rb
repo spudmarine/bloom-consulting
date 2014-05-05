@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505150534) do
+ActiveRecord::Schema.define(version: 20140505155933) do
 
   create_table "abouts", force: true do |t|
     t.string   "hero_image"
@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(version: 20140505150534) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "carousel_image"
+    t.boolean  "recruiting"
   end
 
   create_table "contacts", force: true do |t|
