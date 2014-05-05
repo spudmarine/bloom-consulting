@@ -16,11 +16,11 @@ $museo-sans-italic: 'MuseoSans-500Italic', Arial, sans-serif;
 //////////////////////////////////////////////////////////////////////
 
 // Bloom Brand Colors
-$bloom-blue:     #1F497D;
-$bloom-orange:   #E37929;
-$bloom-gray:     #7f7f7f;
-$bloom-green:    #276327;
-$bloom-drk-blue: #002060;
+$bloom-blue:     #1F497D; // RGB: 31, 73, 125
+$bloom-orange:   #E37929; // RGB: 227, 121, 41
+$bloom-gray:     #7f7f7f; // RGB: 127, 127, 127
+$bloom-green:    #276327; // RGB: 39, 99, 39
+$bloom-drk-blue: #002060; // RGB: 0, 32, 96
 
 $bloom-colors: (
 	('bloom-blue',     $bloom-blue),
@@ -31,11 +31,11 @@ $bloom-colors: (
 );
 
 // Web Colors
-$white:          #fff;
-$lighter-gray:   #f6f6f6;
-$light-gray:     #ddd;
-$gray:           #9b9b9b;
-$dark-gray:      #4a4a4a;
+$white:          #fff; // RGB: 255, 255, 255
+$lighter-gray:   #f6f6f6; // RGB: 246, 246, 246
+$light-gray:     #ddd; // RGB: 221, 221, 221
+$gray:           #9b9b9b; // RGB: 155, 155, 155
+$dark-gray:      #4a4a4a; // RGB: 74, 74, 74
 
 $web-colors: (
 	('white',        $white),
@@ -46,7 +46,7 @@ $web-colors: (
 );
 
 // Special Colors
-$huskies:        #372557;
+$huskies:        #372557; // RGB: 55, 37, 87
 
 // Body Color
 $base-body-color: white;
