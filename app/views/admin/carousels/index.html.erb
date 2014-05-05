@@ -1,0 +1,37 @@
+<h1>Listing carousels</h1>
+
+<table class="sortable_table">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Culture</th>
+      <th>Company Overview</th>
+      <th>Business Consulting</th>
+      <th>Project Management</th>
+      <th>Business Intelligence</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody id="carousels">
+    <% @carousels.each do |carousel| %>
+      <%= content_tag_for :tr, carousel do %>
+        <td><%= image_tag carousel.carousel_image.to_s %></td>
+        <td><%= carousel.title %></td>
+        <td><%= carousel.culture %></td>
+        <td><%= carousel.overview %></td>
+        <td><%= carousel.consulting %></td>
+        <td><%= carousel.pm %></td>
+        <td><%= carousel.bi %></td>
+        <td><%= link_to 'Edit', edit_admin_carousel_path(carousel) %></td>
+        <td><%= link_to 'Delete', admin_carousel_path(carousel), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Carousel Image', new_admin_carousel_path %>

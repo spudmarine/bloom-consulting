@@ -25,6 +25,7 @@ BloomConsulting::Application.routes.draw do
   resources :quotes
   resources :successes
   resources :events
+  resources :carousels
 
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
@@ -43,6 +44,7 @@ BloomConsulting::Application.routes.draw do
     resources :quotes
     resources :successes
     resources :events
+    resources :carousels
 
   end
 
