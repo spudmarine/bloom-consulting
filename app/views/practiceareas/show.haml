@@ -40,7 +40,7 @@
           - carousel.each do |carousel|
             %li
               %a.th{href: carousel.carousel_image}
-                = image_tag carousel.carousel_image.thumb
+                = image_tag carousel.carousel_image.thumb, "data-caption" => carousel.title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa1_copy
       - if @practicearea.marketing_services_title.present?
@@ -87,7 +87,7 @@
           - carousel.each do |carousel|
             %li
               %a.th{href: carousel.carousel_image}
-                = image_tag carousel.carousel_image.thumb
+                = image_tag carousel.carousel_image.thumb, "data-caption" => carousel.title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa2_copy
       - if @practicearea.pm_process_groups_title.present?
@@ -129,7 +129,7 @@
           - carousel.each do |carousel|
             %li
               %a.th{href: carousel.carousel_image}
-                = image_tag carousel.carousel_image.thumb
+                = image_tag carousel.carousel_image.thumb, "data-caption" => carousel.title
     .small-12.medium-7.columns
       %p= raw @practicearea.pa3_copy
       - if @practicearea.bifocus_title.present?
