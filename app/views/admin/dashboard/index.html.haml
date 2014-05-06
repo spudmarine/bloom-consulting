@@ -1,0 +1,21 @@
+= render 'admin_nav'
+
+.strata
+  .row
+    .small-12.columns
+      %h1.c-drk-gray Admin Dashboard
+    .small-12.columns
+      %ul
+        %li= link_to 'Manage Users', admin_users_path
+        %li= link_to 'Manage HomePage', edit_admin_main_path(1)
+        %li= link_to 'Manage Practice Areas Page', edit_admin_practicearea_path(1)
+        %li= link_to 'Manage Careers Page', edit_admin_career_path(1)
+        %li= link_to 'Manage Jobs', admin_jobs_url
+        %li= link_to 'Manage Team Page', edit_admin_team_path(1)
+        %li= link_to 'Manage Employees', admin_employees_path
+        %li= link_to 'Manage About Us', edit_admin_about_path(1)
+        %li= link_to 'Manage Contact Us', edit_admin_contact_path(1)
+        %li= link_to 'Manage Success Stories', admin_successes_path
+        %li= link_to 'Manage Quotes', admin_quotes_path
+        %li= link_to 'Manage Events', admin_events_path
+        %li= link_to 'Manage Carousels', admin_carousels_path
