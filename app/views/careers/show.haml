@@ -44,10 +44,11 @@
             %td{style: "width: 35%;"}= event.description
             %td= event.date.strftime('%b, %d, %Y')
             %td{style: "text-align: right;"}
-              = link_to "http://#{event.link}" do
-                Event Info
-                %span
-                  %small.p-left-5{"data-icon" => "p"}
+              -if event.link.present?
+                = link_to "http://#{event.link}" do
+                  Event Info
+                  %span
+                    %small.p-left-5{"data-icon" => "p"}
   .row.m-top-10
     .small-12.columns
       %p Here are some images from past recruiting events:
