@@ -4,8 +4,8 @@ CarrierWave.configure do |config|
 
   config.fog_credentials = {
     :provider               => 'AWS',                        # required
-    :aws_access_key_id      => Rails.configuration.aws_access_key_id,          # required
-    :aws_secret_access_key  => Rails.configuration.aws_secret_access_key,      # required
+    :aws_access_key_id      => 'AKIAJC4EFI7Y6YYTBQQA',                        # required
+    :aws_secret_access_key  => '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',                     # required
     :region                 => 'us-west-2',                  # optional, defaults to 'us-east-1'
     # :host                   => 's3.example.com',             # optional, defaults to nil
     # :endpoint               => 'https://s3.example.com:8080' # optional, defaults to nil
