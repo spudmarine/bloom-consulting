@@ -2,20 +2,92 @@
 
 .strata
   .row
-    .small-12.columns
-      %h1.c-drk-gray Admin Dashboard
-    .small-12.columns
-      %ul
-        %li= link_to 'Manage Users', admin_users_path
-        %li= link_to 'Manage HomePage', edit_admin_main_path(1)
-        %li= link_to 'Manage Practice Areas Page', edit_admin_practicearea_path(1)
-        %li= link_to 'Manage Careers Page', edit_admin_career_path(1)
-        %li= link_to 'Manage Jobs', admin_jobs_url
-        %li= link_to 'Manage Team Page', edit_admin_team_path(1)
-        %li= link_to 'Manage Employees', admin_employees_path
-        %li= link_to 'Manage About Us', edit_admin_about_path(1)
-        %li= link_to 'Manage Contact Us', edit_admin_contact_path(1)
-        %li= link_to 'Manage Success Stories', admin_successes_path
-        %li= link_to 'Manage Quotes', admin_quotes_path
-        %li= link_to 'Manage Events', admin_events_path
-        %li= link_to 'Manage Carousels', admin_carousels_path
+    .small-12.medium-4.columns
+      %h4.c-drk-gray Edit Website Pages
+      %p.m-top-10 Edit the content and images on the front end of the website.
+    .small-12.medium-8.columns
+      %ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3
+        %li
+          = link_to edit_admin_main_path(1) do
+            .admin-item
+              %span.admin-icon{"data-icon" => "B"}
+              %h6.m-top-30 Homepage
+              %p
+                %small /
+        %li
+          = link_to edit_admin_practicearea_path(1) do
+            .admin-item
+              %span.admin-icon{"data-icon" => "C"}
+              %h6.m-top-30 Practice Areas
+              %p
+                %small /practiceareas
+        %li
+          = link_to edit_admin_career_path(1) do
+            .admin-item
+              %span.admin-icon{"data-icon" => "A"}
+              %h6.m-top-30 Careers
+              %p
+                %small /careers
+        %li
+          = link_to edit_admin_about_path(1) do
+            .admin-item
+              %span.admin-icon{"data-icon" => "z"}
+              %h6.m-top-30 About Us
+              %p
+                %small /about
+        %li
+          = link_to edit_admin_team_path(1) do
+            .admin-item
+              %span.admin-icon{"data-icon" => "E"}
+              %h6.m-top-30 Meet the Team
+              %p
+                %small /team
+        %li
+          = link_to admin_successes_path do
+            .admin-item
+              %span.admin-icon{"data-icon" => "D"}
+              %h6.m-top-30 Success Stories
+              %p
+                %small /successes
+.strata-small
+  .row
+    .small-12.medium-4.columns
+      %h4.c-drk-gray Mediate Website Content &amp; Access
+      %p.m-top-10 Add, remove or edit photos for galleries, documents, job postings, employee profiles and more. Monitor admin access.
+    .small-12.medium-8.columns
+      %ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3
+        %li
+          = link_to admin_users_path do
+            .admin-item
+              %span.admin-icon{"data-icon" => "G"}
+              %h6.m-top-30 Admin Users
+        %li
+          = link_to admin_jobs_url do
+            .admin-item
+              %span.admin-icon{"data-icon" => "H"}
+              %h6.m-top-30 Job Postings
+        %li
+          = link_to admin_employees_path do
+            .admin-item
+              %span.admin-icon{"data-icon" => "K"}
+              %h6.m-top-30 Employees
+        %li
+          = link_to edit_admin_contact_path(1) do
+            .admin-item
+              %span.admin-icon{"data-icon" => "e"}
+              %h6.m-top-30 Contact Info
+        %li
+          = link_to admin_quotes_path do
+            .admin-item
+              %span.admin-icon{"data-icon" => "I"}
+              %h6.m-top-30 Quotes
+        %li
+          = link_to admin_events_path do
+            .admin-item
+              %span.admin-icon{"data-icon" => "J"}
+              %h6.m-top-30 Career Events
+        %li
+          = link_to admin_carousels_path do
+            .admin-item
+              %span.admin-icon{"data-icon" => "F"}
+              %h6.m-top-30 Images

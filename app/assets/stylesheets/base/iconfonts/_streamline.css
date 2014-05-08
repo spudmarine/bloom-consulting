@@ -113,3 +113,39 @@
 .bloom-delete-3:before {
   content: "y";
 }
+.bloom-about-us:before {
+  content: "z";
+}
+.bloom-careers:before {
+  content: "A";
+}
+.bloom-homepage:before {
+  content: "B";
+}
+.bloom-practice-areas:before {
+  content: "C";
+}
+.bloom-success-stories:before {
+  content: "D";
+}
+.bloom-team:before {
+  content: "E";
+}
+.bloom-photos-2:before {
+  content: "F";
+}
+.bloom-contacts-1:before {
+  content: "G";
+}
+.bloom-hand-eco:before {
+  content: "H";
+}
+.bloom-quote:before {
+  content: "I";
+}
+.bloom-column:before {
+  content: "J";
+}
+.bloom-connection-2:before {
+  content: "K";
+}
