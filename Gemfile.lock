@@ -29,6 +29,8 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     bcrypt (3.1.7)
+    bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
     bourbon (3.2.1)
       sass (~> 3.2)
       thor
@@ -215,7 +217,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_link_to
-  bcrypt
+  bcrypt-ruby
   bourbon
   capybara
   carrierwave
