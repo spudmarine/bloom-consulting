@@ -29,7 +29,7 @@ class CarouselImageUploader < CarrierWave::Uploader::Base
   # Process files as they are uploaded:
   # process :scale => [200, 300]
   #
-  process quality: 70
+  process :quality => 70
 
   # def scale(width, height)
   #   # do something
@@ -41,7 +41,7 @@ class CarouselImageUploader < CarrierWave::Uploader::Base
   # end
   version :thumb do
     process :resize_to_fill => [120, 120]
-    process quality: 70
+    process :quality => 70
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
