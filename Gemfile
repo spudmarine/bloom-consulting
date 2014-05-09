@@ -30,6 +30,8 @@ group :production do
 end
 
 group :development, :test do
+	ruby '2.1.0'
+
 	gem 'rspec-rails', '~>3.0.0.beta'
   gem 'capybara'
   # Use sqlite3 as the database for Active Record
@@ -62,8 +64,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.1.2'
-gem 'protected_attributes'
+gem 'bcrypt-ruby'
 
 
 

@@ -8,7 +8,7 @@ def new
   end
 
   def create
-    @employee = Employee.new(params[:employee])
+    @employee = Employee.new(employee_params)
 
     respond_to do |format|
       if @employee.save
@@ -39,7 +39,7 @@ def new
 
   def update
     @employee = Employee.find(params[:id])
-    if @employee.update_attributes(params[:employee])
+    if @employee.update_attributes(employee_params)
       redirect_to admin_employees_url, notice: "employee has been updated."
     else
       render "edit"
@@ -50,4 +50,16 @@ def new
     Employee.find(params[:id]).destroy
     redirect_to admin_employees_url
   end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_employee
+      @employee = Employee.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def employee_params
+      params.require(:employee).permit(:employee_image, :name, :title, :bio_intro, :bio, :linkedin, :twitter, :sort)
+    end
+  
 end
