@@ -86,7 +86,8 @@ select {
 
 button,
 input[type="submit"] {
-  @extend %button;
+  text-align: left;
+  border: none;
   @include appearance(none);
   cursor: pointer;
   user-select: none;

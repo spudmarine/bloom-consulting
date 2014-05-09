@@ -1,0 +1,22 @@
+.lean-label {
+  font-size: .7rem;
+  text-transform: uppercase;
+}
+
+.lean-input {
+  input {
+    padding: 0px;
+    margin-bottom: 5px;
+    box-shadow: none;
+    border: none;
+    color: $dark-gray;
+    font-size: 1rem;
+    &:focus {
+      border: none;
+      box-shadow: none;
+    }
+  }
+  border-bottom: 1px solid $light-gray;
+}
+
+

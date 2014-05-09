@@ -1,6 +1,8 @@
 class Admin::PostsController < ApplicationController
 	before_action :authorize
 
+  layout 'admin'
+
 	def new
 	  @post = Post.new
 	end

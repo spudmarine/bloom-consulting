@@ -1,6 +1,8 @@
 class Admin::EventsController < ApplicationController
   before_action :authorize
 
+  layout 'admin'
+
 def new
     @event = Event.new
   end

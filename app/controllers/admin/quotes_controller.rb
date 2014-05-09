@@ -1,6 +1,8 @@
 class Admin::QuotesController < ApplicationController
 	before_action :authorize
 
+  layout 'admin'
+
 	def new
     @quote = Quote.new
   end

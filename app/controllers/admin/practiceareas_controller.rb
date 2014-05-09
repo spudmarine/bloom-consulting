@@ -1,6 +1,8 @@
 class Admin::PracticeareasController < ApplicationController
   before_action :set_practicearea, only: [:show, :edit, :update, :destroy]
   before_action :authorize
+
+  layout 'admin'
   
   # GET /practiceareas
   # GET /practiceareas.json
