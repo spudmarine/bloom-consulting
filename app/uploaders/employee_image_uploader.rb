@@ -26,7 +26,7 @@ class EmployeeImageUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]
-  process quality: 70
+  process :quality => 70
   #
   # def scale(width, height)
   #   # do something
@@ -35,12 +35,12 @@ class EmployeeImageUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
   version :thumb do
     process :resize_to_fill => [125, 125]
-    process quality: 70
+    process :quality => 70
   end
 
   version :profile do
     process :resize_to_fill => [210, 210]
-    process quality: 70
+    process :quality => 70
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
