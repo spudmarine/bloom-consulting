@@ -60,7 +60,6 @@ def new
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:location, :description, :date, :link)
-    end
-  
+    end 
 
 end

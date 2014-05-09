@@ -62,5 +62,4 @@ def new
       params.require(:employee).permit(:employee_image, :name, :title, :bio_intro, :bio, :linkedin, :twitter, :sort)
     end
   
-
 end
