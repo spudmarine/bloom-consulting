@@ -30,4 +30,6 @@
 //= require toggle_show
 //= require jquery.scrollTo.min
 //= require back_to_top
+//= require all_screen
+//= require password_placeholder
 //= require_tree .

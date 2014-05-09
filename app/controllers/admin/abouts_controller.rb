@@ -1,6 +1,8 @@
 class Admin::AboutsController < ApplicationController
   before_action :set_about, only: [:show, :edit, :update, :destroy]
   before_action :authorize
+
+  layout 'admin'
   
   # GET /abouts
   # GET /abouts.json

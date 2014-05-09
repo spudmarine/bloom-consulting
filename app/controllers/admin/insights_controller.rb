@@ -1,6 +1,8 @@
 class Admin::InsightsController < ApplicationController
   before_action :set_insight, only: [:show, :edit, :update, :destroy]
 
+  layout 'admin'
+
   # GET /insights
   # GET /insights.json
   def index

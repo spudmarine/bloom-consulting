@@ -1,6 +1,8 @@
 class Admin::CareersController < ApplicationController
   before_action :set_career, only: [:show, :edit, :update, :destroy]
   before_action :authorize
+
+  layout 'admin'
   
   # GET /careers
   # GET /careers.json

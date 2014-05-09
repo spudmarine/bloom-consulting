@@ -1,0 +1,21 @@
+- welcome = ['Log In', 'Time to work!', 'Get Sh*t Done', "Treat Yo'self"]
+- n = rand(4)
+
+.strata-mini.all-screen.bgc-lghter-gray
+  .row.p-top-80
+    .small-12.medium-4.medium-offset-4.columns
+      .ta-center
+        = image_tag "bloom-square.svg", style: "width: 100px;"
+  .row.m-top-30
+    .small-12.medium-4.medium-offset-4.columns.bgc-white.b-light-gray.p-30
+      = form_tag sessions_path do
+        .field
+          .lean-label= label_tag "Email:"
+          .lean-input= text_field_tag :email, params[:email]
+        .field.m-top-30
+          .lean-label= label_tag "Password:"
+          .lean-input= password_field_tag :password
+        .actions.m-top-30
+          %button.btn.btn-block.btn-l.btn-filled.m-top-10
+            %span.btn-text Log In
+            %span.btn-text.f-right{"data-icon" => "p"}
