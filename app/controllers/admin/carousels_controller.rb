@@ -8,7 +8,7 @@ def new
   end
 
   def create
-    @carousel = Carousel.new(params[:carousel])
+    @carousel = Carousel.new(carousel_params)
 
     respond_to do |format|
       if @carousel.save
@@ -39,7 +39,7 @@ def new
 
   def update
     @carousel = Carousel.find(params[:id])
-    if @carousel.update_attributes(params[:carousel])
+    if @carousel.update_attributes(carousel_params)
       redirect_to admin_carousels_url, notice: "carousel has been updated."
     else
       render "edit"
@@ -50,4 +50,16 @@ def new
     Carousel.find(params[:id]).destroy
     redirect_to admin_carousels_url
   end
+ 
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_carousel
+      @carousel = Carousel.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def carousel_params
+      params.require(:carousel).permit(:carousel_image, :title, :culture, :overview, :consulting, :pm, :bi, :recruiting)
+    end
+  
 end

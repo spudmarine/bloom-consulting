@@ -13,7 +13,7 @@ class Admin::UsersController < ApplicationController
   end
 
   def create
-  	@user = User.new(params[:user])
+  	@user = User.new(user_params)
 
   	respond_to do |format|
   		if @user.save
@@ -33,7 +33,7 @@ class Admin::UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(params[:user])
+    if @user.update_attributes!(user_params)
       redirect_to admin_path, notice: "User has been updated."
     else
       render "edit"
@@ -45,4 +45,15 @@ class Admin::UsersController < ApplicationController
     redirect_to admin_path
   end
 
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_user
+      @user = User.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def user_params
+      params.require(:user).permit(:email, :password, :password_confirmation)
+    end
+  end
 end

@@ -41,6 +41,6 @@ class Admin::AboutsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def about_params
-      params[:about]
+      params.require(:about).permit(:hero_image, :hero_title, :hero_copy, :area1_title, :area1_copy, :area2_title, :area2_copy, :area3_title, :area3_copy)
     end
 end
