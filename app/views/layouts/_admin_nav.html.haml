@@ -1,7 +1,7 @@
 .nav-admin
   .row.nav-inner
     .small-4.columns
-      = link_to root_path do
+      = link_to admin_url do
         %img{src: "/assets/logo/bloom-logo-gray.svg", style: "max-height: 40px;"}
     .small-8.columns
       - if logged_in?

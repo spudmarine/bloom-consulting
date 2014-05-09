@@ -31,5 +31,5 @@
 //= require jquery.scrollTo.min
 //= require back_to_top
 //= require all_screen
-//= require password_placeholder
+//= require admin/upload_name
 //= require_tree .

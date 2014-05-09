@@ -1,0 +1,152 @@
+.strata-small
+  = form_for [:admin, @main], :html => {:multipart => true} do |f|
+    .row
+      - if @main.errors.any?
+        .small-12.columns
+          .error_explanation
+            %h5
+              = pluralize(@main.errors.count, "error")
+              prohibited this main from being saved:
+            %ul
+              - @main.errors.full_messages.each do |msg|
+                %li= msg
+    .strata-mini.bgc-white.w-100.p-relative{"data-magellan-expedition" => "fixed"}
+      .row.p-top-20
+        .small-12.medium-8.columns
+          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit Homepage
+        .small-4.medium-2.columns
+          = link_to admin_url, class: "btn btn-block btn-l btn-empty ta-center" do
+            %span.m-right-5.hide-lap{"data-icon" => "d"}
+            %span.hide-palm.hide-tablet Cancel
+        .small-8.medium-2.columns
+          .actions
+            %button.btn.btn-block.btn-l.btn-filled.ta-center Save
+      .row
+        .small-12.columns
+          %hr.m-bottom-0
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Hero Image &amp; Copy
+          %p.m-top-10 Please note, the hero image quality will look very low. However, once the overlay is applied, this will look normal on the front-end.
+        .small-12.medium-8.columns
+          .field
+            .c-drk-gray= f.label "Image"
+            .b-lighter-gray= image_tag @main.hero_image.to_s
+            .p-x-20.p-y-80.bgc-lghter-gray
+              %p.ta-center#hero-image-print
+              %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                Upload New Image
+                = f.file_field :hero_image, class: "upload", "data-print" => "#hero-image-print"
+            %p.ta-center#hero-image-print
+          .field.m-top-40
+            .c-drk-gray= f.label "Title"
+            = f.text_field :hero_title
+    .strata-mini
+      .row
+        .small-12.columns
+          %hr
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Announcement
+          %p.m-top-10 If the title is left blank, this section will not appear on the homepage.
+        .small-12.medium-8.columns
+          .field
+            .c-drk-gray= f.label "Title"
+            = f.text_field :stratum_1_title
+          .field.m-top-20
+            .c-drk-gray= f.label "Copy"
+            = f.text_area :stratum_1_copy, :rows => "4"
+          .field.m-top-10
+            .c-drk-gray= f.label "Link copy"
+            = f.text_field :stratum_1_cta
+          .field.m-top-20
+            .c-drk-gray= f.label "Link destination"
+            = f.text_field :stratum_1_link
+    .strata-mini
+      .row
+        .small-12.columns
+          %hr
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Practice Areas
+        .small-12.medium-8.columns
+          %h6.c-blue{style: "text-transform: uppercase;"} Practice Area One
+          .field.m-top-20
+            .c-drk-gray= f.label "Image"
+            .b-lighter-gray= image_tag @main.practice_area_1_image.to_s
+            .p-x-20.p-y-80.bgc-lghter-gray
+              %p.ta-center#pa1-image-print
+              %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                Upload New Image
+                = f.file_field :practice_area_1_image, class: "upload", "data-print" => "#pa1-image-print"
+          .field.m-top-20
+            .c-drk-gray= f.label "Title"
+            = f.text_field :practice_area_1_title
+          .field.m-top-20
+            .c-drk-gray= f.label "Copy"
+            = f.text_area :practice_area_1_copy, :rows => "4"
+          .field.m-top-10
+            .c-drk-gray= f.label "Link Destination"
+            = f.text_field :practice_area_1_link
+          %h6.c-blue.m-top-50{style: "text-transform: uppercase;"} Practice Area Two
+          .field.m-top-20
+            .c-drk-gray= f.label "Image"
+            .b-lighter-gray= image_tag @main.practice_area_2_image.to_s
+            .p-x-20.p-y-80.bgc-lghter-gray
+              %p.ta-center#pa2-image-print
+              %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                Upload New Image
+                = f.file_field :practice_area_2_image, class: "upload", "data-print" => "#pa2-image-print"
+          .field.m-top-20
+            .c-drk-gray= f.label "Title"
+            = f.text_field :practice_area_2_title
+          .field.m-top-20
+            .c-drk-gray= f.label "Copy"
+            = f.text_area :practice_area_2_copy, :rows => "4"
+          .field.m-top-10
+            .c-drk-gray= f.label "Link Destination"
+            = f.text_field :practice_area_2_link
+          %h6.c-blue.m-top-50{style: "text-transform: uppercase;"} Practice Area Three
+          .field.m-top-20
+            .c-drk-gray= f.label "Image"
+            .b-lighter-gray= image_tag @main.practice_area_3_image.to_s
+            .p-x-20.p-y-80.bgc-lghter-gray
+              %p.ta-center#pa3-image-print
+              %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                Upload New Image
+                = f.file_field :practice_area_3_image, class: "upload", "data-print" => "#pa3-image-print"
+          .field.m-top-20
+            .c-drk-gray= f.label "Title"
+            = f.text_field :practice_area_3_title
+          .field.m-top-20
+            .c-drk-gray= f.label "Copy"
+            = f.text_area :practice_area_3_copy, :rows => "4"
+          .field.m-top-10
+            .c-drk-gray= f.label "Link Destination"
+            = f.text_field :practice_area_3_link
+    .strata-mini
+      .row
+        .small-12.columns
+          %hr
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Hiring Announcement
+          %p.m-top-10 If the title is left blank, this section will not appear on the homepage.
+        .small-12.medium-8.columns
+          .field
+            .c-drk-gray= f.label "Title"
+            = f.text_field :stratum_2_title
+          .field.m-top-20
+            .c-drk-gray= f.label "Copy"
+            = f.text_area :stratum_2_copy, :rows => "4"
+          .field.m-top-10
+            .c-drk-gray= f.label "Link copy"
+            = f.text_field :stratum_2_cta
+          .field.m-top-20
+            .c-drk-gray= f.label "Link destination"
+            = f.text_field :stratum_2_link
+

@@ -25,7 +25,7 @@ class Admin::MainsController < ApplicationController
   def update
     @main = Main.find(params[:id])
     if @main.update_attributes(params[:main])
-      redirect_to admin_mains_path, notice: "Homepage has been updated."
+      redirect_to admin_url, notice: "Homepage has been updated."
     else
       render "edit"
     end
