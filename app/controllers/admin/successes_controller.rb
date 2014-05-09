@@ -2,6 +2,8 @@ class Admin::SuccessesController < ApplicationController
   before_action :set_success, only: [:show, :edit, :update, :destroy]
   before_action :authorize
 
+  layout 'admin'
+
   # GET /successes
   # GET /successes.json
   def index

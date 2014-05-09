@@ -1,6 +1,8 @@
 class Admin::JobsController < ApplicationController
   before_action :authorize
 
+  layout 'admin'
+
 def new
     @job = Job.new
   end

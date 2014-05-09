@@ -1,6 +1,8 @@
 class Admin::EmployeesController < ApplicationController
   before_action :authorize
 
+  layout 'admin'
+
 def new
     @employee = Employee.new
   end

@@ -1,6 +1,8 @@
 class Admin::CarouselsController < ApplicationController
   before_action :authorize
 
+  layout 'admin'
+
 def new
     @carousel = Carousel.new
   end

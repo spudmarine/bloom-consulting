@@ -1,6 +1,8 @@
 class Admin::PagesController < ApplicationController
   before_action :set_admin_page, only: [:show, :edit, :update, :destroy]
   before_action :authorize
+
+  layout 'admin'
   
   # GET /admin/pages
   # GET /admin/pages.json

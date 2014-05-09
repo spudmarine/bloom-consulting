@@ -2,6 +2,10 @@
 	background-color: rgba(31, 73, 125, 0.85);
 }
 
+.nav-admin {
+	background-color: $lighter-gray;
+}
+
 .nav-inner {
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -19,6 +23,13 @@
 	&:hover {
 		color: $white;
 		border-bottom: 2px solid $bloom-orange;
+	}
+}
+
+.nav-link-admin {
+	color: $bloom-orange;
+	&:hover {
+		color: darken($bloom-orange, 5);
 	}
 }
 

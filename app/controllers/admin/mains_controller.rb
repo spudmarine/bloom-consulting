@@ -1,5 +1,7 @@
 class Admin::MainsController < ApplicationController
   before_action :authorize
+
+  layout 'admin'
   # GET /mains
   # GET /mains.json
   def index

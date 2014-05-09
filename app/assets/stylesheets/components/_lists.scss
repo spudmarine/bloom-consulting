@@ -1,0 +1,13 @@
+.admin-item {
+  background-color: $lighter-gray;
+  padding: 20px;
+  text-align: center;
+  &:hover {
+    background-color: darken($lighter-gray, 5)
+  }
+  @include transition(all .2s ease-in-out)
+}
+
+.admin-icon {
+  font-size: 3rem;
+}
