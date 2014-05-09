@@ -30,6 +30,8 @@ group :production do
 end
 
 group :development, :test do
+	ruby '2.1.0'
+
 	gem 'rspec-rails', '~>3.0.0.beta'
   gem 'capybara'
   # Use sqlite3 as the database for Active Record
