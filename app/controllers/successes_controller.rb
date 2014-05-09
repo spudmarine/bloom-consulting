@@ -21,6 +21,6 @@ class SuccessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def success_params
-      params.require(:success).permit(:title, :author, :blurb, :article)
+      params.require(:success).permit(:title, :author, :blurb, :article, :businessconsulting, :projectmanagement, :businessintelligence)
     end
 end

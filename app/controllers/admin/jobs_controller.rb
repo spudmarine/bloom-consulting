@@ -8,7 +8,7 @@ def new
   end
 
   def create
-    @job = Job.new(params[:job])
+    @job = Job.new(job_params)
 
     respond_to do |format|
       if @job.save
@@ -39,7 +39,7 @@ def new
 
   def update
     @job = Job.find(params[:id])
-    if @job.update_attributes(params[:job])
+    if @job.update_attributes(job_params)
       redirect_to admin_jobs_url, notice: "job has been updated."
     else
       render "edit"
@@ -50,4 +50,16 @@ def new
     Job.find(params[:id]).destroy
     redirect_to admin_jobs_url
   end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_job
+      @job = Job.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def job_params
+      params.require(:job).permit(:title, :location, :description, :area1_title, :area1_copy, :area2_title, :area2_copy, :area3_title, :area3_copy, :area4_title, :area4_copy, :area5_title, :area5_copy, :area6_title, :area6_copy, :area7_title, :area7_copy)
+    end
+  
 end

@@ -8,7 +8,7 @@ class Admin::QuotesController < ApplicationController
   end
 
   def create
-    @quote = Quote.new(params[:quote])
+    @quote = Quote.new(quote_params)
 
     respond_to do |format|
       if @quote.save
@@ -39,7 +39,7 @@ class Admin::QuotesController < ApplicationController
 
   def update
     @quote = Quote.find(params[:id])
-    if @quote.update_attributes(params[:quote])
+    if @quote.update_attributes(quote_params)
       redirect_to admin_quotes_url, notice: "quote has been updated."
     else
       render "edit"
@@ -50,4 +50,16 @@ class Admin::QuotesController < ApplicationController
     Quote.find(params[:id]).destroy
     redirect_to admin_quotes_url
   end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_quote
+      @quote = Quote.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def quote_params
+      params.require(:quote).permit(:title, :quote, :credit)
+    end
+  
 end

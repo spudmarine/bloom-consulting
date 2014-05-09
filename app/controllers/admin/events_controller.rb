@@ -8,7 +8,7 @@ def new
   end
 
   def create
-    @event = Event.new(params[:event])
+    @event = Event.new(event_params)
 
     respond_to do |format|
       if @event.save
@@ -39,7 +39,7 @@ def new
 
   def update
     @event = Event.find(params[:id])
-    if @event.update_attributes(params[:event])
+    if @event.update_attributes(event_params)
       redirect_to admin_events_url, notice: "event has been updated."
     else
       render "edit"
@@ -50,4 +50,17 @@ def new
     Event.find(params[:id]).destroy
     redirect_to admin_events_url
   end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_event
+      @event = Event.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def event_params
+      params.require(:event).permit(:location, :description, :date, :link)
+    end
+  
+
 end

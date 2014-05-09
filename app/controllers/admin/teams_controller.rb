@@ -41,7 +41,7 @@ class Admin::TeamsController < ApplicationController
   # PATCH/PUT /teams/1.json
   def update
     respond_to do |format|
-      if @team.update(team_params)
+      if @team.update_attributes!(team_params)
         format.html { redirect_to admin_teams_path, notice: 'Team was successfully updated.' }
         format.json { head :no_content }
       else

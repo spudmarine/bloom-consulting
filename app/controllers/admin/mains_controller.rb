@@ -24,7 +24,7 @@ class Admin::MainsController < ApplicationController
   # PATCH/PUT /mains/1.json
   def update
     @main = Main.find(params[:id])
-    if @main.update_attributes(params[:main])
+    if @main.update_attributes(main_params)
       redirect_to admin_mains_path, notice: "Homepage has been updated."
     else
       render "edit"
