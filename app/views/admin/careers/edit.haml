@@ -1,0 +1,83 @@
+.strata-small
+  = form_for [:admin, @career], :html => {:multipart => true} do |f|
+    .row
+      - if @career.errors.any?
+        .small-12.columns
+          .error_explanation
+            %h5
+              = pluralize(@career.errors.count, "error")
+              prohibited this practicearea from being saved:
+            %ul
+              - @career.errors.full_messages.each do |msg|
+                %li= msg
+    .strata-mini.bgc-white.w-100.p-relative{"data-magellan-expedition" => "fixed"}
+      .row.p-top-20
+        .small-12.medium-8.columns
+          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit Careers Page
+        .small-4.medium-2.columns
+          = link_to admin_url, class: "btn btn-block btn-l btn-empty ta-center" do
+            %span.m-right-5.hide-lap{"data-icon" => "d"}
+            %span.hide-palm.hide-tablet Cancel
+        .small-8.medium-2.columns
+          .actions
+            %button.btn.btn-block.btn-l.btn-filled.ta-center Save
+      .row
+        .small-12.columns
+          %hr.m-bottom-0
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Hero Image &amp; Copy
+          %p.m-top-10 Please note, the hero image quality will look very low. However, once the overlay is applied, this will look normal on the front-end.
+        .small-12.medium-8.columns
+          .field
+            .c-drk-gray= f.label :hero_image, "Hero Image"
+            .b-lighter-gray= image_tag @career.hero_image.to_s
+            .p-x-20.p-y-80.bgc-lghter-gray
+              %p.ta-center#hero-image-print
+              %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                Upload New Image
+                = f.file_field :hero_image, class: "upload", "data-print" => "#hero-image-print"
+            %p.ta-center#hero-image-print
+          .field.m-top-40
+            .c-drk-gray= f.label :hero_title, "Hero Title"
+            = f.text_field :hero_title
+          .field.m-top-20
+            .c-drk-gray= f.label :hero_copy, "Hero Copy"
+            = f.text_area :hero_copy, :rows => 4
+    .strata-mini
+      .row
+        .small-12.columns
+          %hr
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Open Positions
+          %p.m-top-10 
+            To add jobs, go to the
+            = link_to "jobs page", admin_jobs_url
+        .small-12.medium-8.columns
+          .field
+            .c-drk-gray= f.label :intro_title, "Open Positions Title"
+            = f.text_field :intro_title
+          .field.m-top-20
+            .c-drk-gray= f.label :intro_copy, "Open Positions Blurb"
+            = f.text_area :intro_copy, :rows => 4
+    .strata-mini
+      .row
+        .small-12.columns
+          %hr
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Events
+          %p.m-top-10 
+            To add events, go to the
+            = link_to "events page", admin_events_path
+        .small-12.medium-8.columns
+          .field
+            .c-drk-gray= f.label :event_header, "Events Header"
+            = f.text_field :event_header
+          .field
+            .c-drk-gray= f.label :event_intro, "Events Blurb"
+            = f.text_area :event_intro, :rows => 4
