@@ -1,0 +1,21 @@
+.hide {
+  @include accessibly-hidden;
+}
+
+.hide-palm {
+  @media all and (max-width: $palm-max) {
+    @include accessibly-hidden;
+  }
+}
+
+.hide-tablet {
+  @media all and (max-width: $lap-min) {
+    @include accessibly-hidden;
+  }
+}
+
+.hide-lap {
+  @media all and (min-width: $lap-min) {
+    @include accessibly-hidden;
+  }
+}
