@@ -31,7 +31,7 @@
           %p.m-top-10 Please note, the hero image quality will look very low. However, once the overlay is applied, this will look normal on the front-end.
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label "Image"
+            .c-drk-gray= f.label :hero_image, "Hero Image"
             .b-lighter-gray= image_tag @practicearea.hero_image.to_s
             .p-x-20.p-y-80.bgc-lghter-gray
               %p.ta-center#hero-image-print
@@ -40,10 +40,10 @@
                 = f.file_field :hero_image, class: "upload", "data-print" => "#hero-image-print"
             %p.ta-center#hero-image-print
           .field.m-top-40
-            .c-drk-gray= f.label "Title"
+            .c-drk-gray= f.label :hero_title, "Hero Title"
             = f.text_field :hero_title
           .field.m-top-20
-            .c-drk-gray= f.label "Copy"
+            .c-drk-gray= f.label :hero_copy, "Hero Copy"
             = f.text_area :hero_copy, :rows => 4
     .strata-mini
       .row
