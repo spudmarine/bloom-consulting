@@ -48,6 +48,16 @@ BloomConsulting::Application.routes.draw do
 
   end
 
+  get "/consulting", :to => redirect("/practiceareas")
+  get "/marketing", :to => redirect("/practiceareas")
+  get "/projectmanagement", :to => redirect("/practiceareas")
+  get "/aboutBloom/companyOverview.html", :to => redirect("/about") 
+  get "/aboutBloom/:all", :to => redirect("/team") 
+  get "/bloomServices/:all", :to => redirect("/practiceareas")
+  get "/contactBloom/:all", :to => redirect("/contact")
+  get "/careersAtBloom/:all", :to => redirect("/careers")
+  get "/aboutBloom/", :to => redirect("/practiceareas")
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
