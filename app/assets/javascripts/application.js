@@ -32,4 +32,6 @@
 //= require back_to_top
 //= require all_screen
 //= require admin/upload_name
+//= require picker
+//= require picker.date
 //= require_tree .

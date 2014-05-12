@@ -40,9 +40,9 @@
       %table.tbl-striped
         -events.each do |event|
           %tr
-            %td.job-title{style: "width: 35%;"}= event.location
+            %td.c-drk-gray= event.date.strftime("%B %d, %Y")
+            %td.c-drk-gray{style: "width: 30%;"}= event.location
             %td{style: "width: 35%;"}= event.description
-            %td= event.date.strftime('%b, %d, %Y')
             %td{style: "text-align: right;"}
               -if event.link.present?
                 = link_to "http://#{event.link}" do
