@@ -22,6 +22,6 @@
               = link_to edit_admin_success_path(success), class: "m-right-50" do
                 %span.m-right-5.btn-text{"data-icon" => "D"}
                 Edit
-              = link_to success, method: :delete, data: { confirm: 'Are you sure?' } do
+              = link_to admin_success_path(success), method: :delete, data: { confirm: 'Are you sure?' } do
                 %span.delete-icon.p-left-10{"data-icon" => "M"}
 

@@ -11,6 +11,7 @@ BloomConsulting::Application.routes.draw do
   get 'about', to: 'abouts#show', :defaults => { id: "1"}
   get 'team', to: 'teams#show', :defaults => { id: "1"}
   get 'contact', to: 'contacts#show', :defaults => { id: "1"}
+  get 'sitemap.xml' => 'sitemap#index', as: 'sitemap', :defaults => { format: "xml" }
 
   resources :users
   resources :sessions
@@ -19,10 +20,8 @@ BloomConsulting::Application.routes.draw do
   resources :careers
   resources :jobs
   resources :teams
-  resources :employees
   resources :contacts
   resources :insights
-  resources :quotes
   resources :successes
   resources :events
   resources :carousels
@@ -47,6 +46,22 @@ BloomConsulting::Application.routes.draw do
     resources :carousels
 
   end
+
+  get "/consulting", :to => redirect("/practiceareas")
+  get "/marketing", :to => redirect("/practiceareas")
+  get "/projectmanagement", :to => redirect("/practiceareas")
+  get "/aboutBloom/companyOverview.html", :to => redirect("/about") 
+  get "/aboutBloom/:all", :to => redirect("/team")
+  get "/employees/:all", :to => redirect("/team")
+  resources :employees
+  get "/quotes/:all", :to => redirect("/about")
+  resources :quotes
+  get "/bloomServices/:all", :to => redirect("/practiceareas")
+  get "/bloomPractices/:all", :to => redirect("/practiceareas")
+  get "/contactBloom/:all", :to => redirect("/contact")
+  get "/careersAtBloom/culture.html", :to => redirect("/about")
+  get "/careersAtBloom/:all", :to => redirect("/careers")
+  get "/whatsNewAtBloom/index.html", :to => redirect("/about")
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
