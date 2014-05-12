@@ -1,0 +1,26 @@
+.strata-small
+  .row
+    .small-12.columns
+      = link_to admin_url, class: "lh-h1" do 
+        %span.m-right-5{"data-icon" => "d"}
+        Return to Dashboard
+  .row
+    .small-12.medium-8.columns
+      %h1.c-drk-gray Quotes
+    .small-12.medium-4.columns
+      = link_to new_admin_quote_path, class: "btn btn-m btn-filled btn-block" do
+        Add Quote
+        %span.f-right{"data-icon" => "N"}
+  .row.m-top-20
+    .small-12.columns
+      %table.tbl-striped
+        - @quotes.each do |quote|
+          %tr
+            %td.c-drk-gray= quote.title
+            %td= quote.credit
+            %td.ta-right
+              = link_to edit_admin_quote_path(quote), class: "m-right-50" do
+                %span.m-right-5.btn-text{"data-icon" => "D"}
+                Edit
+              = link_to admin_quote_path(quote), method: :delete, data: { confirm: 'Are you sure?' } do
+                %span.delete-icon.p-left-10{"data-icon" => "M"}
