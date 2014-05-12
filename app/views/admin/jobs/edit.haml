@@ -1,0 +1,84 @@
+.strata-small
+  = form_for [:admin, @job], :html => {:multipart => true} do |f|
+    .row
+      - if @job.errors.any?
+        .small-12.columns
+          .error_explanation
+            %h5
+              = pluralize(@job.errors.count, "error")
+              prohibited this practicearea from being saved:
+            %ul
+              - @@job.errors.full_messages.each do |msg|
+                %li= msg
+    .strata-mini.bgc-white.w-100.p-relative{"data-magellan-expedition" => "fixed"}
+      .row.p-top-20
+        .small-12.medium-8.columns
+          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit Position
+        .small-4.medium-2.columns
+          = link_to admin_jobs_url, class: "btn btn-block btn-l btn-empty ta-center" do
+            %span.m-right-5.hide-lap{"data-icon" => "d"}
+            %span.hide-palm.hide-tablet Cancel
+        .small-8.medium-2.columns
+          .actions
+            %button.btn.btn-block.btn-l.btn-filled.ta-center Save
+      .row
+        .small-12.columns
+          %hr.m-bottom-0
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Position Info
+        .small-12.medium-8.columns
+          .field
+            .c-drk-gray= f.label :title, "Position Title"
+            = f.text_field :title
+          .field.m-top-20
+            .c-drk-gray= f.label :location, "Location"
+            = f.text_field :location
+          .field.m-top-20
+            .c-drk-gray= f.label :description, "Description"
+            = f.text_area :description, :rows => 10
+          .field.m-top-20
+            .c-drk-gray= f.label :area1_title, "Section One Title"
+            = f.text_field :area1_title
+          .field.m-top-20
+            .c-drk-gray= f.label :area1_copy, "Section One Copy"
+            = f.text_area :area1_copy, :class => "tinymce", :id => "area1", :rows => 20, :cols => 80
+          .field.m-top-20
+            .c-drk-gray= f.label :area2_title, "Section Two Title"
+            = f.text_field :area2_title
+          .field.m-top-20
+            .c-drk-gray= f.label :area2_copy, "Section Two Copy"
+            = f.text_area :area2_copy, :class => "tinymce", :id => "area2", :rows => 20, :cols => 80
+          .field.m-top-20
+            .c-drk-gray= f.label :area3_title, "Section Three Title"
+            = f.text_field :area3_title
+          .field.m-top-20
+            .c-drk-gray= f.label :area3_copy, "Section Three Copy"
+            = f.text_area :area3_copy, :class => "tinymce", :id => "area3", :rows => 20, :cols => 80
+          .field.m-top-20
+            .c-drk-gray= f.label :area4_title, "Section Four Title"
+            = f.text_field :area4_title
+          .field.m-top-20
+            .c-drk-gray= f.label :area4_copy, "Section Four Copy"
+            = f.text_area :area4_copy, :class => "tinymce", :id => "area4", :rows => 20, :cols => 80
+          .field.m-top-20
+            .c-drk-gray= f.label :area5_title, "Section Five Title"
+            = f.text_field :area5_title
+          .field.m-top-20
+            .c-drk-gray= f.label :area5_copy, "Section Five Copy"
+            = f.text_area :area5_copy, :class => "tinymce", :id => "area5", :rows => 20, :cols => 80
+          .field.m-top-20
+            .c-drk-gray= f.label :area6_title, "Section Six Title"
+            = f.text_field :area6_title
+          .field.m-top-20
+            .c-drk-gray= f.label :area6_copy, "Section Six Copy"
+            = f.text_area :area6_copy, :class => "tinymce", :id => "area6", :rows => 20, :cols => 80
+          .field.m-top-20
+            .c-drk-gray= f.label :area7_title, "Section Seven Title"
+            = f.text_field :area7_title
+          .field.m-top-20
+            .c-drk-gray= f.label :area7_copy, "Section Seven Copy"
+            = f.text_area :area7_copy, :class => "tinymce", :id => "area7", :rows => 20, :cols => 80
+
+= tinymce
