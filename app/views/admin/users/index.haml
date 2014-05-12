@@ -1,0 +1,27 @@
+.strata-small
+  .row
+    .small-12.columns
+      = link_to admin_url, class: "lh-h1" do 
+        %span.m-right-5{"data-icon" => "d"}
+        Return to Dashboard
+  .row
+    .small-12.medium-8.columns
+      %h1.c-drk-gray Admin Users
+    .small-12.medium-4.columns
+      = link_to new_admin_user_path, class: "btn btn-m btn-filled btn-block" do
+        Add User
+        %span.f-right{"data-icon" => "N"}
+  .row.m-top-20
+    .small-12.columns
+      %table.tbl-striped
+        - @users.each do |user|
+          %tr
+            %td.c-drk-gray{style: "width: 50%;"}= user.email
+            %td.ta-right
+              = link_to edit_admin_user_path(user), class: "m-right-50" do
+                %span.m-right-5.btn-text{"data-icon" => "D"}
+                Edit
+              = link_to admin_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } do
+                %span.delete-icon.p-left-10{"data-icon" => "M"}
+
+
