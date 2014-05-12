@@ -7,10 +7,10 @@
     .small-12.medium-4.medium-offset-4.columns.bgc-white.b-light-gray.p-30
       = form_tag sessions_path do
         .field
-          .lean-label= label_tag "Email:"
+          = label_tag "Email:"
           .lean-input= text_field_tag :email, params[:email]
         .field.m-top-30
-          .lean-label= label_tag "Password:"
+          = label_tag "Password:"
           .lean-input= password_field_tag :password
         .actions.m-top-30
           %button.btn.btn-block.btn-l.btn-filled.m-top-10

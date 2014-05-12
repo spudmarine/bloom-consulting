@@ -37,22 +37,22 @@
               Upload Success Story
               = f.file_field :article, class: "upload", "data-print" => "#article-print"
           .field.m-top-20
-            .c-drk-gray= f.label :title, "Title"
+            = f.label :title, "Title"
             = f.text_field :title
           .field.m-top-20
-            .c-drk-gray= f.label :author, "Author"
+            = f.label :author, "Author"
             = f.select :author, options_from_collection_for_select(@employees, 'name', 'name', @success.author), include_blank: "--"
           .field.m-top-20
-            .c-drk-gray= f.label :blurb, "Blurb"
+            = f.label :blurb, "Blurb"
             = f.text_area :blurb, :rows => 8
           %h6.c-drk-gray.m-top-20{style: "text-transform: uppercase;"} Relevant Practice Areas:
           .field.m-top-20
             .d-inline-block.m-right-5= f.check_box :businessconsulting
-            .d-inline-block.c-drk-gray= f.label :businessconsulting, "Business Consulting"
+            .d-inline-block= f.label :businessconsulting, "Business Consulting"
           .field.m-top-20
             .d-inline-block.m-right-5= f.check_box :projectmanagement
-            .d-inline-block.c-drk-gray= f.label :projectmanagement, "Project Management"
+            .d-inline-block= f.label :projectmanagement, "Project Management"
           .field.m-top-20
             .d-inline-block.m-right-5= f.check_box :businessintelligence
-            .d-inline-block.c-drk-gray= f.label :businessintelligence, "Business Intelligence"
+            .d-inline-block= f.label :businessintelligence, "Business Intelligence"
 

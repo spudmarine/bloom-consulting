@@ -30,8 +30,8 @@
           %h4.c-drk-gray Meet the Team Intro
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :intro_title, "Meet the Team Title"
+            = f.label :intro_title, "Meet the Team Title"
             = f.text_field :intro_title
           .field.m-top-20
-            .c-drk-gray= f.label :intro_copy, "Meet the Team Blurb"
+            = f.label :intro_copy, "Meet the Team Blurb"
             = f.text_area :intro_copy, :rows => 4

@@ -31,7 +31,7 @@
           %p.m-top-10 Please note, the hero image quality will look very low. However, once the overlay is applied, this will look normal on the front-end.
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :hero_image, "Hero Image"
+            = f.label :hero_image, "Hero Image"
             .b-lighter-gray= image_tag @about.hero_image.to_s
             .p-x-20.p-y-80.bgc-lghter-gray
               %p.ta-center#hero-image-print
@@ -39,10 +39,10 @@
                 Upload New Image
                 = f.file_field :hero_image, class: "upload", "data-print" => "#hero-image-print"
           .field.m-top-40
-            .c-drk-gray= f.label :hero_title, "Hero Title"
+            = f.label :hero_title, "Hero Title"
             = f.text_field :hero_title
           .field.m-top-20
-            .c-drk-gray= f.label :hero_copy, "Hero Copy"
+            = f.label :hero_copy, "Hero Copy"
             = f.text_area :hero_copy, :rows => 4
     .strata-mini
       .row
@@ -54,10 +54,10 @@
           %h4.c-drk-gray Company Overview
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :area1_title, "Overview Title"
+            = f.label :area1_title, "Overview Title"
             = f.text_field :area1_title
           .field.m-top-20
-            .c-drk-gray= f.label :area1_copy, "Overview Copy"
+            = f.label :area1_copy, "Overview Copy"
             = f.text_area :area1_copy, :class => "tinymce", :id => "editor", :rows => 20, :cols => 80
     .strata-mini
       .row
@@ -69,10 +69,10 @@
           %h4.c-drk-gray Culture
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :area2_title, "Culture Title"
+            = f.label :area2_title, "Culture Title"
             = f.text_field :area2_title
           .field.m-top-20
-            .c-drk-gray= f.label :area2_copy, "Culture Copy"
+            = f.label :area2_copy, "Culture Copy"
             = f.text_area :area2_copy, :class => "tinymce", :id => "editor2", :rows => 20, :cols => 80
     .strata-mini
       .row
@@ -84,7 +84,7 @@
           %h4.c-drk-gray Quotes
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :area3_title, "Quotes Title"
+            = f.label :area3_title, "Quotes Title"
             = f.text_field :area3_title
 
 = tinymce
