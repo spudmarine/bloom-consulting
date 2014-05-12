@@ -59,7 +59,7 @@ class Admin::SuccessesController < ApplicationController
   def destroy
     @success.destroy
     respond_to do |format|
-      format.html { redirect_to successes_url }
+      format.html { redirect_to admin_successes_url }
       format.json { head :no_content }
     end
   end
