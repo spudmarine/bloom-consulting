@@ -40,13 +40,6 @@
               %h6.m-top-30 Meet the Team
               %p
                 %small /team
-        %li
-          = link_to admin_successes_path do
-            .admin-item
-              %span.admin-icon{"data-icon" => "D"}
-              %h6.m-top-30 Success Stories
-              %p
-                %small /successes
 .strata-small
   .row
     .small-12.medium-4.columns
@@ -69,6 +62,11 @@
             .admin-item
               %span.admin-icon{"data-icon" => "K"}
               %h6.m-top-30 Employees
+        %li
+          = link_to admin_successes_path do
+            .admin-item
+              %span.admin-icon{"data-icon" => "L"}
+              %h6.m-top-30 Success Stories
         %li
           = link_to edit_admin_contact_path(1) do
             .admin-item

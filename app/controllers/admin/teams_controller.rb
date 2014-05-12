@@ -24,7 +24,7 @@ class Admin::TeamsController < ApplicationController
 
     respond_to do |format|
       if @team.save
-        format.html { redirect_to admin_teams_url, notice: 'Team was successfully created.' }
+        format.html { redirect_to admin_url, notice: 'Team was successfully created.' }
         format.json { render action: 'show', status: :created, location: @team }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class Admin::TeamsController < ApplicationController
   def update
     respond_to do |format|
       if @team.update_attributes!(team_params)
-        format.html { redirect_to admin_teams_path, notice: 'Team was successfully updated.' }
+        format.html { redirect_to admin_url, notice: 'Team was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
