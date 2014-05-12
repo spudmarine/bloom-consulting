@@ -5,7 +5,7 @@ xml.urlset(
 ) do
   @mains.each do |main|
     xml.url do
-      xml.loc "#{main}"
+      xml.loc "/"
       xml.changefreq("monthly")
     end
   end
@@ -47,7 +47,7 @@ xml.urlset(
   end
   @practiceareas.each do |practicearea|
     xml.url do
-      xml.loc "#{practicearea}"
+      xml.loc "/practiceareas"
       xml.changefreq("monthly")
     end
   end
