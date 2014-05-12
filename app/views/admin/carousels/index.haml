@@ -26,7 +26,7 @@
         - @carousels.each do |carousel|
           %tr
             %td.ta-center.c-drk-gray
-              = image_tag carousel.carousel_image.to_s
+              = image_tag carousel.carousel_image.thumb.to_s
             %td.ta-center.c-drk-gray
               - if carousel.overview?
                 %span{"data-icon" => "Q"}
