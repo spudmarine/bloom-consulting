@@ -31,7 +31,7 @@
           %p.m-top-10 Please note, the hero image quality will look very low. However, once the overlay is applied, this will look normal on the front-end.
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :hero_image, "Hero Image"
+            = f.label :hero_image, "Hero Image"
             .b-lighter-gray= image_tag @practicearea.hero_image.to_s
             .p-x-20.p-y-80.bgc-lghter-gray
               %p.ta-center#hero-image-print
@@ -39,10 +39,10 @@
                 Upload New Image
                 = f.file_field :hero_image, class: "upload", "data-print" => "#hero-image-print"
           .field.m-top-40
-            .c-drk-gray= f.label :hero_title, "Hero Title"
+            = f.label :hero_title, "Hero Title"
             = f.text_field :hero_title
           .field.m-top-20
-            .c-drk-gray= f.label :hero_copy, "Hero Copy"
+            = f.label :hero_copy, "Hero Copy"
             = f.text_area :hero_copy, :rows => 4
     .strata-mini
       .row
@@ -54,34 +54,34 @@
           %h4.c-drk-gray Practice Area One
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :pa1_title, "Practice Area Name"
+            = f.label :pa1_title, "Practice Area Name"
             = f.text_field :pa1_title
           .field.m-top-20
-            .c-drk-gray= f.label :pa1_copy, "Blurb"
+            = f.label :pa1_copy, "Blurb"
             = f.text_area :pa1_copy, :class => "tinymce", :id => "editor", :rows => 20, :cols => 80
           .field.m-top-20
-            .c-drk-gray= f.label :marketing_services_title, "Marketing Services Title"
+            = f.label :marketing_services_title, "Marketing Services Title"
             = f.text_field :marketing_services_title
           .field.m-top-20
-            .c-drk-gray= f.label :marketing_services_copy, "Marketing Services Copy"
+            = f.label :marketing_services_copy, "Marketing Services Copy"
             = f.text_area :marketing_services_copy, :class => "tinymce", :id => "marketing", :rows => 10, :cols => 80
           .field.m-top-20
-            .c-drk-gray= f.label :sales_services_title, "Sales Services Title"
+            = f.label :sales_services_title, "Sales Services Title"
             = f.text_field :sales_services_title
           .field.m-top-20
-            .c-drk-gray= f.label :sales_services_copy, "Sales Services Copy"
+            = f.label :sales_services_copy, "Sales Services Copy"
             = f.text_area :sales_services_copy, :class => "tinymce", :id => "sales", :rows => 10, :cols => 80
           .field.m-top-20
-            .c-drk-gray= f.label :channel_services_title, "Channels Services Title"
+            = f.label :channel_services_title, "Channels Services Title"
             = f.text_field :channel_services_title
           .field.m-top-20
-            .c-drk-gray= f.label :channel_services_copy, "Channels Services Copy"
+            = f.label :channel_services_copy, "Channels Services Copy"
             = f.text_area :channel_services_copy, :class => "tinymce", :id => "channel", :rows => 10, :cols => 80
           .field.m-top-20
-            .c-drk-gray= f.label :bi_services_title, "Business Intelligence Services Title"
+            = f.label :bi_services_title, "Business Intelligence Services Title"
             = f.text_field :bi_services_title
           .field.m-top-20
-            .c-drk-gray= f.label :bi_services_copy, "Business Intelligence Services Copy"
+            = f.label :bi_services_copy, "Business Intelligence Services Copy"
             = f.text_area :bi_services_copy, :class => "tinymce", :id => "bi", :rows => 10, :cols => 80
     .strata-mini
       .row
@@ -93,29 +93,28 @@
           %h4.c-drk-gray Practice Area Two
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :pa2_title, "Practice Area Name"
+            = f.label :pa2_title, "Practice Area Name"
             = f.text_field :pa2_title
           .field.m-top-20
-            .c-drk-gray= f.label :pa2_copy, "Blurb"
+            = f.label :pa2_copy, "Blurb"
             = f.text_area :pa2_copy, :class => "tinymce", :id => "editor2", :rows => 20, :cols => 80
           .field.m-top-20
-          
-            .c-drk-gray= f.label :pm_process_groups_title, "PM Process Groups Title"
+            = f.label :pm_process_groups_title, "PM Process Groups Title"
             = f.text_field :pm_process_groups_title
           .field.m-top-20
-            .c-drk-gray= f.label :pm_process_groups_copy, "PM Process Groups Copy"
+            = f.label :pm_process_groups_copy, "PM Process Groups Copy"
             = f.text_area :pm_process_groups_copy, :class => "tinymce", :id => "pm-process", :rows => 10, :cols => 80
           .field.m-top-20
-            .c-drk-gray= f.label :pm_knowledge_title, "PM Knowledge Areas Title"
+            = f.label :pm_knowledge_title, "PM Knowledge Areas Title"
             = f.text_field :pm_knowledge_title
           .field.m-top-20
-            .c-drk-gray= f.label :pm_knowledge_copy, "PM Knowledge Areas Copy"
+            = f.label :pm_knowledge_copy, "PM Knowledge Areas Copy"
             = f.text_area :pm_knowledge_copy, :class => "tinymce", :id => "pm-knowledge", :rows => 10, :cols => 80
           .field.m-top-20
-            .c-drk-gray= f.label :pm_deliverables_title, "PM Deliverables Title"
+            = f.label :pm_deliverables_title, "PM Deliverables Title"
             = f.text_field :pm_deliverables_title
           .field.m-top-20
-            .c-drk-gray= f.label :pm_deliverables_copy, "PM Deliverables Copy"
+            = f.label :pm_deliverables_copy, "PM Deliverables Copy"
             = f.text_area :pm_deliverables_copy, :class => "tinymce", :id => "pm-deliverables", :rows => 10, :cols => 80
     .strata-mini
       .row
@@ -127,16 +126,16 @@
           %h4.c-drk-gray Practice Area Three
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :pa3_title, "Practice Area Name"
+            = f.label :pa3_title, "Practice Area Name"
             = f.text_field :pa3_title
           .field.m-top-20
-            .c-drk-gray= f.label :pa3_copy, "Blurb"
+            = f.label :pa3_copy, "Blurb"
             = f.text_area :pa3_copy, :class => "tinymce", :id => "editor3", :rows => 30, :cols => 80
           .field.m-top-20
-            .c-drk-gray= f.label :bifocus_title, "BI Focus Title"
+            = f.label :bifocus_title, "BI Focus Title"
             = f.text_field :bifocus_title
           .field.m-top-20
-            .c-drk-gray= f.label :bifocus_copy, "BI Focus Copy"
+            = f.label :bifocus_copy, "BI Focus Copy"
             = f.text_area :bifocus_copy, :class => "tinymce", :id => "bifocus", :rows => 10, :cols => 80
 
 = tinymce

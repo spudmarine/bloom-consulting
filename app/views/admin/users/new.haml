@@ -30,13 +30,13 @@
           %h4.c-drk-gray User Information
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :email, "Email Address"
+            = f.label :email, "Email Address"
             = f.text_field :email
           %h6.c-drk-gray.m-top-40{style: "text-transform: uppercase;"} Update Password:
           .field.m-top-20
-            .c-drk-gray= f.label :password, "Enter New Password"
+            = f.label :password, "Enter New Password"
             = f.password_field :password
           .field.m-top-20
-            .c-drk-gray= f.label :password_confirmation, "Confirm New Password"
+            = f.label :password_confirmation, "Confirm New Password"
             = f.password_field :password_confirmation
 

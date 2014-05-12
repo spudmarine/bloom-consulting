@@ -1,0 +1,52 @@
+.strata-small
+  = form_for [:admin, @contact], :html => {:multipart => true} do |f|
+    .row
+      - if @contact.errors.any?
+        .small-12.columns
+          .error_explanation
+            %h5
+              = pluralize(@contact.errors.count, "error")
+              prohibited this practicearea from being saved:
+            %ul
+              - @contact.errors.full_messages.each do |msg|
+                %li= msg
+    .strata-mini.bgc-white.w-100.p-relative{"data-magellan-expedition" => "fixed"}
+      .row.p-top-20
+        .small-12.medium-8.columns
+          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit Contact Info
+        .small-4.medium-2.columns
+          = link_to admin_url, class: "btn btn-block btn-l btn-empty ta-center" do
+            %span.m-right-5.hide-lap{"data-icon" => "d"}
+            %span.hide-palm.hide-tablet Cancel
+        .small-8.medium-2.columns
+          .actions
+            %button.btn.btn-block.btn-l.btn-filled.ta-center Save
+      .row
+        .small-12.columns
+          %hr.m-bottom-0
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Company Contact Information
+        .small-12.medium-8.columns
+          .field
+            = f.label :address, "Address"
+            = f.text_area :address, :rows => 2
+          .field.m-top-5
+            = f.label :phone, "Phone Number"
+            = f.text_field :phone
+          .field.m-top-20
+            = f.label :email, "Email Address"
+            = f.text_field :email
+          %h6.c-drk-gray.m-top-60{style: "text-transform: uppercase;"} Social Network Links:
+          .field.m-top-20
+            = f.label :twitter, "Twitter"
+            = f.text_field :twitter, :placeholder => "www.twitter.com/username"
+          .field.m-top-20
+            = f.label :linkedin, "LinkedIn"
+            = f.text_field :linkedin, :placeholder => "www.linkedin.com/in/username"
+          .field.m-top-20
+            = f.label :facebook, "Facebook"
+            = f.text_field :facebook, :placeholder => "www.facebook.com/username"
+
+

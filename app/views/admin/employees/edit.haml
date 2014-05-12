@@ -30,7 +30,7 @@
           %h4.c-drk-gray Employee Info
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :employee_image, "Employee Photo"
+            = f.label :employee_image, "Employee Photo"
             .b-lighter-gray.bgc-lghter-gray.p-y-80.p-top-30.ta-center= image_tag @employee.employee_image.to_s
             .p-x-20.p-y-80.bgc-lghter-gray
               %p.ta-center#emp-image-print
@@ -38,27 +38,27 @@
                 Upload New Image
                 = f.file_field :employee_image, class: "upload", "data-print" => "#emp-image-print"
           .field.m-top-40
-            .c-drk-gray= f.label :name, "Name"
+            = f.label :name, "Name"
             = f.text_field :name
           .field.m-top-20
-            .c-drk-gray= f.label :title, "Job Title"
+            = f.label :title, "Job Title"
             = f.text_field :title
           .field.m-top-20
-            .c-drk-gray= f.label :bio_intro, "Bio Intro"
+            = f.label :bio_intro, "Bio Intro"
             = f.text_area :bio_intro, :rows => 10
           .field.m-top-20
-            .c-drk-gray= f.label :bio, "Expanded Bio"
+            = f.label :bio, "Expanded Bio"
             = f.text_area :bio, :class => "tinymce", :id => "editor", :rows => 20, :cols => 80
           %h6.c-drk-gray.m-top-60{style: "text-transform: uppercase;"} Social Network Links:
           .field.m-top-20
-            .c-drk-gray= f.label :linkedin, "LinkedIn"
+            = f.label :linkedin, "LinkedIn"
             = f.text_field :linkedin, :placeholder => "www.linkedin/com/in/username"
           .field.m-top-20
-            .c-drk-gray= f.label :twitter, "Twitter"
+            = f.label :twitter, "Twitter"
             = f.text_field :twitter, :placeholder => "www.twitter.com/username"
           %h6.c-drk-gray.m-top-60{style: "text-transform: uppercase;"} Sort Order:
           .field.m-top-20
-            .c-drk-gray= f.label :sort, "Sort Order Number"
+            = f.label :sort, "Sort Order Number"
             = f.text_field :sort
 
 

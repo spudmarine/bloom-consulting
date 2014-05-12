@@ -31,7 +31,7 @@
           %p.m-top-10 Please note, the hero image quality will look very low. However, once the overlay is applied, this will look normal on the front-end.
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :hero_image, "Hero Image"
+            = f.label :hero_image, "Hero Image"
             .b-lighter-gray= image_tag @career.hero_image.to_s
             .p-x-20.p-y-80.bgc-lghter-gray
               %p.ta-center#hero-image-print
@@ -39,10 +39,10 @@
                 Upload New Image
                 = f.file_field :hero_image, class: "upload", "data-print" => "#hero-image-print"
           .field.m-top-40
-            .c-drk-gray= f.label :hero_title, "Hero Title"
+            = f.label :hero_title, "Hero Title"
             = f.text_field :hero_title
           .field.m-top-20
-            .c-drk-gray= f.label :hero_copy, "Hero Copy"
+            = f.label :hero_copy, "Hero Copy"
             = f.text_area :hero_copy, :rows => 4
     .strata-mini
       .row
@@ -57,10 +57,10 @@
             = link_to "jobs page", admin_jobs_url
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :intro_title, "Open Positions Title"
+            = f.label :intro_title, "Open Positions Title"
             = f.text_field :intro_title
           .field.m-top-20
-            .c-drk-gray= f.label :intro_copy, "Open Positions Blurb"
+            = f.label :intro_copy, "Open Positions Blurb"
             = f.text_area :intro_copy, :rows => 4
     .strata-mini
       .row
@@ -75,8 +75,8 @@
             = link_to "events page", admin_events_path
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :event_header, "Events Header"
+            = f.label :event_header, "Events Header"
             = f.text_field :event_header
           .field
-            .c-drk-gray= f.label :event_intro, "Events Blurb"
+            = f.label :event_intro, "Events Blurb"
             = f.text_area :event_intro, :rows => 4
