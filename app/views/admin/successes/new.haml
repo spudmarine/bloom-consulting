@@ -1,0 +1,58 @@
+- @employees = Employee.all
+
+.strata-small
+  = form_for [:admin, @success], :html => {:multipart => true} do |f|
+    .row
+      - if @success.errors.any?
+        .small-12.columns
+          .error_explanation
+            %h5
+              = pluralize(@success.errors.count, "error")
+              prohibited this practicearea from being saved:
+            %ul
+              - @success.errors.full_messages.each do |msg|
+                %li= msg
+    .strata-mini.bgc-white.w-100.p-relative{"data-magellan-expedition" => "fixed"}
+      .row.p-top-20
+        .small-12.medium-8.columns
+          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit Success Story
+        .small-4.medium-2.columns
+          = link_to admin_successes_url, class: "btn btn-block btn-l btn-empty ta-center" do
+            %span.m-right-5.hide-lap{"data-icon" => "d"}
+            %span.hide-palm.hide-tablet Cancel
+        .small-8.medium-2.columns
+          .actions
+            %button.btn.btn-block.btn-l.btn-filled.ta-center Save
+      .row
+        .small-12.columns
+          %hr.m-bottom-0
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Success Story Info
+        .small-12.medium-8.columns
+          .p-x-20.p-y-80.bgc-lghter-gray
+            %p.ta-center#article-print
+            %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+              Upload Success Story
+              = f.file_field :article, class: "upload", "data-print" => "#article-print"
+          .field.m-top-20
+            .c-drk-gray= f.label :title, "Title"
+            = f.text_field :title
+          .field.m-top-20
+            .c-drk-gray= f.label :author, "Author"
+            = f.select :author, options_from_collection_for_select(@employees, 'name', 'name', @success.author), include_blank: "--"
+          .field.m-top-20
+            .c-drk-gray= f.label :blurb, "Blurb"
+            = f.text_area :blurb, :rows => 8
+          %h6.c-drk-gray.m-top-20{style: "text-transform: uppercase;"} Relevant Practice Areas:
+          .field.m-top-20
+            .d-inline-block.m-right-5= f.check_box :businessconsulting
+            .d-inline-block.c-drk-gray= f.label :businessconsulting, "Business Consulting"
+          .field.m-top-20
+            .d-inline-block.m-right-5= f.check_box :projectmanagement
+            .d-inline-block.c-drk-gray= f.label :projectmanagement, "Project Management"
+          .field.m-top-20
+            .d-inline-block.m-right-5= f.check_box :businessintelligence
+            .d-inline-block.c-drk-gray= f.label :businessintelligence, "Business Intelligence"
+

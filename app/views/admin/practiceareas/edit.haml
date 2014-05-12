@@ -38,7 +38,6 @@
               %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
                 Upload New Image
                 = f.file_field :hero_image, class: "upload", "data-print" => "#hero-image-print"
-            %p.ta-center#hero-image-print
           .field.m-top-40
             .c-drk-gray= f.label :hero_title, "Hero Title"
             = f.text_field :hero_title

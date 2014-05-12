@@ -1,0 +1,37 @@
+.strata-small
+  = form_for [:admin, @team], :html => {:multipart => true} do |f|
+    .row
+      - if @team.errors.any?
+        .small-12.columns
+          .error_explanation
+            %h5
+              = pluralize(@team.errors.count, "error")
+              prohibited this practicearea from being saved:
+            %ul
+              - @team.errors.full_messages.each do |msg|
+                %li= msg
+    .strata-mini.bgc-white.w-100.p-relative{"data-magellan-expedition" => "fixed"}
+      .row.p-top-20
+        .small-12.medium-8.columns
+          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit Meet the Team Page
+        .small-4.medium-2.columns
+          = link_to admin_url, class: "btn btn-block btn-l btn-empty ta-center" do
+            %span.m-right-5.hide-lap{"data-icon" => "d"}
+            %span.hide-palm.hide-tablet Cancel
+        .small-8.medium-2.columns
+          .actions
+            %button.btn.btn-block.btn-l.btn-filled.ta-center Save
+      .row
+        .small-12.columns
+          %hr.m-bottom-0
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Meet the Team Intro
+        .small-12.medium-8.columns
+          .field
+            .c-drk-gray= f.label :intro_title, "Meet the Team Title"
+            = f.text_field :intro_title
+          .field.m-top-20
+            .c-drk-gray= f.label :intro_copy, "Meet the Team Blurb"
+            = f.text_area :intro_copy, :rows => 4

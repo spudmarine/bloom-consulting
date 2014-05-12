@@ -12,10 +12,11 @@
     .row
       .small-12.medium-4.columns
         %h5.c-drk-gray= success.title
-        %p
-          %small
-            by
-            = success.author
+        - if success.author.present?
+          %p
+            %small
+              by
+              = success.author
       .small-12.medium-8.columns
         %p= success.blurb
         - if success.article.url.present?

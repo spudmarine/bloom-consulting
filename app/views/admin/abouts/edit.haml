@@ -1,19 +1,19 @@
 .strata-small
-  = form_for [:admin, @career], :html => {:multipart => true} do |f|
+  = form_for [:admin, @about], :html => {:multipart => true} do |f|
     .row
-      - if @career.errors.any?
+      - if @about.errors.any?
         .small-12.columns
           .error_explanation
             %h5
-              = pluralize(@career.errors.count, "error")
+              = pluralize(@about.errors.count, "error")
               prohibited this practicearea from being saved:
             %ul
-              - @career.errors.full_messages.each do |msg|
+              - @about.errors.full_messages.each do |msg|
                 %li= msg
     .strata-mini.bgc-white.w-100.p-relative{"data-magellan-expedition" => "fixed"}
       .row.p-top-20
         .small-12.medium-8.columns
-          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit Careers Page
+          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit About Us Page
         .small-4.medium-2.columns
           = link_to admin_url, class: "btn btn-block btn-l btn-empty ta-center" do
             %span.m-right-5.hide-lap{"data-icon" => "d"}
@@ -32,7 +32,7 @@
         .small-12.medium-8.columns
           .field
             .c-drk-gray= f.label :hero_image, "Hero Image"
-            .b-lighter-gray= image_tag @career.hero_image.to_s
+            .b-lighter-gray= image_tag @about.hero_image.to_s
             .p-x-20.p-y-80.bgc-lghter-gray
               %p.ta-center#hero-image-print
               %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
@@ -51,17 +51,14 @@
     .strata
       .row
         .small-12.medium-4.columns
-          %h4.c-drk-gray Open Positions
-          %p.m-top-10 
-            To add jobs, go to the
-            = link_to "jobs page", admin_jobs_url
+          %h4.c-drk-gray Company Overview
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :intro_title, "Open Positions Title"
-            = f.text_field :intro_title
+            .c-drk-gray= f.label :area1_title, "Overview Title"
+            = f.text_field :area1_title
           .field.m-top-20
-            .c-drk-gray= f.label :intro_copy, "Open Positions Blurb"
-            = f.text_area :intro_copy, :rows => 4
+            .c-drk-gray= f.label :area1_copy, "Overview Copy"
+            = f.text_area :area1_copy, :class => "tinymce", :id => "editor", :rows => 20, :cols => 80
     .strata-mini
       .row
         .small-12.columns
@@ -69,14 +66,26 @@
     .strata
       .row
         .small-12.medium-4.columns
-          %h4.c-drk-gray Events
-          %p.m-top-10 
-            To add events, go to the
-            = link_to "events page", admin_events_path
+          %h4.c-drk-gray Culture
         .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :event_header, "Events Header"
-            = f.text_field :event_header
+            .c-drk-gray= f.label :area2_title, "Culture Title"
+            = f.text_field :area2_title
+          .field.m-top-20
+            .c-drk-gray= f.label :area2_copy, "Culture Copy"
+            = f.text_area :area2_copy, :class => "tinymce", :id => "editor2", :rows => 20, :cols => 80
+    .strata-mini
+      .row
+        .small-12.columns
+          %hr
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Quotes
+        .small-12.medium-8.columns
           .field
-            .c-drk-gray= f.label :event_intro, "Events Blurb"
-            = f.text_area :event_intro, :rows => 4
+            .c-drk-gray= f.label :area3_title, "Quotes Title"
+            = f.text_field :area3_title
+
+= tinymce
+

@@ -1,4 +1,6 @@
 .ta-center { text-align: center; }
+.ta-right  { text-align: right; }
+.ta-left   { text-align: left; }
 
 .f-italics {
   font-family: 'MuseoSans-500Italic', Arial, sans-serif;
@@ -29,4 +31,12 @@
 // Line Height for Medium Buttons
 .lh-btn-m {
   line-height: 42px;
+}
+
+// Delete Link Styling
+.delete-icon {
+  color: $light-gray;
+  &:hover {
+    color: $bloom-orange;
+  }
 }
