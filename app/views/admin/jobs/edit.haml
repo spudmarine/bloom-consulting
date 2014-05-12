@@ -8,12 +8,12 @@
               = pluralize(@job.errors.count, "error")
               prohibited this practicearea from being saved:
             %ul
-              - @@job.errors.full_messages.each do |msg|
+              - @job.errors.full_messages.each do |msg|
                 %li= msg
     .strata-mini.bgc-white.w-100.p-relative{"data-magellan-expedition" => "fixed"}
       .row.p-top-20
         .small-12.medium-8.columns
-          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit Position
+          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit #{@job.title}
         .small-4.medium-2.columns
           = link_to admin_jobs_url, class: "btn btn-block btn-l btn-empty ta-center" do
             %span.m-right-5.hide-lap{"data-icon" => "d"}

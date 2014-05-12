@@ -1,0 +1,39 @@
+.strata-small
+  .row
+    .small-12.columns
+      = link_to admin_url, class: "lh-h1" do 
+        %span.m-right-5{"data-icon" => "d"}
+        Return to Dashboard
+  .row
+    .small-12.medium-8.columns
+      %h1.c-drk-gray Employees
+    .small-12.medium-4.columns
+      = link_to new_admin_employee_path, class: "btn btn-m btn-filled btn-block" do
+        Add Employee
+        %span.f-right{"data-icon" => "N"}
+  .row.m-top-20
+    .small-12.columns
+      %ul.l-no-style.p-left-0
+        - @employees.each do |employee|
+          %li.strata-striped.p-20
+            .row
+              .small-1.column
+                %span{"data-icon" => "O"}
+              .small-2.columns
+                = image_tag employee.employee_image.thumb.to_s
+              .small-3.columns
+                .c-drk-gray= employee.name
+              .small-2.columns
+                = employee.title
+              .small-1.column.ta-right
+                - if employee.linkedin.present?
+                  %span{"data-icon" => "k"}
+                - if employee.twitter.present?
+                  %span.m-left-5{"data-icon" => "l"}
+              .small-3.columns.ta-right
+                = link_to edit_admin_employee_path(employee), class: "m-right-50" do
+                  %span.m-right-5.btn-text{"data-icon" => "D"}
+                  Edit
+                = link_to admin_employee_path(employee), method: :delete, data: { confirm: 'Are you sure?' } do
+                  %span.delete-icon.p-left-10{"data-icon" => "M"}
+
