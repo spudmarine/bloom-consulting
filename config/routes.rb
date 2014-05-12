@@ -36,7 +36,9 @@ BloomConsulting::Application.routes.draw do
     resources :careers
     resources :jobs
     resources :teams
-    resources :employees
+    resources :employees do
+      collection { post :sort }
+    end    
     resources :abouts
     resources :contacts
     resources :insights

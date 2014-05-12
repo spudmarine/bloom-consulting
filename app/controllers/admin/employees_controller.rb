@@ -26,7 +26,7 @@ def new
   end
 
   def index
-    @employees = Employee.all
+    @employees = Employee.order("sortorder")
   end
 
   def show
@@ -51,6 +51,14 @@ def new
     redirect_to admin_employees_url
   end
 
+  def sort
+    params[:employee].each_with_index do |id, index|
+      employee = Employee.find(id)
+      employee.update_attribute(:sortorder, index) if employee
+    end
+    render nothing: true
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_employee
@@ -59,7 +67,7 @@ def new
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def employee_params
-      params.require(:employee).permit(:employee_image, :name, :title, :bio_intro, :bio, :linkedin, :twitter, :sort)
+      params.require(:employee).permit(:id, :employee_image, :name, :title, :bio_intro, :bio, :linkedin, :twitter, :sortorder)
     end
   
 end
