@@ -1,0 +1,42 @@
+.strata-small
+  = form_for [:admin, @quote], :html => {:multipart => true} do |f|
+    .row
+      - if @quote.errors.any?
+        .small-12.columns
+          .error_explanation
+            %h5
+              = pluralize(@quote.errors.count, "error")
+              prohibited this practicearea from being saved:
+            %ul
+              - @quote.errors.full_messages.each do |msg|
+                %li= msg
+    .strata-mini.bgc-white.w-100.p-relative{"data-magellan-expedition" => "fixed"}
+      .row.p-top-20
+        .small-12.medium-8.columns
+          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit Quote
+        .small-4.medium-2.columns
+          = link_to admin_quotes_path, class: "btn btn-block btn-l btn-empty ta-center" do
+            %span.m-right-5.hide-lap{"data-icon" => "d"}
+            %span.hide-palm.hide-tablet Cancel
+        .small-8.medium-2.columns
+          .actions
+            %button.btn.btn-block.btn-l.btn-filled.ta-center Save
+      .row
+        .small-12.columns
+          %hr.m-bottom-0
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Quote Info
+        .small-12.medium-8.columns
+          .field
+            = f.label :title, "Title"
+            = f.text_field :title
+          .field.m-top-20
+            = f.label :quote, "Quote"
+            = f.text_area :quote, :class => "tinymce", :id => "editor", :rows => 10, :cols => 10
+          .field.m-top-20
+            = f.label :credit, "Credit"
+            = f.text_area :credit
+
+= tinymce
