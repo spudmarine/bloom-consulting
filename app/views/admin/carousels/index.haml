@@ -1,0 +1,52 @@
+.strata-small
+  .row
+    .small-12.columns
+      = link_to admin_url, class: "lh-h1" do 
+        %span.m-right-5{"data-icon" => "d"}
+        Return to Dashboard
+  .row
+    .small-12.medium-8.columns
+      %h1.c-drk-gray Carousel Photos
+    .small-12.medium-4.columns
+      = link_to new_admin_carousel_path, class: "btn btn-m btn-filled btn-block" do
+        Add Photo
+        %span.f-right{"data-icon" => "N"}
+  .row.m-top-20
+    .small-12.columns
+      %table.tbl-striped
+        %thead
+          %th Image
+          %th Overview
+          %th Culture
+          %th Business Consulting
+          %th Project Management
+          %th Business Intelligence
+          %th Recruiting
+          %th Actions
+        - @carousels.each do |carousel|
+          %tr
+            %td.ta-center.c-drk-gray
+              = image_tag carousel.carousel_image.to_s
+            %td.ta-center.c-drk-gray
+              - if carousel.overview?
+                %span{"data-icon" => "Q"}
+            %td.ta-center.c-drk-gray
+              - if carousel.culture?
+                %span{"data-icon" => "Q"}
+            %td.ta-center.c-drk-gray
+              - if carousel.consulting?
+                %span{"data-icon" => "Q"}
+            %td.ta-center.c-drk-gray
+              - if carousel.pm?
+                %span{"data-icon" => "Q"}
+            %td.ta-center.c-drk-gray
+              - if carousel.bi?
+                %span{"data-icon" => "Q"}
+            %td.ta-center.c-drk-gray
+              - if carousel.recruiting?
+                %span{"data-icon" => "Q"}
+            %td.ta-right
+              = link_to edit_admin_carousel_path(carousel), class: "m-right-15" do
+                %span.m-right-5.btn-text{"data-icon" => "D"}
+              = link_to admin_carousel_path(carousel), method: :delete, data: { confirm: 'Are you sure?' } do
+                %span.delete-icon.p-left-10{"data-icon" => "M"}

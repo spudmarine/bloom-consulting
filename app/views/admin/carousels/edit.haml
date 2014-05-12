@@ -1,0 +1,62 @@
+.strata-small
+  = form_for [:admin, @carousel], :html => {:multipart => true} do |f|
+    .row
+      - if @carousel.errors.any?
+        .small-12.columns
+          .error_explanation
+            %h5
+              = pluralize(@carousel.errors.count, "error")
+              prohibited this practicearea from being saved:
+            %ul
+              - @carousel.errors.full_messages.each do |msg|
+                %li= msg
+    .strata-mini.bgc-white.w-100.p-relative{"data-magellan-expedition" => "fixed"}
+      .row.p-top-20
+        .small-12.medium-8.columns
+          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit Image
+        .small-4.medium-2.columns
+          = link_to admin_carousels_path, class: "btn btn-block btn-l btn-empty ta-center" do
+            %span.m-right-5.hide-lap{"data-icon" => "d"}
+            %span.hide-palm.hide-tablet Cancel
+        .small-8.medium-2.columns
+          .actions
+            %button.btn.btn-block.btn-l.btn-filled.ta-center Save
+      .row
+        .small-12.columns
+          %hr.m-bottom-0
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Image Information
+        .small-12.medium-8.columns
+          .field
+            = f.label :carousel_image, "Image"
+            .b-lighter-gray= image_tag @carousel.carousel_image.to_s
+            .p-x-20.p-y-80.bgc-lghter-gray
+              %p.ta-center#carousel-image-print
+              %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                Upload New Image
+                = f.file_field :carousel_image, class: "upload", "data-print" => "#carousel-image-print"
+          .field.m-top-40
+            = f.label :title, "Title"
+            = f.text_field :title
+          %h6.c-drk-gray.m-top-60{style: "text-transform: uppercase;"} Place in carousels:
+          .field.m-top-20
+            .d-inline-block.m-right-5= f.check_box :overview
+            .d-inline-block= f.label :overview, "About :: Overview"
+          .field.m-top-20
+            .d-inline-block.m-right-5= f.check_box :culture
+            .d-inline-block= f.label :culture, "About :: Culture"
+          .field.m-top-20
+            .d-inline-block.m-right-5= f.check_box :consulting
+            .d-inline-block= f.label :consulting, "Practice Areas :: Business Consulting"
+          .field.m-top-20
+            .d-inline-block.m-right-5= f.check_box :pm
+            .d-inline-block= f.label :pm, "Practice Areas :: Project Management"
+          .field.m-top-20
+            .d-inline-block.m-right-5= f.check_box :bi
+            .d-inline-block= f.label :bi, "Practice Areas :: Business Intelligence"
+          .field.m-top-20
+            .d-inline-block.m-right-5= f.check_box :recruiting
+            .d-inline-block= f.label :recruiting, "Careers :: Recruiting Events"
+

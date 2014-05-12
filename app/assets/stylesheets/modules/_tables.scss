@@ -1,3 +1,10 @@
+th {
+  font-size: .7rem;
+  text-transform: uppercase;
+  color: $dark-gray;
+  text-align: center;
+}
+
 .tbl-striped {
   tr:nth-child(odd) > td {
     background-color: $lighter-gray;
