@@ -12,6 +12,7 @@ gem 'tinymce-rails'
 gem 'active_link_to'
 gem 'newrelic_rpm'
 gem 'jquery-ui-rails'
+gem 'friendly_id', '~> 5.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'

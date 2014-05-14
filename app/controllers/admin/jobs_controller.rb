@@ -34,11 +34,11 @@ def new
   end
 
   def edit
-    @job = Job.find(params[:id])
+    @job = Job.friendly.find(params[:id])
   end
 
   def update
-    @job = Job.find(params[:id])
+    @job = Job.friendly.find(params[:id])
     if @job.update_attributes(job_params)
       redirect_to admin_jobs_url, notice: "job has been updated."
     else
@@ -47,7 +47,7 @@ def new
   end
 
   def destroy
-    Job.find(params[:id]).destroy
+    Job.friendly.find(params[:id]).destroy
     redirect_to admin_jobs_url
   end
 
