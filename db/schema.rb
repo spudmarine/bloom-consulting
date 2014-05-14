@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140512200156) do
+ActiveRecord::Schema.define(version: 20140514203021) do
 
   create_table "abouts", force: true do |t|
     t.string   "hero_image"
@@ -23,6 +23,35 @@ ActiveRecord::Schema.define(version: 20140512200156) do
     t.text     "area2_copy"
     t.string   "area3_title"
     t.text     "area3_copy"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_mains", force: true do |t|
+    t.string   "hero_image"
+    t.string   "hero_title"
+    t.string   "stratum_1_image"
+    t.string   "stratum_1_title"
+    t.text     "stratum_1_copy"
+    t.string   "stratum_1_cta"
+    t.string   "stratum_1_link"
+    t.string   "practice_area_1_image"
+    t.string   "practice_area_1_title"
+    t.text     "practice_area_1_copy"
+    t.string   "practice_area_1_link"
+    t.string   "practice_area_2_image"
+    t.string   "practice_area_2_title"
+    t.text     "practice_area_2_copy"
+    t.string   "practice_area_2_link"
+    t.string   "practice_area_3_image"
+    t.string   "practice_area_3_title"
+    t.text     "practice_area_3_copy"
+    t.string   "practice_area_3_link"
+    t.string   "stratum_2_image"
+    t.string   "stratum_2_title"
+    t.text     "stratum_2_copy"
+    t.string   "stratum_2_cta"
+    t.string   "stratum_2_link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -97,6 +126,19 @@ ActiveRecord::Schema.define(version: 20140512200156) do
     t.string   "description"
   end
 
+  create_table "friendly_id_slugs", force: true do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+
   create_table "insights", force: true do |t|
     t.string   "title"
     t.string   "author"
@@ -129,7 +171,10 @@ ActiveRecord::Schema.define(version: 20140512200156) do
     t.text     "area6_copy"
     t.string   "area7_title"
     t.text     "area7_copy"
+    t.string   "slug"
   end
+
+  add_index "jobs", ["slug"], name: "index_jobs_on_slug"
 
   create_table "mains", force: true do |t|
     t.string   "hero_image"
