@@ -24,7 +24,7 @@
             %td.job-detail= job.location
             %td.job-detail{style: "width: 35%;"}= raw job.description
             %td.job-link
-              = link_to job_path(job) do
+              = link_to careers_job_path(job) do
                 Position Details
                 %span
                   %small.p-left-5{"data-icon" => "p"}
