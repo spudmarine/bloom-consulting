@@ -1,7 +1,4 @@
 BloomConsulting::Application.routes.draw do
-  require 'robots_generator'
-
-  match '/robots.txt' => RobotsGenerator
 
   root to: 'mains#show', :defaults => { id: "1" }
 

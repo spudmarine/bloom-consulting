@@ -9,4 +9,5 @@ class RobotsGenerator
       "User-agent: *\nDisallow: /"
     end
 
+   
 end
