@@ -5,7 +5,7 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.friendly.find(params[:id])
-    if request.path != job_path(@job)
+    if request.path != careers_job_path(@job)
     	redirect_to @job, status: :moved_permanently
     end
   end
