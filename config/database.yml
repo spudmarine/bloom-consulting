@@ -18,6 +18,13 @@ test:
   pool: 5
   timeout: 5000
 
+staging:
+  adapter: postgresql
+  database: db/bloom_production
+  pool: 5
+  timeout: 5000
+  username: scottrowland
+  password:
 
 
 production:
