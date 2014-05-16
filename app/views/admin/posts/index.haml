@@ -17,8 +17,7 @@
         - @posts.each do |post|
           %tr
             %td{style: "width: 15%;"}
-              - if post.date.present?
-                = post.date.strftime("%B %d, %Y")
+              = post.created_at.strftime("%B %d, %Y")
             %td.c-drk-gray{style: "width: 35%;"}= post.title
             %td= post.author
             %td.ta-right
