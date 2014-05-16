@@ -12,6 +12,7 @@ BloomConsulting::Application.routes.draw do
   get 'team', to: 'teams#show', :defaults => { id: "1"}
   get 'contact', to: 'contacts#show', :defaults => { id: "1"}
   get 'sitemap.xml' => 'sitemap#index', as: 'sitemap', :defaults => { format: "xml" }
+  get 'blog', to: 'posts#index'
 
   resources :users
   resources :sessions

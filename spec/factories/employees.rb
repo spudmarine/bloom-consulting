@@ -2,12 +2,11 @@
 
 FactoryGirl.define do
   factory :employee do
-    employee_image "MyString"
-    name "MyString"
-    title "MyString"
-    bio "MyText"
+    name "Scott Rowland"
+    title "Web Admin"
+    bio "This is some text"
+    bio_intro "this is an intro"
     linkedin "MyString"
     twitter "MyString"
-    facebook "MyString"
   end
 end
