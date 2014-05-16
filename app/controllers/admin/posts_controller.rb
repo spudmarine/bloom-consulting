@@ -34,11 +34,11 @@ class Admin::PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     if @post.update_attributes(post_params)
       redirect_to admin_posts_url, notice: "post has been updated."
     else
@@ -47,7 +47,7 @@ class Admin::PostsController < ApplicationController
   end
 
   def destroy
-  	Post.find(params[:id]).destroy
+  	Post.friendly.find(params[:id]).destroy
   	redirect_to admin_posts_url
   end
 
