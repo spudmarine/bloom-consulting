@@ -29,9 +29,9 @@
         .small-12.medium-4.columns
           %h4.c-drk-gray Blog Post Info
         .small-12.medium-8.columns
-          .field
-            = f.label :date, "Date"
-            = f.text_field :date, :value => (f.object.date.strftime('%B %d, %Y') if f.object.date), class: "datepicker"
+          %p
+            %small{style: "text-transform: uppercase;"} created on: 
+          %p.c-drk-gray.m-bottom-20= @post.created_at.strftime('%B %d, %Y')
           .field
             = f.label :title, "Title"
             = f.text_field :title

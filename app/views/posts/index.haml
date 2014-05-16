@@ -1,12 +1,10 @@
-= render 'layouts/blog_nav'
-
 .strata-striped
   - @posts.each do |post|
     .strata
       .row
         .small-10.small-offset-1.columns.ta-center
           %p.m-bottom-30
-            %small{style: "text-transform: uppercase;"}= post.date.strftime("%B %d, %Y")
+            %small{style: "text-transform: uppercase;"}= post.created_at.strftime("%B %d, %Y")
           %h2.c-blue= post.title
           %p.m-bottom-20
             by
@@ -15,6 +13,4 @@
           = link_to post_path(post) do
             %h3.c-orange
               %span{"data-icon" => "p"}
-
-= render 'layouts/blog_footer'
 

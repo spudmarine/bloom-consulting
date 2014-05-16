@@ -11,9 +11,10 @@
     .small-4.columns
       - contact = Contact.all
       %ul.f-right.l-no-style
-        %li.footer-item
-          %p
-            %small FOLLOW US:
+        - if contact.last.linkedin.present? || contact.last.twitter.present? || contact.last.facebook.present?
+          %li.footer-item
+            %p
+              %small FOLLOW US:
         - if contact.last.linkedin.present?
           %li.footer-item
             %h4

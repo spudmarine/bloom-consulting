@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  layout 'login'
+  layout 'blog'
   
   def index
   	@posts = Post.all
@@ -8,5 +8,8 @@ class PostsController < ApplicationController
 
   def show
   	@post = Post.find(params[:id])
+    @prev = @post.previous_post
+    @next = @post.next_post
   end
+
 end
