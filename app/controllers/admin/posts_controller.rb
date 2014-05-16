@@ -8,7 +8,7 @@ class Admin::PostsController < ApplicationController
 	end
 
 	def create
-    @post = Post.new(params[:post])
+    @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
@@ -39,8 +39,8 @@ class Admin::PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if @post.update_attributes(params[:post])
-      redirect_to @post, notice: "post has been updated."
+    if @post.update_attributes(post_params)
+      redirect_to admin_posts_url, notice: "post has been updated."
     else
       render "edit"
     end
@@ -48,7 +48,17 @@ class Admin::PostsController < ApplicationController
 
   def destroy
   	Post.find(params[:id]).destroy
-  	redirect_to root_url
+  	redirect_to admin_posts_url
   end
+
+  private
+
+    def set_post
+      @posts = Post.find(params[:id])
+    end
+
+    def post_params
+      params.require(:post).permit(:title, :author, :date, :body)
+    end
 
 end

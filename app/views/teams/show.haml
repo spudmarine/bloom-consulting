@@ -14,33 +14,34 @@
     .small-12.large-9.columns
       %p.p-top-5= @team.intro_copy
 - employees = Employee.all
-- employees.each do |employee|
-  .strata-small.strata-striped
-    .row.p-20
-      .small-12.medium-2.columns
-        = image_tag employee.employee_image.profile, class: "w-100 b-light-gray"
-      .small-12.medium-10.columns
-        .row
-          .small-8.columns
-            %h5
-              .c-drk-gray.d-inline-block= employee.name + ","
-              = employee.title
-          .small-4.columns
-            - if employee.linkedin.present?
+.strata-striped
+  - employees.each do |employee|
+    .strata-small
+      .row.p-20
+        .small-12.medium-2.columns
+          = image_tag employee.employee_image.profile, class: "w-100 b-light-gray"
+        .small-12.medium-10.columns
+          .row
+            .small-8.columns
               %h5
-                %a.f-right.m-left-10{href: "http://" + employee.linkedin, target: "_blank", "data-icon" => "k"}
-            - if employee.twitter.present?
-              %h5
-                %a.f-right{href: "http://" + employee.twitter, target: "_blank", "data-icon" => "l"}
-        .row
-          .small-12.columns
-            %p.p-top-10= employee.bio_intro
-            %div.bio-hide
-              %p.full-bio.m-0= raw employee.bio
-            - if employee.bio.present?
-              %a.bio-toggle
-                %span.js-link-text
-                %span.p-left-5
-                  %small.p-icon.js-link-icon{"data-icon" => ""}
+                .c-drk-gray.d-inline-block= employee.name + ","
+                = employee.title
+            .small-4.columns
+              - if employee.linkedin.present?
+                %h5
+                  %a.f-right.m-left-10{href: "http://" + employee.linkedin, target: "_blank", "data-icon" => "k"}
+              - if employee.twitter.present?
+                %h5
+                  %a.f-right{href: "http://" + employee.twitter, target: "_blank", "data-icon" => "l"}
+          .row
+            .small-12.columns
+              %p.p-top-10= employee.bio_intro
+              %div.bio-hide
+                %p.full-bio.m-0= raw employee.bio
+              - if employee.bio.present?
+                %a.bio-toggle
+                  %span.js-link-text
+                  %span.p-left-5
+                    %small.p-icon.js-link-icon{"data-icon" => ""}
 
 

@@ -16,7 +16,7 @@ BloomConsulting::Application.routes.draw do
   resources :users
   resources :sessions
   resources :mains
-  resources :posts, only: [:index]
+  resources :posts, only: [:index, :show]
   resources :careers
   resources :jobs
   resources :teams

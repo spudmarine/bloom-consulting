@@ -1,0 +1,22 @@
+= render 'layouts/blog_nav'
+
+.strata.bgc-lghter-gray
+  .row
+    .small-10.small-offset-1.columns.ta-center
+      %h1.c-blue= @post.title
+      %p
+        %small
+          %span= @post.date.strftime("%B %d, %Y")
+          &nbsp;|&nbsp;  by
+          %span.c-drk-gray= @post.author
+      %p.m-top-30
+        %small{style: "text-transform: uppercase;"} share:
+      %h4.d-inline-block
+        %a.twitter-share-button{"data-lang" => "en", "onclick" => "window.open('https://twitter.com/share', 'newwindow', 'width=300, height=250'); return false;"}
+          %span{"data-icon" => "l"}
+.strata
+  .row
+    .small-10.small-offset-1.columns
+      %p= raw @post.body
+
+= render 'layouts/blog_footer'

@@ -11,3 +11,7 @@
 .admin-icon {
   font-size: 3rem;
 }
+
+.list-striped:nth-of-type(odd) {
+  background-color: $lighter-gray;
+}

@@ -7,22 +7,23 @@
     .small-12.columns
       %h1.c-blue Insights
 - insights = Insight.all
-- insights.each do |insight|
-  .strata.strata-striped
-    .row
-      .small-12.medium-4.columns
-        %h5.c-drk-gray= insight.title
-        %p
-          %small
-            by
-            = insight.author
-      .small-12.medium-8.columns
-        %p= insight.blurb
-        - if insight.article.url.present?
-          %div.p-top-20
-            = link_to insight.article.url, class: "btn btn-empty btn-m ta-center", :target => "_Blank" do
-              %span.btn-text.p-right-5{"data-icon" => "c"}
-              - if insight.article.url.end_with?(".ppt", ".pptx")
-                %span.btn-text Download Presentation
-              - else
-                %span.btn-text Download Article
+.strata-striped
+  - insights.each do |insight|
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h5.c-drk-gray= insight.title
+          %p
+            %small
+              by
+              = insight.author
+        .small-12.medium-8.columns
+          %p= insight.blurb
+          - if insight.article.url.present?
+            %div.p-top-20
+              = link_to insight.article.url, class: "btn btn-empty btn-m ta-center", :target => "_Blank" do
+                %span.btn-text.p-right-5{"data-icon" => "c"}
+                - if insight.article.url.end_with?(".ppt", ".pptx")
+                  %span.btn-text Download Presentation
+                - else
+                  %span.btn-text Download Article
