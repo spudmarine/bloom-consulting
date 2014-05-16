@@ -1,22 +1,44 @@
-= render 'layouts/blog_nav'
-
 .strata.bgc-lghter-gray
   .row
-    .small-10.small-offset-1.columns.ta-center
+    .small-12.medium-10.medium-offset-1.columns.ta-center
       %h1.c-blue= @post.title
       %p
         %small
-          %span= @post.date.strftime("%B %d, %Y")
+          %span= @post.created_at.strftime("%B %d, %Y")
           &nbsp;|&nbsp;  by
           %span.c-drk-gray= @post.author
       %p.m-top-30
         %small{style: "text-transform: uppercase;"} share:
       %h4.d-inline-block
-        %a.twitter-share-button{"data-lang" => "en", "expr:data-text" => "#{@post.share_text}", "onclick" => "window.open('https://twitter.com/share', 'newwindow', 'width=500, height=300'); return false;"}
+        %a.twitter-share-button.m-right-20{"data-lang" => "en", "data-text" => "#{@post.share_text}", "onclick" => "window.open('https://twitter.com/share', 'newwindow', 'width=500, height=300'); return false;"}
           %span{"data-icon" => "l"}
+        %a.fb-share-button#facebook-jssdk{"onclick" => "window.open('#{post_path(@post)}', 'newwindow', 'width=500, height=300'); return false;"}
+          %span{"data-icon" => "j"}
+        %a.m-left-20{href: "http://www.linkedin.com/shareArticle?mini=true&url=http://bloomconsultinggroup.com#{post_path(@post)}&title=#{url_encode(@post.title)}&source=#{url_encode('Bloom Consulting Group')}&summary=#{truncate(@post.body, length: 253, separator: ' ')}", "target" => "_blank"}
+          %span{"data-icon" => "k"}
 .strata
   .row
-    .small-10.small-offset-1.columns
+    .small-12.medium-10.medium-offset-1.columns
       %p= raw @post.body
-
-= render 'layouts/blog_footer'
+.strata-small
+  .row.m-bottom-50
+    .small-12.medium-10.medium-offset-1.columns
+      .row{"data-equalizer" => "true"}
+        .small-6.columns
+          - unless @next.blank?
+            = link_to post_path(@next) do
+              .w-100.bgc-lghter-gray.p-20{"data-equalizer-watch" => "true"}
+                %p
+                  %small{style: "text-transform: uppercase;"} 
+                    %span.btn-text.m-right-5.d-inline-block{"data-icon" => "R"}
+                    Newer Post
+                .c-orange= @next.title
+        .small-6.columns
+          - unless @prev.blank?
+            = link_to post_path(@prev) do
+              .w-100.bgc-lghter-gray.p-20.ta-right{"data-equalizer-watch" => "true"}
+                %p
+                  %small{style: "text-transform: uppercase;"} 
+                    Older Post
+                    %span.m-left-5.btn-text.d-inline-block{"data-icon" => "p"}
+                = link_to @prev.title, post_path(@prev), class: "d-inline-block"

@@ -5,11 +5,13 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <link rel="shortcut icon" href="https://s3-us-west-2.amazonaws.com/bcg-site-assets/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="https://s3-us-west-2.amazonaws.com/bcg-site-assets/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://s3-us-west-2.amazonaws.com/bcg-site-assets/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://s3-us-west-2.amazonaws.com/bcg-site-assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <%= render 'layouts/blog_nav' %>
   <div class="container"><%= yield %></div>
+  <%= render 'layouts/blog_footer' %>
   <script>
     $(document).foundation();
     
@@ -17,8 +19,6 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
     ga('create', 'UA-42564530-1', 'bloomconsultinggroup.com');
     ga('send', 'pageview');
