@@ -2,12 +2,11 @@
 
 FactoryGirl.define do
   factory :career do
-    hero_image "MyString"
-    hero_title "MyString"
-    hero_copy "MyText"
-    intro_title "MyString"
-    intro_title "MyText"
-    cta_title "MyString"
-    cta_copy "MyText"
+    hero_title "Careers"
+    hero_copy "We help people grow"
+    intro_title "You should work here"
+    event_header "Upcoming events"
+    cta_title "Don't see a job?"
+    cta_copy "We're always watching for you!"
   end
 end

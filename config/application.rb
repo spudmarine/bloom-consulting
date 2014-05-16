@@ -13,6 +13,18 @@ module BloomConsulting
     config.assets.paths << Rails.root.join("app", "assets", "fonts", "icon_fonts")
     
     config.tinymce.base = "/assets/tinymce"
+
+    config.generators do |g|
+      g.test_framework :rspec,
+        :fixtures => true,
+        :view_specs => false,
+        :helper_specs => false,
+        :routing_specs => false,
+        :controller_specs => true,
+        :requests_specs => true
+      g.fixture_replacement :factor_girl, :dir => "spec/factories"
+    end
+
     
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

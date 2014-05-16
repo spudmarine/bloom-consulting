@@ -10,4 +10,9 @@ class Post < ActiveRecord::Base
     self.class.last(:conditions => ["created_at > ?", created_at], :order => "created_at asc")
   end
 
+	extend FriendlyId
+	friendly_id :title, use: [:slugged, :history]
+	
+	validates :date, :title, :author, :body, presence: true
+
 end

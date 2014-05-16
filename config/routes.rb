@@ -12,10 +12,10 @@ BloomConsulting::Application.routes.draw do
   get 'team', to: 'teams#show', :defaults => { id: "1"}
   get 'contact', to: 'contacts#show', :defaults => { id: "1"}
   get 'sitemap.xml' => 'sitemap#index', as: 'sitemap', :defaults => { format: "xml" }
-
+ 
   resources :users
   resources :sessions
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show], :path => 'blog'
   get 'careers/job/:id', to: 'jobs#show', as: 'careers/job/'
   # resources :jobs
   resources :contacts
