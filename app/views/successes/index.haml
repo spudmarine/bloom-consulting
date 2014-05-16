@@ -7,23 +7,24 @@
     .small-12.columns
       %h1.c-blue Success Stories
 - success = Success.all
-- success.each do |success|
-  .strata.strata-striped
-    .row
-      .small-12.medium-4.columns
-        %h5.c-drk-gray= success.title
-        - if success.author.present?
-          %p
-            %small
-              by
-              = success.author
-      .small-12.medium-8.columns
-        %p= success.blurb
-        - if success.article.url.present?
-          %div.p-top-20
-            = link_to success.article.url, class: "btn btn-empty btn-m ta-center", :target => "_Blank" do
-              %span.btn-text.m-right-5{"data-icon" => "c"}
-              - if success.article.url.end_with?(".ppt", ".pptx")
-                %span.btn-text Download Presentation
-              - else
-                %span.btn-text Download Article
+.strata-striped
+  - success.each do |success|
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h5.c-drk-gray= success.title
+          - if success.author.present?
+            %p
+              %small
+                by
+                = success.author
+        .small-12.medium-8.columns
+          %p= success.blurb
+          - if success.article.url.present?
+            %div.p-top-20
+              = link_to success.article.url, class: "btn btn-empty btn-m ta-center", :target => "_Blank" do
+                %span.btn-text.m-right-5{"data-icon" => "c"}
+                - if success.article.url.end_with?(".ppt", ".pptx")
+                  %span.btn-text Download Presentation
+                - else
+                  %span.btn-text Download Article

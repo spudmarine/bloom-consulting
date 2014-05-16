@@ -35,4 +35,5 @@
 //= require admin/upload_name
 //= require picker
 //= require picker.date
+//= require blog_nav
 //= require_tree .

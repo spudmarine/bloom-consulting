@@ -15,7 +15,7 @@ BloomConsulting::Application.routes.draw do
 
   resources :users
   resources :sessions
-  resources :posts, only: [:index]
+  resources :posts, only: [:index, :show]
   get 'careers/job/:id', to: 'jobs#show', as: 'careers/job/'
   # resources :jobs
   resources :contacts

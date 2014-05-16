@@ -15,7 +15,7 @@
     .small-12.columns
       %ul.l-no-style.p-left-0#empsort{"data-update" => "#{sort_admin_employees_url}" }
         - @employees.each do |employee|
-          = content_tag_for :li, employee, class: "strata-striped p-20" do 
+          = content_tag_for :li, employee, class: "list-striped p-20" do 
             .row
               .small-1.column
                 %span{"data-icon" => "O"}

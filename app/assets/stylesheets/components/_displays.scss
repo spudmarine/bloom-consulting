@@ -2,3 +2,15 @@
 .d-inline-block { display: inline-block; }
 .d-inline-table { display: inline-table; }
 .d-inherit      { display: inherit; }
+
+.d-none         { display: none; }
+
+.ui-effects-wrapper { 
+  z-index: 0;
+  background-repeat: none;
+  background-position: 0px 0px;
+  display: inline-block; 
+  padding: 0px;
+  margin: 0px;
+  float: left;
+}

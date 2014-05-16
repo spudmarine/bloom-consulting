@@ -21,3 +21,11 @@
   height: 100%;
   background-color: rgba(227,121,41,0.4);
 }
+
+.strata-striped {
+  .strata:nth-of-type(odd),
+  .strata-small:nth-of-type(odd),
+  .strata-mini:nth-of-type(odd) {
+    background-color: $lighter-gray;
+  }
+}
