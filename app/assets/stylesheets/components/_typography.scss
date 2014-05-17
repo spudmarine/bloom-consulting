@@ -40,3 +40,34 @@
     color: $bloom-orange;
   }
 }
+
+.main-title {
+  @include transition(all 0.1s linear);
+}
+
+a:hover {
+  .main-title { color: $base-link-color; }
+}
+
+// Styling Pagination
+.previous_page.disabled,
+.next_page.disabled {
+  color: transparent;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination {
+  .current, [href^="/blog?"] {
+    margin: 5px;
+    padding: 5px;
+    &.previous_page {
+      margin-right: 20px;
+    }
+    &.next_page {
+      margin-left: 20px;
+    }
+  }
+}
