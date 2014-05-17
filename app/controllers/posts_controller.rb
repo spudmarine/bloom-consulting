@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   layout 'blog'
   
   def index
-  	@posts = Post.all
+  	@posts = Post.paginate(:page => params[:page], :per_page => 2)
   end
 
   def show
