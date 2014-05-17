@@ -13,8 +13,9 @@
             %p.m-bottom-30= Nokogiri::HTML.parse(post.body).css('p').first.text
             %h3.c-orange
               %span{"data-icon" => "p"}
-  .strata
-    .row
-      .small-12.columns
-        = will_paginate @posts, :previous_label => "<span class='btn-text m-right-5', data-icon='R'></span> Previous", :next_label => "Next <span class='btn-text m-left-5', data-icon='p'></span>"
+  - if @posts.count > 10
+    .strata
+      .row
+        .small-12.columns
+          = will_paginate @posts, :previous_label => "<span class='btn-text m-right-5', data-icon='R'></span> Previous", :next_label => "Next <span class='btn-text m-left-5', data-icon='p'></span>"
 
