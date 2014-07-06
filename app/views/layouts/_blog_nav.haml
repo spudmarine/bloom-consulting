@@ -11,18 +11,22 @@
     .small-4.columns
       - contact = Contact.all
       %ul.f-right.l-no-style
-        %li.footer-item
-          %p
-            %small FOLLOW US:
-        %li.footer-item
-          %h4
-            = link_to contact.last.linkedin, class: "footer-link", :target => "_blank" do
-              %span{"data-icon" => "k", style: "position: relative; top: 6px;"}
-        %li.footer-item
-          %h4
-            = link_to contact.last.twitter, class: "footer-link", :target => "_blank" do
-              %span{"data-icon" => "l", style: "position: relative; top: 6px;"}
-        %li.footer-item
-          %h4
-            = link_to contact.last.facebook, class: "footer-link", :target => "_blank" do
-              %span{"data-icon" => "j", style: "position: relative; top: 6px;"}
+        - if contact.last.facebook.present?
+          %li.footer-item
+            %p
+              %small FOLLOW US:
+        - if contact.last.linkedin.present?
+          %li.footer-item
+            %h4
+              = link_to contact.last.linkedin, class: "footer-link", :target => "_blank" do
+                %span{"data-icon" => "k", style: "position: relative; top: 6px;"}
+        - if contact.last.twitter.present?
+          %li.footer-item
+            %h4
+              = link_to contact.last.twitter, class: "footer-link", :target => "_blank" do
+                %span{"data-icon" => "l", style: "position: relative; top: 6px;"}
+        - if contact.last.facebook.present?
+          %li.footer-item
+            %h4
+              = link_to contact.last.facebook, class: "footer-link", :target => "_blank" do
+                %span{"data-icon" => "j", style: "position: relative; top: 6px;"}

@@ -7,15 +7,6 @@
           %span= @post.created_at.strftime("%B %d, %Y")
           &nbsp;|&nbsp;  by
           %span.c-drk-gray= @post.author
-      %p.m-top-30
-        %small{style: "text-transform: uppercase;"} share:
-      %h4.d-inline-block
-        %a.twitter-share-button.m-right-20{"data-lang" => "en", "expr:data-text" => "#{@post.share_text}:", "onclick" => "window.open('https://twitter.com/share', 'newwindow', 'width=500, height=300'); return false;"}
-          %span{"data-icon" => "l"}
-        %a.fb-share-button#facebook-jssdk{"onclick" => "window.open('#{post_path(@post)}', 'newwindow', 'width=500, height=300'); return false;"}
-          %span{"data-icon" => "j"}
-        %a.m-left-20{href: "http://www.linkedin.com/shareArticle?mini=true&url=http://bloomconsultinggroup.com#{post_path(@post)}&title=#{url_encode(@post.title)}&source=#{url_encode('Bloom Consulting Group')}&summary=#{truncate(@post.body, length: 253, separator: ' ')}", "target" => "_blank"}
-          %span{"data-icon" => "k"}
 .strata
   .row
     .small-12.medium-10.medium-offset-1.columns

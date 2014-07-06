@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516141729) do
+ActiveRecord::Schema.define(version: 20140701233457) do
 
   create_table "abouts", force: true do |t|
     t.string   "hero_image"
@@ -23,6 +23,35 @@ ActiveRecord::Schema.define(version: 20140516141729) do
     t.text     "area2_copy"
     t.string   "area3_title"
     t.text     "area3_copy"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_mains", force: true do |t|
+    t.string   "hero_image"
+    t.string   "hero_title"
+    t.string   "stratum_1_image"
+    t.string   "stratum_1_title"
+    t.text     "stratum_1_copy"
+    t.string   "stratum_1_cta"
+    t.string   "stratum_1_link"
+    t.string   "practice_area_1_image"
+    t.string   "practice_area_1_title"
+    t.text     "practice_area_1_copy"
+    t.string   "practice_area_1_link"
+    t.string   "practice_area_2_image"
+    t.string   "practice_area_2_title"
+    t.text     "practice_area_2_copy"
+    t.string   "practice_area_2_link"
+    t.string   "practice_area_3_image"
+    t.string   "practice_area_3_title"
+    t.text     "practice_area_3_copy"
+    t.string   "practice_area_3_link"
+    t.string   "stratum_2_image"
+    t.string   "stratum_2_title"
+    t.text     "stratum_2_copy"
+    t.string   "stratum_2_cta"
+    t.string   "stratum_2_link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -110,6 +139,17 @@ ActiveRecord::Schema.define(version: 20140516141729) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
+  create_table "images", force: true do |t|
+    t.string   "alt",               default: ""
+    t.string   "hint",              default: ""
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "insights", force: true do |t|
     t.string   "title"
     t.string   "author"
@@ -185,6 +225,17 @@ ActiveRecord::Schema.define(version: 20140516141729) do
     t.string   "author"
     t.string   "share_text"
     t.string   "slug"
+    t.string   "blog_image"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "alt",                default: ""
+    t.string   "hint",               default: ""
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug"

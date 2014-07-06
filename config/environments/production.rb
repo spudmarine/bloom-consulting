@@ -13,6 +13,17 @@ BloomConsulting::Application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  # paperclip config
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+        :bucket => ENV['bcg-site-assets'],
+        :access_key_id => ENV['AKIAJC4EFI7Y6YYTBQQA'],
+        :secret_access_key => ENV['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']
+    },
+    :path => 'posts/:id',
+}
+  
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true

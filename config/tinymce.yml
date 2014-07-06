@@ -1,8 +1,9 @@
 selector: '.tinymce'
 menubar: "format view edit table"
+
 plugins: [
   "advlist autolink lists link charmap preview anchor image",
-        "searchreplace visualblocks fullscreen",
+        "searchreplace visualblocks fullscreen uploadimage",
         "insertdatetime table contextmenu paste wordcount media code"
 ]
 style_formats:
@@ -21,9 +22,10 @@ style_formats:
   - title: 'Huskies Purple Text'
     inline : 'span'
     classes: 'c-huskies'
-toolbar1: "undo redo | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | link image media | code"
+toolbar1: "undo redo | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | link uploadimage media | code"
 browser_spellcheck : true
 forced_root_block: false 
-relative_url: true 
-convert_urls: false
+relative_url: false 
+convert_urls: true
+remove_script_host: false
 paste_word_valid_elements: "b,strong,i,em,h1,h2,ul,li"
