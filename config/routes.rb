@@ -13,6 +13,8 @@ BloomConsulting::Application.routes.draw do
   get 'contact', to: 'contacts#show', :defaults => { id: "1"}
   get 'sitemap.xml' => 'sitemap#index', as: 'sitemap', :defaults => { format: "xml" }
  
+  post '/tinymce_assets' => 'admin/tinymce_assets#create'
+
   resources :users
   resources :sessions
   resources :posts, only: [:index, :show], :path => 'blog'

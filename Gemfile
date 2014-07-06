@@ -14,6 +14,10 @@ gem 'newrelic_rpm'
 gem 'jquery-ui-rails'
 gem 'friendly_id', '~> 5.0.0'
 gem 'will_paginate', '~> 3.0.5'
+gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
+gem 'paperclip', "~> 4.1"
+gem 'aws-sdk'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'

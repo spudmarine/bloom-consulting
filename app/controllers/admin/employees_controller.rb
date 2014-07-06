@@ -13,7 +13,7 @@ def new
     respond_to do |format|
       if @employee.save
         format.html { redirect_to admin_employees_url,
-          notice: 'Blog Employee successfully created' }
+          notice: 'Employee successfully created' }
         format.json { render json: @employee,
           status: :created,
           location: [:admin,@employee] }

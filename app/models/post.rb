@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-
+  has_many :images
   default_scope -> { order('created_at desc') }
 
   def previous_post
