@@ -8,8 +8,9 @@
 					= active_link_to "Success Stories", successes_path, class: "footer-link main-footer", :class_active => "current"
 				%li.footer-item
 					= active_link_to "Contact", contact_path, class: "footer-link main-footer", :class_active => "current"
-				%li.footer-item
-					= active_link_to "Blog", posts_path, class: "footer-link main-footer", :class_active => "current"
+				- if Post.any?
+					%li.footer-item
+						= active_link_to "Blog", posts_path, class: "footer-link main-footer", :class_active => "current"
 		.small-12.medium-4.columns
 			- contact = Contact.all
 			%ul.f-right.l-no-style

@@ -15,6 +15,8 @@ BloomConsulting::Application.routes.draw do
  
   post '/tinymce_assets' => 'admin/tinymce_assets#create'
 
+  get 'apportal', to: 'apportal#index', :defaults => { id: "1"}
+
   resources :users
   resources :sessions
   resources :posts, only: [:index, :show], :path => 'blog'

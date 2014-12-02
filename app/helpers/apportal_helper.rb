@@ -1,0 +1,2 @@
+module ApportalHelper
+end

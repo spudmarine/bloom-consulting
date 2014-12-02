@@ -35,9 +35,6 @@
           .field
             = f.label :author, "Author"
             = f.text_field :author
-          %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
-            Upload Blog Image
-            = f.file_field :blog_image, class: "upload", "data-print" => "#blog-print"
           .field
             = f.label :body, "Post"
             = f.text_field :body, :class => "tinymce", :id => "post", :rows => 150, :cols => 80
