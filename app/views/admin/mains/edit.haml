@@ -119,6 +119,22 @@
           .field.m-top-20
             = f.label "Copy"
             = f.text_area :practice_area_3_copy, :rows => "4"
+
+          %h6.c-blue.m-top-50{style: "text-transform: uppercase;"} Practice Area Four
+          .field.m-top-20
+            = f.label "Image"
+            .b-lighter-gray= image_tag @main.practice_area_4_image.to_s
+            .p-x-20.p-y-80.bgc-lghter-gray
+              %p.ta-center#pa3-image-print
+              %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                Upload New Image
+                = f.file_field :practice_area_4_image, class: "upload", "data-print" => "#pa3-image-print"
+          .field.m-top-20
+            = f.label "Title"
+            = f.text_field :practice_area_4_title
+          .field.m-top-20
+            = f.label "Copy"
+            = f.text_area :practice_area_4_copy, :rows => "4"
           
     .strata-mini
       .row
