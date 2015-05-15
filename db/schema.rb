@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140701233457) do
+ActiveRecord::Schema.define(version: 20150513211002) do
 
   create_table "abouts", force: true do |t|
     t.string   "hero_image"
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 20140701233457) do
     t.datetime "updated_at"
     t.string   "carousel_image"
     t.boolean  "recruiting"
+    t.boolean  "ap"
   end
 
   create_table "contacts", force: true do |t|
@@ -214,6 +215,10 @@ ActiveRecord::Schema.define(version: 20140701233457) do
     t.string   "stratum_2_link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "practice_area_4_link"
+    t.string   "practice_area_4_image"
+    t.string   "practice_area_4_title"
+    t.text     "practice_area_4_copy"
   end
 
   create_table "posts", force: true do |t|
@@ -268,6 +273,10 @@ ActiveRecord::Schema.define(version: 20140701233457) do
     t.text     "pm_deliverables_copy"
     t.string   "bifocus_title"
     t.text     "bifocus_copy"
+    t.string   "pa4_title"
+    t.text     "pa4_copy"
+    t.string   "apportal_title"
+    t.text     "apportal_copy"
   end
 
   create_table "quotes", force: true do |t|
@@ -288,6 +297,7 @@ ActiveRecord::Schema.define(version: 20140701233457) do
     t.boolean  "businessintelligence"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "apportals"
   end
 
   create_table "teams", force: true do |t|

@@ -17,6 +17,9 @@
 .strata-small.bgc-lghter-gray.b-bottom-light-gray.w-100.p-relative{"data-magellan-expedition" => "fixed"}
   .row
     .small-12.medium-9.columns
+      %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "ap"}
+        %a= @practicearea.pa4_title
+      %h6.d-inline-block.p-left-5.c-lght-gray.lh-btn-m.m-bottom-0 &#124;
       %h6.target-jump.d-inline-block.p-left-5.m-bottom-0.lh-btn-m{"data-target" => "pm"}
         %a= @practicearea.pa1_title
       %h6.d-inline-block.p-left-5.c-lght-gray.lh-btn-m.m-bottom-0 &#124;
@@ -29,6 +32,74 @@
       = link_to contact_path, class: "btn btn-empty btn-m btn-block" do
         %span.btn-text Contact Us
         %span.btn-text.f-right{"data-icon" => "p"}
+#ap.clear-nav-anchor    
+.strata-small
+  .row.p-top-10
+    .small-12.columns
+      %h3.c-orange WINDOWS 8.1 ENTERPRISE APPLICATIONS  
+  .row
+    .small-we.large-9.columns
+      %h5.c-blue What is a Windows 8 Application?
+  .row
+    .small-12.large-6.columns
+      %p.p-top-5 A Windows 8 application is a customizable enterprise App that can integrate your company’s entire Line of Business (LOB) stack, social media, news, and business intelligence into a single, modern, touch-based experience for employees, channel partners, and/or customers.  The concept behind a Windows Enterprise App is simple—provide a single view of the heterogeneous Apps that exist in an organization today in an “single pane of glass” experience. In today’s diverse organization environments, it is not realistic or desirable to build a single, monolithic application.
+    .small-12.large-6.columns
+      = image_tag('https://s3-us-west-2.amazonaws.com/bcg-site-assets/Apportal/update/windows8.1.jpg', style: "max-height: 260px;")
+      = image_tag('https://s3-us-west-2.amazonaws.com/bcg-site-assets/Apportal/update/windows8.1laptop.png', style: "max-height: 260px;")
+  .row
+    .small-12.large-12.columns
+      %p.p-top-5 
+        Instead, organizations can use the flexibility of the Windows 8.1 OS to create a UI-based virtual integration.
+        %span.c-orange With the help of a partner like Bloom, business users can initiate a new way to experience information in the enterprise that is extremely simple, intuitive and designed specifically for the modern UI. 
+        And, because the App can deliver customized content based on the user’s role in the organization using Active Directory, the experience is all the better.
+  .row
+    .small-12.large-4.columns
+      %h6.c-blue.p-top-10 Bloom was selected to partner with Microsoft to deliver the concept behind the “Patrol Car of the Future” with touch and voice activated tiles consolidating disparate data from across various police information sources.  We’re about to change the world! Join us!
+    .small-12.large-8.columns
+      = image_tag('https://s3-us-west-2.amazonaws.com/bcg-site-assets/Apportal/update/patrolcaroffuture.jpg', style: "max-height: 460px;")
+  .row.p-top-10
+    .small-12.large-12.columns
+      %h5.c-blue.p-top-10 Why is a Windows 8 enterprise App a game changer?
+  .row.p-top-40
+    .small-12.large-4.columns
+      %p.p-top-10.c-orange 1. It’s all about Experience! 
+      %p.p-top-5 Information is delivered seamlessly across Windows-based PC, mobile, and Hub devices in a simple, intuitive design for the Modern UI lover.
+    .small-12.large-4.columns
+      = image_tag('https://s3-us-west-2.amazonaws.com/bcg-site-assets/Apportal/update/windowslineup.jpg', style: "max-height: 260px;")
+    .small-12.large-4.columns
+      .row
+        .small-12.columns
+          = image_tag('https://s3-us-west-2.amazonaws.com/bcg-site-assets/Apportal/update/surface.jpg', style: "max-height: 260px;")
+      .row
+        .small-12.columns
+          = image_tag('https://s3-us-west-2.amazonaws.com/bcg-site-assets/Apportal/update/scrollingcontent.jpg', style: "max-height: 260px;")
+  .row.p-top-40
+    .small-12.large-4.columns
+      %p.p-top-10.c-orange 2. It’s all about Experience!
+      %p.p-top-5 Content can be delivered based on role using Active Directory, creating a custom user experience.
+    .small-12.large-8.columns
+      = image_tag('https://s3-us-west-2.amazonaws.com/bcg-site-assets/Apportal/update/multiuser.jpg', style: "max-height: 460px;")
+  .row.p-top-40
+    .small-12.large-4.columns
+      %p.p-top-10.c-orange 3. It’s all about Experience!
+      %p.p-top-10 All employee apps, tools, data sources, reports, and metrics can be consolidated into one view for a more productive experience.
+    .small-12.large-8.columns
+      = image_tag('https://s3-us-west-2.amazonaws.com/bcg-site-assets/Apportal/update/gebeakers.jpg', style: "max-height: 460px;")
+  .row.p-top-40
+    .small-12.large-4.columns
+      %p.p-top-10.c-orange 4. It’s all about Experience!
+      %p.p-top-10 Data from 15, 20, or as many as 30 data sources can be surfaced in one simple view launched right from the Start Screen.
+    .small-12.large-8.columns
+      = image_tag('https://s3-us-west-2.amazonaws.com/bcg-site-assets/Apportal/update/security.jpg', style: "max-height: 460px;")
+  .row.p-top-40
+    .small-12.large-4.columns 
+      %p.p-top-10.c-orange 5. It’s all about Experience!
+      %p.p-top-10 The modern UI is about simple, intuitive design for touch and voice activation.
+    .small-12.large-4.columns
+      = image_tag('https://s3-us-west-2.amazonaws.com/bcg-site-assets/Apportal/update/portfolio.jpg', style: "max-height: 460px;")
+    .small-12.large-4.columns
+      = image_tag('https://s3-us-west-2.amazonaws.com/bcg-site-assets/Apportal/update/cortana.jpg', style: "max-height: 460px;")
+%hr{style: "z-index: 800;"}
 #pm.clear-nav-anchor    
 .strata{style: "z-index: 800;"}
   .row
