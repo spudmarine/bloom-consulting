@@ -11,6 +11,7 @@ class PracticeareasController < ApplicationController
   # GET /practiceareas/1.json
   def show
     @mains = Main.all
+    @practiceareas = Practicearea.all
   end
 
   private

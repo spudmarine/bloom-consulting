@@ -3,11 +3,13 @@ class MainsController < ApplicationController
 
   def index
     @mains = Main.all
+    @practiceareas = Practicearea.all
   end
 
   def show
     @employees = Employee.all
     @quotes = Quote.all
+    @practiceareas = Practicearea.all
   end
 
   private

@@ -1,0 +1,15 @@
+- image = @main.hero_image_url
+.large-hero.fixed-image{style: "background-image: url(#{image});"}
+  = render 'layouts/header'
+  .hero
+    .row
+      .small-8.small-offset-2.columns
+        %h1.hero-font= @main.hero_title
+        %h2.intro-arrow-box
+          %a.intro-arrow.page-jump{"data-icon" => "f"}
+
+= render 'mains/top_announcement'
+= render 'practice_areas'
+= render 'mains/meet_the_team'
+= render 'mains/hiring_announcement'
+= render 'mains/quotes'

@@ -6,6 +6,8 @@ BloomConsulting::Application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
+  get 'pages/home'
+
   get 'practiceareas', to: 'practiceareas#show', :defaults => { id: "1"}, path: 'practice-areas'
   get 'careers', to: 'careers#show', :defaults => { id: "1"}
   get 'about', to: 'abouts#show', :defaults => { id: "1"}

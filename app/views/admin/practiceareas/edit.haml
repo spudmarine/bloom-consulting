@@ -56,6 +56,17 @@
           .field
             = f.label :pa1_title, "Practice Area Name"
             = f.text_field :pa1_title
+          .field
+            = f.label :hero_image, "Practice Area 1 Home Image"
+            .b-lighter-gray= image_tag @practicearea.hero_image.to_s
+            .p-x-20.p-y-80.bgc-lghter-gray
+              %p.ta-center#hero-image-print
+              %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                Upload New Image
+                = f.file_field :pa1_image, class: "upload", "data-print" => "#pa1-image-print"
+          .field
+            = f.label :pa1_home_copy, "Practice Area 1 Home Copy"
+            = f.text_field :pa1_home_copy
           .field.m-top-20
             = f.label :pa1_copy, "Blurb"
             = f.text_area :pa1_copy, :class => "tinymce", :id => "editor", :rows => 20, :cols => 80
@@ -95,6 +106,17 @@
           .field
             = f.label :pa2_title, "Practice Area Name"
             = f.text_field :pa2_title
+          .field
+            = f.label :hero_image, "Practice Area 2 Home Image"
+            .b-lighter-gray= image_tag @practicearea.hero_image.to_s
+            .p-x-20.p-y-80.bgc-lghter-gray
+              %p.ta-center#hero-image-print
+              %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                Upload New Image
+                = f.file_field :pa2_image, class: "upload", "data-print" => "#pa1-image-print"
+          .field
+            = f.label :pa2_home_copy, "Practice Area 2 Home Copy"
+            = f.text_field :pa2_home_copy
           .field.m-top-20
             = f.label :pa2_copy, "Blurb"
             = f.text_area :pa2_copy, :class => "tinymce", :id => "editor2", :rows => 20, :cols => 80
@@ -128,6 +150,17 @@
           .field
             = f.label :pa3_title, "Practice Area Name"
             = f.text_field :pa3_title
+          .field
+            = f.label :hero_image, "Practice Area 3 Home Image"
+            .b-lighter-gray= image_tag @practicearea.hero_image.to_s
+            .p-x-20.p-y-80.bgc-lghter-gray
+              %p.ta-center#hero-image-print
+              %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                Upload New Image
+                = f.file_field :pa3_image, class: "upload", "data-print" => "#pa1-image-print"
+          .field
+            = f.label :pa3_home_copy, "Practice Area 3 Home Copy"
+            = f.text_field :pa3_home_copy
           .field.m-top-20
             = f.label :pa3_copy, "Blurb"
             = f.text_area :pa3_copy, :class => "tinymce", :id => "editor3", :rows => 30, :cols => 80
@@ -137,6 +170,32 @@
           .field.m-top-20
             = f.label :bifocus_copy, "BI Focus Copy"
             = f.text_area :bifocus_copy, :class => "tinymce", :id => "bifocus", :rows => 10, :cols => 80
+    .strata-mini
+      .row
+        .small-12.columns
+          %hr
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Practice Area Three
+        .small-12.medium-8.columns
+          .field
+            = f.label :pa4_title, "Practice Area Name"
+            = f.text_field :pa4_title
+          .field
+            = f.label :hero_image, "Practice Area 4 Home Image"
+            .b-lighter-gray= image_tag @practicearea.hero_image.to_s
+            .p-x-20.p-y-80.bgc-lghter-gray
+              %p.ta-center#hero-image-print
+              %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                Upload New Image
+                = f.file_field :pa4_image, class: "upload", "data-print" => "#pa1-image-print"
+          .field
+            = f.label :pa4_home_copy, "Practice Area 4 Home Copy"
+            = f.text_field :pa4_home_copy
+          .field.m-top-20
+            = f.label :pa4_copy, "Blurb"
+            = f.text_area :pa4_copy, :class => "tinymce", :id => "editor3", :rows => 30, :cols => 80
 
 = tinymce
 
