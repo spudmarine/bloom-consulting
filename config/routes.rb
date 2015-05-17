@@ -1,6 +1,6 @@
 BloomConsulting::Application.routes.draw do
 
-  root to: 'mains#show', :defaults => { id: "1" }
+  root to: 'pages#home'
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
