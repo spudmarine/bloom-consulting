@@ -24,6 +24,14 @@ class Admin::PagesController < ApplicationController
   def edit
   end
 
+  def home
+    @practiceareas = Practicearea.all
+    @employees = Employee.all
+    @quotes = Quote.all
+    @main = Main.find(1)
+    @practicearea = Practicearea.find_by_id(params[:id])
+  end
+
   # POST /admin/pages
   # POST /admin/pages.json
   def create
