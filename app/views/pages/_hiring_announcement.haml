@@ -1,12 +1,13 @@
-.strata.bgc-orange
-  .row
-    .small-12.medium-3.columns
-      %div.ta-center
-        = image_tag @main.stratum_2_image_url(:thumb).to_s, class: "circle-thumb b-gray"
-    .small-12.medium-9.columns
-      %h4.c-white= @main.stratum_2_title
-      %p.c-white.p-top-10= @main.stratum_2_copy
-      %h5
-        = link_to @main.stratum_2_link, :class => "link-white" do
-          = @main.stratum_2_cta
-          %span.h5-icon{ "data-icon" => "p"}
+= if @announcements.last.announcement_2_title.present?
+  .strata.bgc-orange
+    .row
+      .small-12.medium-3.columns
+        %div.ta-center
+          = image_tag @announcements.last.announcement_2_image.to_s
+      .small-12.medium-9.columns
+        %h4.c-white= @announcements.last.announcement_2_title
+        %p.c-white.p-top-10= @announcements.last.announcement_2_copy
+        %h5
+          = link_to @announcements.last.announcement_2_link, :class => "link-white" do
+            = @announcements.last.announcement_2_cta
+            %span.h5-icon{ "data-icon" => "p"}

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150516161205) do
+ActiveRecord::Schema.define(version: 20150518004918) do
 
   create_table "abouts", force: true do |t|
     t.string   "hero_image"
@@ -65,6 +65,21 @@ ActiveRecord::Schema.define(version: 20150516161205) do
   end
 
   add_index "admin_pages", ["permalink"], name: "index_admin_pages_on_permalink"
+
+  create_table "announcements", force: true do |t|
+    t.string   "announcement_1_image"
+    t.string   "announcement_1_title"
+    t.text     "announcement_1_copy"
+    t.string   "announcement_1_cta"
+    t.string   "announcement_1_link"
+    t.string   "announcement_2_image"
+    t.string   "announcement_2_title"
+    t.text     "announcement_2_copy"
+    t.string   "announcement_2_cta"
+    t.string   "announcement_2_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "careers", force: true do |t|
     t.string   "hero_image"

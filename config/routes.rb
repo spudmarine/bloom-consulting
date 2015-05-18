@@ -49,6 +49,7 @@ BloomConsulting::Application.routes.draw do
     resources :successes
     resources :events
     resources :carousels
+    resources :announcements
 
   end
 

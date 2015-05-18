@@ -1,12 +1,13 @@
-.strata.bgc-lghter-gray.jump-anchor
-  .row
-    .small-12.medium-3.columns
-      %div.ta-center
-        = image_tag('https://s3-us-west-2.amazonaws.com/bcg-site-assets/Apportal/image1-8.png', style: "max-height: 130px;")
-    .small-12.medium-9.columns
-      %h4.c-drk-gray= @main.stratum_1_title
-      %p.c-drk-gray.p-top-10= @main.stratum_1_copy
-      %h5
-        = link_to @main.stratum_1_link do
-          = @main.stratum_1_cta
-          %span.h5-icon{ "data-icon" => "p"}
+= if @announcements.last.announcement_1_title.present?
+  .strata.bgc-lghter-gray.jump-anchor
+    .row
+      .small-12.medium-3.columns
+        %div.ta-center
+          = image_tag @announcements.last.announcement_1_image.to_s
+      .small-12.medium-9.columns
+        %h4.c-drk-gray= @announcements.last.announcement_1_title
+        %p.c-drk-gray.p-top-10= @announcements.last.announcement_1_copy
+        %h5
+          = link_to @announcements.last.announcement_1_link do
+            = @announcements.last.announcement_1_cta
+            %span.h5-icon{ "data-icon" => "p"}

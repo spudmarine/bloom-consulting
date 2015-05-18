@@ -6,7 +6,7 @@
     .small-12.medium-8.columns
       %ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3
         %li
-          = link_to admin_pages_home_path do
+          = link_to edit_admin_main_path(1) do
             .admin-item
               %span.admin-icon{"data-icon" => "B"}
               %h6.m-top-30 Homepage
@@ -40,6 +40,13 @@
               %h6.m-top-30 Meet the Team
               %p
                 %small /team
+        %li
+          = link_to edit_admin_announcement_path(1) do
+            .admin-item
+              %span.admin-icon{"data-icon" => "C"}
+              %h6.m-top-30 Announcements
+              %p
+                %small /announcements
 .strata-small
   .row
     .small-12.medium-4.columns

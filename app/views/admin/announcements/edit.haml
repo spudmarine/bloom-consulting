@@ -1,0 +1,92 @@
+.strata-small
+  = form_for [:admin, @announcement], :html => {:multipart => true} do |f|
+    .row
+      - if @announcement.errors.any?
+        .small-12.columns
+          .error_explanation
+            %h5
+              = pluralize(@announcement.errors.count, "error")
+              prohibited this practicearea from being saved:
+            %ul
+              - @announcement.errors.full_messages.each do |msg|
+                %li= msg.strata-mini
+    .strata-mini.bgc-white.w-100.p-relative{"data-magellan-expedition" => "fixed"}
+      .row.p-top-20
+        .small-12.medium-8.columns
+          %h1.c-drk-gray{style: "vertical-align: middle;"} Edit Announcements
+        .small-4.medium-2.columns
+          = link_to admin_url, class: "btn btn-block btn-l btn-empty ta-center" do
+            %span.m-right-5.hide-lap{"data-icon" => "d"}
+            %span.hide-palm.hide-tablet Cancel
+        .small-8.medium-2.columns
+          .actions
+            %button.btn.btn-block.btn-l.btn-filled.ta-center Save
+      .row
+        .small-12.columns
+          %hr
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray First Announcement
+          %p.m-top-10 If the title is left blank, this section will not appear on the homepage.
+        .small-12.medium-8.columns
+          .field
+            = f.label "Title"
+            = f.text_field :announcement_1_title
+        .strata
+          .row
+            .small-12.medium-4.columns
+              %h4.c-drk-gray Announcement 1 image
+            .small-12.medium-8.columns
+              .field
+                = f.label "Image"
+                .b-lighter-gray= image_tag @announcement.announcement_1_image.to_s
+                .p-x-20.p-y-80.bgc-lghter-gray
+                  %p.ta-center#hero-image-print
+                  %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                    Upload New Image
+                    = f.file_field :announcement_1_image, class: "upload", "data-print" => "#hero-image-print"
+          .field.m-top-20
+            = f.label "Copy"
+            = f.text_area :announcement_1_copy, :rows => "4"
+          .field.m-top-10
+            = f.label "Link copy"
+            = f.text_field :announcement_1_cta
+          .field.m-top-20
+            = f.label "Link destination"
+            = f.text_field :announcement_1_link
+    .strata-mini
+      .row
+        .small-12.columns
+          %hr
+    .strata
+      .row
+        .small-12.medium-4.columns
+          %h4.c-drk-gray Second Announcement
+          %p.m-top-10 If the title is left blank, this section will not appear on the homepage.
+        .small-12.medium-8.columns
+          .field
+            = f.label "Title"
+            = f.text_field :announcement_2_title
+        .strata
+          .row
+            .small-12.medium-4.columns
+              %h4.c-drk-gray Announcement 2 image
+            .small-12.medium-8.columns
+              .field
+                = f.label "Image"
+                .b-lighter-gray= image_tag @announcement.announcement_2_image.to_s
+                .p-x-20.p-y-80.bgc-lghter-gray
+                  %p.ta-center#hero-image-print
+                  %button.file-upload.btn.btn-l.btn-empty.btn-block.ta-center
+                    Upload New Image
+                    = f.file_field :announcement_2_image, class: "upload", "data-print" => "#hero-image-print"
+          .field.m-top-20
+            = f.label "Copy"
+            = f.text_area :announcement_2_copy, :rows => "4"
+          .field.m-top-10
+            = f.label "Link copy"
+            = f.text_field :announcement_2_cta
+          .field.m-top-20
+            = f.label "Link destination"
+            = f.text_field :announcement_2_link
