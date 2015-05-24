@@ -13,14 +13,19 @@
         %span.f-right{"data-icon" => "N"}
   .row.m-top-20
     .small-12.columns
-      %table.tbl-striped
+      %ul.l-no-style.p-left-0#quotesort{"data-update" => "#{sort_admin_quotes_url}" }
         - @quotes.each do |quote|
-          %tr
-            %td.c-drk-gray= quote.title
-            %td= quote.credit
-            %td.ta-right
-              = link_to edit_admin_quote_path(quote), class: "m-right-50" do
-                %span.m-right-5.btn-text{"data-icon" => "D"}
-                Edit
-              = link_to admin_quote_path(quote), method: :delete, data: { confirm: 'Are you sure?' } do
-                %span.delete-icon.p-left-10{"data-icon" => "M"}
+          = content_tag_for :li, quote, class: "list-striped p-20" do 
+            .row
+              .small-1.column
+                %span{"data-icon" => "O"}              
+              .small-2.column
+                = quote.title
+              .small-3.column
+                = quote.credit
+              .small-3.column
+                = link_to edit_admin_quote_path(quote), class: "m-right-50" do
+                  %span.m-right-5.btn-text{"data-icon" => "D"}
+                  Edit
+                = link_to admin_quote_path(quote), method: :delete, data: { confirm: 'Are you sure?' } do
+                  %span.delete-icon.p-left-10{"data-icon" => "M"}

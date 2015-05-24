@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150513211002) do
+ActiveRecord::Schema.define(version: 20150524152145) do
 
   create_table "abouts", force: true do |t|
     t.string   "hero_image"
@@ -65,6 +65,21 @@ ActiveRecord::Schema.define(version: 20150513211002) do
   end
 
   add_index "admin_pages", ["permalink"], name: "index_admin_pages_on_permalink"
+
+  create_table "announcements", force: true do |t|
+    t.string   "announcement_1_image"
+    t.string   "announcement_1_title"
+    t.text     "announcement_1_copy"
+    t.string   "announcement_1_cta"
+    t.string   "announcement_1_link"
+    t.string   "announcement_2_image"
+    t.string   "announcement_2_title"
+    t.text     "announcement_2_copy"
+    t.string   "announcement_2_cta"
+    t.string   "announcement_2_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "careers", force: true do |t|
     t.string   "hero_image"
@@ -277,6 +292,14 @@ ActiveRecord::Schema.define(version: 20150513211002) do
     t.text     "pa4_copy"
     t.string   "apportal_title"
     t.text     "apportal_copy"
+    t.string   "pa1_image"
+    t.string   "pa2_image"
+    t.string   "pa3_image"
+    t.string   "pa4_image"
+    t.text     "pa1_home_copy"
+    t.text     "pa2_home_copy"
+    t.text     "pa3_home_copy"
+    t.text     "pa4_home_copy"
   end
 
   create_table "quotes", force: true do |t|
@@ -285,6 +308,7 @@ ActiveRecord::Schema.define(version: 20150513211002) do
     t.string   "credit"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sortorder"
   end
 
   create_table "successes", force: true do |t|
