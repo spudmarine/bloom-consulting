@@ -26,7 +26,7 @@ class Admin::QuotesController < ApplicationController
   end
 
   def index
-    @quotes = Quote.all
+    @quotes = Quote.order("sortorder")
   end
 
   def show
@@ -49,6 +49,14 @@ class Admin::QuotesController < ApplicationController
   def destroy
     Quote.find(params[:id]).destroy
     redirect_to admin_quotes_url
+  end
+
+  def sort
+    params[:quote].each_with_index do |id, index|
+      quote = Quote.find(id)
+      quote.update_attribute(:sortorder, index) if quote
+    end
+    render nothing: true
   end
 
   private
