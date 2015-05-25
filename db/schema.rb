@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150518004918) do
+
+ActiveRecord::Schema.define(version: 20150524152145) do
 
   create_table "abouts", force: true do |t|
     t.string   "hero_image"
@@ -308,6 +309,7 @@ ActiveRecord::Schema.define(version: 20150518004918) do
     t.string   "credit"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sortorder"
   end
 
   create_table "successes", force: true do |t|

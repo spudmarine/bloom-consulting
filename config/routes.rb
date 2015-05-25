@@ -45,7 +45,9 @@ BloomConsulting::Application.routes.draw do
     resources :abouts
     resources :contacts
     resources :insights
-    resources :quotes
+    resources :quotes do
+      collection { post :sort }
+    end
     resources :successes
     resources :events
     resources :carousels
