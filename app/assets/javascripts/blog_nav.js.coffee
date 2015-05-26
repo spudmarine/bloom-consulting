@@ -2,7 +2,7 @@ navShow = (square, text) ->
 
   $(square).mouseenter(->
     $(text).stop().animate
-      width: "263px"
+      width: "115px"
     , 200
     $(text).addClass('p-y-5');
     return
@@ -14,7 +14,7 @@ navShow = (square, text) ->
     return
   $(text).mouseenter(->
     $(text).stop().animate
-      width: "263px"
+      width: "115px"
     , 200
     $(text).addClass('p-y-5');
     return
