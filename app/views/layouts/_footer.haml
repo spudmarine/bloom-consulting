@@ -1,6 +1,6 @@
 %footer.footer
 	.row
-		.small-12.medium-8.columns
+		.small-12.medium-6.columns
 			%ul.l-no-style
 				%li.footer-item
 					= active_link_to "Meet the Team", team_path, class: "footer-link main-footer", :class_active => "current"
@@ -10,8 +10,12 @@
 					= active_link_to "Contact", contact_path, class: "footer-link main-footer", :class_active => "current"
 				- if Post.any?
 					%li.footer-item
-						= active_link_to "Blog", posts_path, class: "footer-link main-footer", :class_active => "current"
-		.small-12.medium-4.columns
+						= active_link_to "News", posts_path, class: "footer-link main-footer", :class_active => "current"
+		.small-12.medium-5.columns
+			%p
+				%small
+					&copy; Bloom Consulting Group, #{ Time.now.year } |  All Rights Reserved
+		.small-12.medium-1.columns
 			- contact = Contact.all
 			%ul.f-right.l-no-style
 				- if contact.last.linkedin.present?

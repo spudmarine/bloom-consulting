@@ -28,37 +28,37 @@
                 Position Details
                 %span
                   %small.p-left-5{"data-icon" => "p"}
-.strata.p-top-0#events
-  .row
-    .small-12.columns
-      %h3.c-blue= @career.event_header
-      %p.p-top-10
-        = @career.event_intro
-  .row
-    - events = Event.all
-    .small-12.columns
-      %table.tbl-striped
-        -events.each do |event|
-          %tr
-            %td.c-drk-gray= event.date.strftime("%B %d, %Y")
-            %td.c-drk-gray{style: "width: 30%;"}= event.location
-            %td{style: "width: 35%;"}= event.description
-            %td{style: "text-align: right;"}
-              -if event.link.present?
-                = link_to "http://#{event.link}" do
-                  Event Info
-                  %span
-                    %small.p-left-5{"data-icon" => "p"}
-  .row.m-top-10
-    .small-12.columns
-      %p Here are some images from past recruiting events:
-      %ul.clearing-thumbs.medium-block-grid-6{"data-clearing" => "true"}
-        - carousel = Carousel.where(:recruiting => true)
-        - if carousel.present?
-          - carousel.each do |carousel|
-            %li
-              %a.th{href: carousel.carousel_image}
-                = image_tag carousel.carousel_image.thumb, "data-caption" => carousel.title
+/ .strata.p-top-0#events
+/   .row
+/     .small-12.columns
+/       %h3.c-blue= @career.event_header
+/       %p.p-top-10
+/         = @career.event_intro
+/   .row
+/     - events = Event.all
+/     .small-12.columns
+/       %table.tbl-striped
+/         -events.each do |event|
+/           %tr
+/             %td.c-drk-gray= event.date.strftime("%B %d, %Y")
+/             %td.c-drk-gray{style: "width: 30%;"}= event.location
+/             %td{style: "width: 35%;"}= event.description
+/             %td{style: "text-align: right;"}
+/               -if event.link.present?
+/                 = link_to "http://#{event.link}" do
+/                   Event Info
+/                   %span
+/                     %small.p-left-5{"data-icon" => "p"}
+/   .row.m-top-10
+/     .small-12.columns
+/       %p Here are some images from past recruiting events:
+/       %ul.clearing-thumbs.medium-block-grid-6{"data-clearing" => "true"}
+/         - carousel = Carousel.where(:recruiting => true)
+/         - if carousel.present?
+/           - carousel.each do |carousel|
+/             %li
+/               %a.th{href: carousel.carousel_image}
+/                 = image_tag carousel.carousel_image.thumb, "data-caption" => carousel.title
 
 .strata.bgc-lghter-gray
   .row
